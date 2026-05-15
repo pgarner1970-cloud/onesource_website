@@ -31,10 +31,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 .save-btn{margin-top:25px;background:#2F80ED;color:#fff;border:none;padding:14px 24px;border-radius:10px;font-weight:700}
 .notice{margin-top:20px}
 </style>
+<link rel="stylesheet" href="admin.css">
 </head>
 <body>
-  <header class="admin-header">
-    <h1>Gallery Admin</h1>
+<header class="admin-header">
+  <h1>Gallery Admin</h1>
+  <nav class="admin-top-links">
+    <a href="index.php">Gallery Admin</a>
+    <a href="category-images.php">Service Images</a>
+    <a href="opening-hours.php">Opening Hours</a>
+    <a href="../index.php">Back to Website</a>
+    <a href="logout.php">Logout</a>
+  </nav>
+</header></h1>
     <nav class="admin-top-links">
       <a href="index.php">Gallery Admin</a>
       <a href="category-images.php">Service Images</a>
