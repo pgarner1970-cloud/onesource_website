@@ -9,7 +9,6 @@ filters.forEach((button) => {
   button.addEventListener('click', () => {
     filters.forEach((b) => b.classList.remove('active'));
     button.classList.add('active');
-
     const filter = button.dataset.filter;
     projects.forEach((project) => {
       const show = filter === 'all' || project.dataset.category === filter;
