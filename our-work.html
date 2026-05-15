@@ -7,7 +7,22 @@
         
         <a href="contact.html" data-page="contact">Contact</a>
       </nav><div class="nav-actions"><a class="btn btn-primary" href="contact.html">Get a Quote →</a><a class="whatsapp" href="https://wa.me/447502216131" aria-label="Message One Source on WhatsApp"><img src="assets/icons/whatsapp.svg" alt="WhatsApp"></a></div></div></header>
-<main><section class="page-hero"><div class="wrap"><div class="breadcrumb">Gallery</div><h1>Gallery</h1><p>A gallery-ready layout for completed domestic projects.</p></div></section><section class="section"><div class="wrap"><div class="gallery-grid"><article class="project"><img src="assets/images/services/air-conditioning.jpg" alt="Air Conditioning project"><div><strong>Air Conditioning</strong><span>Domestic installation example</span></div></article><article class="project"><img src="assets/images/services/solar-pv.jpg" alt="Solar PV project"><div><strong>Solar PV</strong><span>Domestic installation example</span></div></article><article class="project"><img src="assets/images/services/battery-storage.jpg" alt="Battery Storage project"><div><strong>Battery Storage</strong><span>Domestic installation example</span></div></article><article class="project"><img src="assets/images/services/ev-chargers.jpg" alt="EV Chargers project"><div><strong>EV Chargers</strong><span>Domestic installation example</span></div></article><article class="project"><img src="assets/images/services/electrical-services.jpg" alt="Electrical Services project"><div><strong>Electrical Services</strong><span>Domestic installation example</span></div></article><article class="project"><img src="assets/images/services/gas-services.jpg" alt="Gas Services project"><div><strong>Gas Services</strong><span>Domestic installation example</span></div></article></div></div></section></main>
+<main><section class="page-hero"><div class="wrap"><div class="breadcrumb">Our Work</div><h1>Gallery of work</h1><p>View a selection of recent domestic installations and completed work. Select a category below to filter the gallery.</p></div></section><section class="section">
+      <div class="wrap">
+        <div class="filters gallery-filters">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="air-conditioning">Air Conditioning</button>
+          <button class="filter" data-filter="solar-pv">Solar PV</button>
+          <button class="filter" data-filter="battery-storage">Battery Storage</button>
+          <button class="filter" data-filter="ev-chargers">EV Chargers</button>
+          <button class="filter" data-filter="electrical">Electrical</button>
+          <button class="filter" data-filter="gas-services">Gas Services</button>
+        </div>
+        <div class="gallery-grid" id="dynamic-gallery">
+          <p>Loading gallery...</p>
+        </div>
+      </div>
+    </section></main>
 <footer>
   <div class="wrap footer-grid">
     <div>
@@ -18,4 +33,44 @@
     </div>
   </div>
 </footer>
-<script src="assets/js/site.js"></script></body></html>
+<script src="assets/js/site.js"></script><script>
+fetch('data/projects.json')
+  .then(response => response.json())
+  .then(projects => {
+    const gallery = document.getElementById('dynamic-gallery');
+    const activeProjects = projects.filter(project => project.featured !== false);
+
+    function render(filter = 'all') {
+      const filtered = activeProjects.filter(project => filter === 'all' || project.category === filter);
+
+      if (!filtered.length) {
+        gallery.innerHTML = '<p>No gallery items found for this category.</p>';
+        return;
+      }
+
+      gallery.innerHTML = filtered.map(project => `
+        <article class="project" data-category="${project.category}">
+          <img src="${project.image}" alt="${project.title}">
+          <div>
+            <strong>${project.title}</strong>
+            <span>${project.description || 'Recent domestic installation'}</span>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    document.querySelectorAll('.gallery-filters .filter').forEach(button => {
+      button.addEventListener('click', () => {
+        document.querySelectorAll('.gallery-filters .filter').forEach(item => item.classList.remove('active'));
+        button.classList.add('active');
+        render(button.dataset.filter);
+      });
+    });
+
+    render();
+  })
+  .catch(() => {
+    document.getElementById('dynamic-gallery').innerHTML = '<p>Unable to load gallery.</p>';
+  });
+</script>
+</body></html>

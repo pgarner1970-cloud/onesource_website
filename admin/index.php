@@ -1,0 +1,85 @@
+<?php
+require_once __DIR__ . '/auth.php';
+require_login();
+
+$projects = [];
+if (file_exists($PROJECTS_JSON)) {
+    $projects = json_decode(file_get_contents($PROJECTS_JSON), true);
+    if (!is_array($projects)) {
+        $projects = [];
+    }
+}
+
+$categories = [
+    'air-conditioning' => 'Air Conditioning',
+    'solar-pv' => 'Solar PV',
+    'battery-storage' => 'Battery Storage',
+    'ev-chargers' => 'EV Chargers',
+    'electrical' => 'Electrical',
+    'gas-services' => 'Gas Services',
+    'other' => 'Other'
+];
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery Admin | One Source</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <header class="admin-header">
+    <h1>Gallery Admin</h1>
+    <a href="logout.php">Logout</a>
+  </header>
+
+  <main class="admin-wrap">
+    <section class="admin-panel">
+      <h2>Add Project Image</h2>
+      <form action="save.php" method="post" enctype="multipart/form-data" class="admin-form">
+        <label>Title<input type="text" name="title" required placeholder="Example: Solar PV installation"></label>
+        <label>Category
+          <select name="category" required>
+            <?php foreach ($categories as $key => $label): ?>
+              <option value="<?= htmlspecialchars($key) ?>"><?= htmlspecialchars($label) ?></option>
+            <?php endforeach; ?>
+          </select>
+        </label>
+        <label>Description<textarea name="description" placeholder="Short description/location/project note"></textarea></label>
+        <label>Image<input type="file" name="image" accept="image/jpeg,image/png,image/webp" required></label>
+        <label class="check"><input type="checkbox" name="featured" value="1" checked> Show in gallery</label>
+        <button type="submit">Upload Project</button>
+      </form>
+    </section>
+
+    <section class="admin-panel">
+      <h2>Current Gallery Items</h2>
+      <div class="project-list">
+        <?php foreach ($projects as $project): ?>
+          <article class="project-row">
+            <img src="../<?= htmlspecialchars($project['image'] ?? '') ?>" alt="">
+            <div>
+              <strong><?= htmlspecialchars($project['title'] ?? '') ?></strong>
+              <span><?= htmlspecialchars($categories[$project['category'] ?? 'other'] ?? 'Other') ?> • <?= (isset($project['featured']) ? (bool)$project['featured'] : true) ? 'Visible' : 'Hidden' ?></span>
+              <p><?= htmlspecialchars($project['description'] ?? '') ?></p>
+            </div>
+            <div class="admin-actions">
+              <form action="toggle.php" method="post">
+                <input type="hidden" name="id" value="<?= htmlspecialchars($project['id'] ?? '') ?>">
+                <?php $isVisible = isset($project['featured']) ? (bool)$project['featured'] : true; ?>
+                <button class="<?= $isVisible ? 'hide' : 'show' ?>" type="submit">
+                  <?= $isVisible ? 'Hide' : 'Show' ?>
+                </button>
+              </form>
+              <form action="delete.php" method="post" onsubmit="return confirm('Permanently delete this gallery item?');">
+                <input type="hidden" name="id" value="<?= htmlspecialchars($project['id'] ?? '') ?>">
+                <button class="delete" type="submit">Delete</button>
+              </form>
+            </div>
+          </article>
+        <?php endforeach; ?>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

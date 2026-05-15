@@ -1,0 +1,50 @@
+[
+  {
+    "id": "air-conditioning-example",
+    "title": "Air Conditioning",
+    "category": "air-conditioning",
+    "description": "Domestic air conditioning installation example",
+    "image": "assets/images/services/air-conditioning.jpg",
+    "featured": true
+  },
+  {
+    "id": "solar-pv-example",
+    "title": "Solar PV",
+    "category": "solar-pv",
+    "description": "Domestic solar PV installation example",
+    "image": "assets/images/services/solar-pv.jpg",
+    "featured": true
+  },
+  {
+    "id": "battery-storage-example",
+    "title": "Battery Storage",
+    "category": "battery-storage",
+    "description": "Domestic battery storage installation example",
+    "image": "assets/images/services/battery-storage.jpg",
+    "featured": true
+  },
+  {
+    "id": "ev-charger-example",
+    "title": "EV Charger",
+    "category": "ev-chargers",
+    "description": "Home EV charger installation example",
+    "image": "assets/images/services/ev-chargers.jpg",
+    "featured": true
+  },
+  {
+    "id": "electrical-example",
+    "title": "Electrical Services",
+    "category": "electrical",
+    "description": "Domestic electrical work example",
+    "image": "assets/images/services/electrical-services.jpg",
+    "featured": true
+  },
+  {
+    "id": "gas-services-example",
+    "title": "Gas Services",
+    "category": "gas-services",
+    "description": "Domestic gas and boiler work example",
+    "image": "assets/images/services/gas-services.jpg",
+    "featured": true
+  }
+]

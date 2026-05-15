@@ -143,3 +143,25 @@ section[id] {
 .footer-grid a {
   color: var(--green);
 }
+
+.gallery-filters {
+  margin-bottom: 26px;
+}
+
+#dynamic-gallery > p {
+  color: var(--muted);
+  font-size: 18px;
+}
+
+
+.whatsapp{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.whatsapp img{
+  width:32px !important;
+  height:32px !important;
+  image-rendering:auto;
+}
