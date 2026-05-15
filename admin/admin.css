@@ -255,7 +255,10 @@ textarea::placeholder{
 }
 
 
-/* Consistent admin header */
+
+
+
+/* Shared admin header */
 .admin-header {
   background: #0b2c52 !important;
   color: #fff !important;
@@ -277,61 +280,11 @@ textarea::placeholder{
 .admin-top-links {
   display: flex !important;
   align-items: center !important;
-  gap: 22px !important;
+  justify-content: flex-end !important;
+  gap: 14px !important;
   flex-wrap: wrap !important;
 }
 
-
-
-@media (max-width: 768px) {
-  .admin-header {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-  }
-
-  .admin-top-links {
-    gap: 14px !important;
-  }
-}
-
-
-/* Final standard admin header */
-.admin-header {
-  background: #0b2c52 !important;
-  color: #fff !important;
-  padding: 24px 28px !important;
-  display: flex !important;
-  justify-content: space-between !important;
-  align-items: center !important;
-  gap: 20px !important;
-  flex-wrap: wrap !important;
-}
-
-.admin-header h1 {
-  margin: 0 !important;
-  color: #fff !important;
-  font-size: 30px !important;
-  line-height: 1.1 !important;
-}
-
-.admin-top-links {
-  display: flex !important;
-  align-items: center !important;
-  gap: 22px !important;
-  flex-wrap: wrap !important;
-}
-
-
-
-@media (max-width: 768px) {
-  .admin-header {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-  }
-}
-
-
-/* Cigar style admin menu buttons */
 .admin-top-links a {
   display: inline-flex !important;
   align-items: center !important;
@@ -350,7 +303,19 @@ textarea::placeholder{
 
 .admin-top-links a:hover {
   background: #2F80ED !important;
-  color: #ffffff !important;
+  color: #fff !important;
   border-color: #2F80ED !important;
   transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .admin-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .admin-top-links {
+    justify-content: flex-start !important;
+    gap: 10px !important;
+  }
 }
