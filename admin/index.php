@@ -28,7 +28,7 @@ $categories = [
   <title>Gallery Admin | One Source</title>
   <link rel="stylesheet" href="admin.css">
 </head>
-<body>
+<body><div style="padding:15px;background:#041327;"><a href="opening-hours.php" style="color:#fff;font-weight:bold;text-decoration:none;">Manage Opening Hours</a></div>
   <header class="admin-header">
     <h1>Gallery Admin</h1>
     <nav class="admin-top-links"><a href="category-images.php">Service Images</a><a href="../index.html">Back to Website</a><a href="logout.php">Logout</a></nav>

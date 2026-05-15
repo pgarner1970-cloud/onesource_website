@@ -1,0 +1,38 @@
+{
+  "monday": {
+    "type": "open",
+    "open": "08:00",
+    "close": "17:00"
+  },
+  "tuesday": {
+    "type": "open",
+    "open": "08:00",
+    "close": "17:00"
+  },
+  "wednesday": {
+    "type": "open",
+    "open": "08:00",
+    "close": "17:00"
+  },
+  "thursday": {
+    "type": "open",
+    "open": "08:00",
+    "close": "17:00"
+  },
+  "friday": {
+    "type": "open",
+    "open": "08:00",
+    "close": "17:00"
+  },
+  "saturday": {
+    "type": "appointment",
+    "open": "",
+    "close": ""
+  },
+  "sunday": {
+    "type": "closed",
+    "open": "",
+    "close": ""
+  },
+  "notice": "Closed bank holidays"
+}
