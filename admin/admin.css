@@ -253,3 +253,52 @@ textarea::placeholder{
   background: #0b2c52 !important;
   color: #fff !important;
 }
+
+
+/* Consistent admin header */
+.admin-header {
+  background: #0b2c52 !important;
+  color: #fff !important;
+  padding: 24px 28px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 20px !important;
+  flex-wrap: wrap !important;
+}
+
+.admin-header h1 {
+  margin: 0 !important;
+  color: #fff !important;
+  font-size: 30px !important;
+  line-height: 1.1 !important;
+}
+
+.admin-top-links {
+  display: flex !important;
+  align-items: center !important;
+  gap: 22px !important;
+  flex-wrap: wrap !important;
+}
+
+.admin-top-links a {
+  color: #2F80ED !important;
+  text-decoration: none !important;
+  font-weight: 800 !important;
+  font-size: 16px !important;
+}
+
+.admin-top-links a:hover {
+  color: #5AA2FF !important;
+}
+
+@media (max-width: 768px) {
+  .admin-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .admin-top-links {
+    gap: 14px !important;
+  }
+}

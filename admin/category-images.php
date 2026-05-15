@@ -34,11 +34,9 @@ if (file_exists($CATEGORY_IMAGES_JSON)) {
   <header class="admin-header">
     <h1>Gallery Admin</h1>
     <nav class="admin-top-links">
-      <a href="index.php">Gallery</a>
-      <a href="opening-hours.php">Opening Hours</a>
+      <a href="index.php">Gallery Admin</a>
       <a href="category-images.php">Service Images</a>
-      <a href="../index.php">Back to Website</a>
-      <a href="logout.php">Logout</a>
+      <a href="opening-hours.php">Opening Hours</a>
     </nav>
   </header>
 

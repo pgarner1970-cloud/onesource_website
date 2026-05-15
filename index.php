@@ -8,7 +8,7 @@
         
         <a href="contact.php" data-page="contact">Contact</a>
       </nav><div class="nav-actions"><a class="btn btn-primary" href="contact.php">Get a Quote →</a><a href="https://wa.me/447502216131" class="header-whatsapp" aria-label="WhatsApp"><img src="assets/icons/whatsapp.svg" alt="WhatsApp"></a></div></div></header>
-<main><section class="hero"><div class="hero-bg"></div><div class="wrap hero-content"><p class="eyebrow">Air conditioning, solar PV, EV chargers & more</p><h1>Trusted home energy solutions across the West Midlands.</h1><p class="hero-copy">Professional domestic installations, certified engineers and quality workmanship you can rely on.</p><div class="hero-buttons"><a href="contact.php" class="btn btn-primary">Request a Quote →</a><a href="our-work.php" class="btn btn-ghost">View Our Work →</a></div></div></section>
+<main><section class="hero"><div class="hero-bg"></div><div class="wrap hero-content"><h1>Trusted home energy solutions across the West Midlands.</h1><p class="hero-copy">Professional domestic installations, certified engineers and quality workmanship you can rely on.</p><div class="hero-buttons"><a href="contact.php" class="btn btn-primary">Request a Quote →</a><a href="our-work.php" class="btn btn-ghost">View Our Work →</a></div></div></section>
 <section class="trust">
   <div class="wrap trust-grid">
     <div class="trust-heading">Trusted. Certified. Accredited.</div>

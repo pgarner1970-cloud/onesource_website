@@ -515,3 +515,12 @@ footer {
     gap:12px;
   }
 }
+
+
+/* Remove small blue eyebrow headings site-wide */
+.eyebrow,
+.section-tag,
+.hero-eyebrow,
+.page-eyebrow {
+  display: none !important;
+}

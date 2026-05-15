@@ -33,6 +33,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </style>
 </head>
 <body>
+  <header class="admin-header">
+    <h1>Gallery Admin</h1>
+    <nav class="admin-top-links">
+      <a href="index.php">Gallery Admin</a>
+      <a href="category-images.php">Service Images</a>
+      <a href="opening-hours.php">Opening Hours</a>
+    </nav>
+  </header>
 
 <div class="hours-admin">
 <h1>Opening Hours</h1>
