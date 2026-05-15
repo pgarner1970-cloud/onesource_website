@@ -23,6 +23,7 @@ $categories = [
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="robots" content="noindex,nofollow">
   <meta charset="UTF-8">
   <title>Gallery Admin | One Source</title>
   <link rel="stylesheet" href="admin.css">

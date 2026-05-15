@@ -19,6 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="robots" content="noindex,nofollow">
   <meta charset="UTF-8">
   <title>Admin Login | One Source</title>
   <link rel="stylesheet" href="admin.css">

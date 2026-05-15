@@ -1,3 +1,2 @@
 User-agent: *
-Allow: /
-Sitemap: https://onesourceairandenergyltd.co.uk/sitemap.xml
+Disallow: /admin/

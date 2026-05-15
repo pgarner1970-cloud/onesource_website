@@ -1,4 +1,5 @@
 <?php
+header('X-Robots-Tag: noindex, nofollow', true);
 session_start();
 require_once __DIR__ . '/config.php';
 
