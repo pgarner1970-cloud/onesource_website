@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" role="img" aria-label="UK urban street of red brick homes">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dceaf7"/>
+      <stop offset="1" stop-color="#e7eef6"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#071f3d" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <rect width="900" height="560" fill="url(#sky)"/>
+  
+<rect y="385" width="900" height="175" fill="#5f6f5a"/>
+<g filter="url(#shadow)">
+  <rect x="40" y="175" width="185" height="220" fill="#b34f38"/>
+  <polygon points="30,175 132,95 235,175" fill="#4b4b4b"/>
+  <rect x="70" y="230" width="42" height="55" fill="#e7f1f8"/><rect x="150" y="230" width="42" height="55" fill="#e7f1f8"/>
+  <rect x="120" y="305" width="45" height="90" fill="#173a59"/>
+  <rect x="98" y="128" width="96" height="38" fill="#152a42" transform="rotate(-8 146 147)"/>
+  <rect x="250" y="150" width="190" height="245" fill="#c76546"/>
+  <polygon points="240,150 345,75 452,150" fill="#444"/>
+  <rect x="280" y="215" width="46" height="60" fill="#e7f1f8"/><rect x="365" y="215" width="46" height="60" fill="#e7f1f8"/>
+  <rect x="330" y="305" width="48" height="90" fill="#173a59"/>
+  <rect x="300" y="103" width="105" height="42" fill="#10233f" transform="rotate(-8 352 124)"/>
+  <rect x="470" y="170" width="185" height="225" fill="#a94734"/>
+  <polygon points="460,170 562,95 665,170" fill="#505050"/>
+  <rect x="500" y="235" width="42" height="55" fill="#e7f1f8"/><rect x="582" y="235" width="42" height="55" fill="#e7f1f8"/>
+  <rect x="550" y="310" width="45" height="85" fill="#173a59"/>
+  <rect x="532" y="126" width="100" height="40" fill="#10233f" transform="rotate(-8 582 146)"/>
+  <rect x="680" y="185" width="170" height="210" fill="#bd5f42"/>
+  <polygon points="670,185 765,108 860,185" fill="#4b4b4b"/>
+  <rect x="710" y="245" width="40" height="52" fill="#e7f1f8"/><rect x="785" y="245" width="40" height="52" fill="#e7f1f8"/>
+  <rect x="755" y="318" width="44" height="77" fill="#173a59"/>
+</g>
+<path d="M0 440 C120 410 210 460 340 430 C480 400 590 455 710 420 C805 395 850 415 900 405 L900 560 L0 560Z" fill="#315b35"/>
+
+<rect x="0" y="0" width="900" height="560" fill="rgba(0,0,0,0)" />
+
+</svg>
