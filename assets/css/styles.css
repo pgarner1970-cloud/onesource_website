@@ -8,3 +8,33 @@ section[id] {
 #accreditations {
   scroll-margin-top: 120px;
 }
+
+
+.icon-air{
+  color:#2a78ff;
+}
+
+.icon-solar{
+  color:#f7a600;
+}
+
+.icon-battery{
+  color:#27ae60;
+}
+
+.icon-ev{
+  color:#b04dff;
+}
+
+.icon-electric{
+  color:#ff6a00;
+}
+
+.icon-gas{
+  color:#2a78ff;
+}
+
+.service-icon{
+  font-size:22px;
+  font-weight:900;
+}
