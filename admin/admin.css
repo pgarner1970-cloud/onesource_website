@@ -452,3 +452,39 @@ textarea::placeholder{
   gap: 6px !important;
   margin-top: 10px !important;
 }
+
+
+/* FINAL hard override: compact gallery action buttons */
+.admin-project-grid .admin-actions,
+.project-row .admin-actions {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 6px !important;
+  margin-top: 8px !important;
+}
+
+.admin-project-grid .admin-actions a,
+.admin-project-grid .admin-actions button,
+.project-row .admin-actions a,
+.project-row .admin-actions button,
+.admin-actions .edit,
+.admin-actions .hide,
+.admin-actions .show,
+.admin-actions .delete {
+  width: auto !important;
+  min-width: 58px !important;
+  height: 30px !important;
+  min-height: 30px !important;
+  padding: 0 10px !important;
+  border-radius: 7px !important;
+  font-size: 12px !important;
+  line-height: 1 !important;
+  font-weight: 800 !important;
+  box-shadow: 0 1px 4px rgba(0,0,0,.08) !important;
+}
+
+.admin-project-grid .admin-actions form,
+.project-row .admin-actions form {
+  margin: 0 !important;
+  display: inline-flex !important;
+}
