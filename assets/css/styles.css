@@ -38,3 +38,22 @@ section[id] {
   font-size:22px;
   font-weight:900;
 }
+
+/* Multi-page / SEO navigation additions */
+.page-hero{background:linear-gradient(135deg,rgba(11,44,82,.96),rgba(21,96,141,.92));color:#fff;padding:74px 0}
+.page-hero h1{margin:0 0 12px;max-width:860px;font-size:clamp(36px,5vw,60px);line-height:1.02;letter-spacing:-.05em}
+.page-hero p{max-width:720px;margin:0;font-size:19px;color:rgba(255,255,255,.86)}
+.breadcrumb{margin-bottom:18px;font-size:14px;font-weight:800;color:var(--green);text-transform:uppercase}
+.content-grid{display:grid;grid-template-columns:1fr 320px;gap:34px;align-items:start}
+.content-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:28px;box-shadow:0 8px 20px rgba(7,31,61,.06)}
+.content-card h2{color:var(--navy);margin-top:0;font-size:clamp(28px,3vw,40px);line-height:1.1;letter-spacing:-.04em}
+.content-card h3{color:var(--navy);margin-top:28px}.content-card p,.content-card li{color:var(--muted);font-size:17px}.content-card ul{padding-left:20px}
+.side-nav{background:var(--pale);border:1px solid var(--line);border-radius:10px;padding:20px;position:sticky;top:115px}
+.side-nav h3{margin:0 0 12px;color:var(--navy)}.side-nav a{display:block;padding:10px 0;border-bottom:1px solid var(--line);color:var(--navy);font-weight:800}.side-nav a:last-child{border-bottom:0}
+.service-detail-image{border-radius:10px;margin-bottom:24px;box-shadow:var(--shadow);border:1px solid var(--line);width:100%;max-height:430px;object-fit:cover}
+.nav-dropdown{position:relative}.nav-dropdown>a::after{content:" ▾";font-size:11px}
+.dropdown-menu{display:none;position:absolute;top:100%;left:-18px;min-width:245px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);border-radius:8px;padding:8px;z-index:50}
+.dropdown-menu a{display:block;padding:10px 12px;border-bottom:0;color:var(--navy);text-transform:none;font-size:14px;border-radius:5px}.dropdown-menu a:hover{background:var(--pale);color:var(--green)}
+.nav-dropdown:hover .dropdown-menu{display:block}
+.footer-grid span{display:block}
+@media(max-width:900px){.content-grid{grid-template-columns:1fr}.side-nav{position:static}.nav-dropdown:hover .dropdown-menu,.dropdown-menu{position:static;display:block;box-shadow:none;border:0;padding:0 0 8px 14px}.dropdown-menu a{padding:8px 0}}
