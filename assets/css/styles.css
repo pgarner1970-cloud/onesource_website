@@ -238,3 +238,66 @@ textarea::placeholder{
 .whatsapp img {
   color: #25D366;
 }
+
+
+/* Compact footer refinement */
+footer {
+  padding: 18px 0 !important;
+}
+
+.footer-grid {
+  min-height: auto !important;
+  display: grid !important;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 18px;
+  text-align: left !important;
+}
+
+.footer-grid > div {
+  max-width: none !important;
+}
+
+.footer-grid strong {
+  font-size: 13px;
+  line-height: 1.25;
+  margin-bottom: 3px;
+}
+
+.footer-grid span {
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.footer-grid span a {
+  display: inline-block;
+  margin: 0 6px;
+}
+
+.footer-social {
+  margin-top: 0 !important;
+  justify-content: flex-end !important;
+  gap: 10px !important;
+}
+
+.footer-social a {
+  width: 36px !important;
+  height: 36px !important;
+}
+
+.footer-social img {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+    gap: 12px;
+  }
+
+  .footer-social {
+    justify-content: center !important;
+  }
+}
