@@ -1,267 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>One Source Air & Energy Ltd | Domestic Energy & Home Services</title>
-  <meta name="description" content="One Source Air & Energy Ltd provides domestic air conditioning, solar PV, battery storage, EV chargers, electrical and gas services." />
-  <link rel="stylesheet" href="assets/css/styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One Source Air & Energy Ltd</title>
+<style>
+body{font-family:Arial,sans-serif;margin:0;background:#f4f9fc;color:#16324f}
+header{background:#0b2c52;color:white;padding:40px;text-align:center}
+.trust-strip{padding:50px 20px;background:white}
+.container{max-width:1200px;margin:auto}
+.trust-items{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.trust-item{background:white;border:1px solid #dfe6ee;border-radius:18px;padding:20px;
+display:flex;align-items:center;justify-content:center;min-height:120px;box-shadow:0 8px 20px rgba(0,0,0,.05)}
+.trust-item img{max-width:150px;max-height:70px}
+@media(max-width:800px){.trust-items{grid-template-columns:1fr 1fr}}
+@media(max-width:500px){.trust-items{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
-  <div class="topbar">
-    <div class="wrap topbar-inner">
-      <div class="top-contact">
-        <a href="tel:01217690263">☎ 0121 769 0263</a>
-        <a href="mailto:info@onesourceairandenergyltd.co.uk">✉ info@onesourceairandenergyltd.co.uk</a>
-      </div>
-      <div class="top-meta">Mon - Fri: 8:00 - 17:00</div>
-    </div>
-  </div>
+<header>
+<h1>One Source Air & Energy Ltd</h1>
+<p>Domestic Energy & Home Services</p>
+</header>
 
-  <header class="site-header">
-    <div class="wrap nav">
-      <a href="#" class="logo" aria-label="One Source Air and Energy Ltd">
-        <span class="logo-mark">
-          <span></span>
-        </span>
-        <span class="logo-text">
-          <strong>ONE SOURCE</strong>
-          <small>AIR & ENERGY LTD</small>
-        </span>
-      </a>
+<section class="trust-strip">
+<div class="container">
+<h2>Accreditations</h2>
+<div class="trust-items">
+<div class="trust-item"><img src="assets/logos/gas-safe-register.png" alt="Gas Safe"></div>
+<div class="trust-item"><img src="assets/logos/niceic-approved-contractor.png" alt="NICEIC"></div>
+<div class="trust-item"><img src="assets/logos/refcom.png" alt="REFCOM"></div>
+<div class="trust-item"><img src="assets/logos/mcs-certified.png" alt="MCS"></div>
+</div>
+</div>
+</section>
 
-      <button class="menu-toggle" aria-label="Open menu">☰</button>
-
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="#home" class="active">Home</a>
-        <a href="#services">Services</a>
-        <a href="#work">Our Work</a>
-        <a href="#about">About Us</a>
-        <a href="#accreditations">Accreditations</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <div class="nav-actions">
-        <a class="btn btn-primary" href="#contact">Get a Quote →</a>
-        <a class="whatsapp" href="#" aria-label="WhatsApp">☘</a>
-      </div>
-    </div>
-  </header>
-
-  <main id="home">
-    <section class="hero">
-      <div class="hero-bg"></div>
-      <div class="wrap hero-content">
-        <p class="eyebrow">Air conditioning, solar PV, EV chargers & more</p>
-        <h1>Trusted home energy solutions across the West Midlands.</h1>
-        <p class="hero-copy">Professional domestic installations, certified engineers and quality workmanship you can rely on.</p>
-        <div class="hero-buttons">
-          <a href="#contact" class="btn btn-primary">Request a Quote →</a>
-          <a href="#work" class="btn btn-ghost">View Our Work →</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="accreditations" class="trust">
-      <div class="wrap trust-grid">
-        <div class="trust-heading">Trusted. Certified. Accredited.</div>
-        <div class="badge">Gas Safe<br><small>Registered</small></div>
-        <div class="badge">NICEIC<br><small>Approved Contractor</small></div>
-        <div class="badge">REFCOM<br><small>F-Gas Certified</small></div>
-        <div class="badge">MCS<br><small>Certified</small></div>
-        <div class="rating">★★★★★<br><small>5 star rated by customers</small></div>
-      </div>
-    </section>
-
-    <section id="services" class="section">
-      <div class="wrap">
-        <div class="section-title">
-          <p>Our services</p>
-          <h2>Domestic services from one reliable source.</h2>
-        </div>
-
-        <div class="service-grid">
-          <article class="service-card">
-            <img src="assets/images/service-aircon.svg" alt="Wall mounted air conditioning unit in a UK home" />
-            <div class="service-body">
-              <span class="service-icon">❄</span>
-              <h3>Air Conditioning</h3>
-              <p>Supply, installation and servicing of efficient systems for bedrooms, living spaces, garden rooms and home offices.</p>
-              <a href="#contact">Learn more →</a>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <img src="assets/images/service-solar.svg" alt="Solar panels on a UK domestic roof" />
-            <div class="service-body">
-              <span class="service-icon">▦</span>
-              <h3>Solar PV</h3>
-              <p>Generate clean energy and reduce electricity bills with domestic solar panel installations.</p>
-              <a href="#contact">Learn more →</a>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <img src="assets/images/service-battery.svg" alt="Home battery storage system" />
-            <div class="service-body">
-              <span class="service-icon">▣</span>
-              <h3>Battery Storage</h3>
-              <p>Store your energy for when you need it most and get more from your solar investment.</p>
-              <a href="#contact">Learn more →</a>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <img src="assets/images/service-ev.svg" alt="EV charger on a brick house wall" />
-            <div class="service-body">
-              <span class="service-icon">⌁</span>
-              <h3>EV Chargers</h3>
-              <p>Home EV charging solutions installed neatly by experienced engineers.</p>
-              <a href="#contact">Learn more →</a>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <img src="assets/images/service-electrical.svg" alt="Modern domestic electrical installation" />
-            <div class="service-body">
-              <span class="service-icon">⚡</span>
-              <h3>Electrical Services</h3>
-              <p>Electrical installation, upgrades, inspection and support for domestic properties.</p>
-              <a href="#contact">Learn more →</a>
-            </div>
-          </article>
-
-          <article class="service-card">
-            <img src="assets/images/service-gas.svg" alt="Domestic boiler installation" />
-            <div class="service-body">
-              <span class="service-icon">●</span>
-              <h3>Gas Services</h3>
-              <p>Boiler installations, servicing and repairs carried out by Gas Safe engineers.</p>
-              <a href="#contact">Learn more →</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section pale" id="about">
-      <div class="wrap about-grid">
-        <div>
-          <p class="label">Why choose One Source?</p>
-          <h2>Practical advice, certified workmanship and a tidy finish.</h2>
-          <p>One Source Air & Energy Ltd brings together home energy, comfort and electrical services so homeowners can deal with one reliable team from enquiry to aftercare.</p>
-          <div class="ticks">
-            <div><strong>✓ Certified engineers</strong><span>Accredited installation and compliance-led workmanship.</span></div>
-            <div><strong>✓ Domestic focus</strong><span>Systems designed around real homes, budgets and everyday use.</span></div>
-            <div><strong>✓ End-to-end support</strong><span>Survey, quotation, installation and future servicing.</span></div>
-          </div>
-        </div>
-        <img class="about-img" src="assets/images/uk-terrace-solar.svg" alt="UK terrace homes with solar panels" />
-      </div>
-    </section>
-
-    <section id="work" class="section">
-      <div class="wrap work-layout">
-        <div class="work-main">
-          <div class="section-title left">
-            <p>Recent installations</p>
-            <h2>Gallery-ready project layout.</h2>
-          </div>
-
-          <div class="filters" aria-label="Gallery filters">
-            <button class="filter active" data-filter="all">All</button>
-            <button class="filter" data-filter="solar">Solar PV</button>
-            <button class="filter" data-filter="battery">Battery Storage</button>
-            <button class="filter" data-filter="ev">EV Chargers</button>
-            <button class="filter" data-filter="aircon">Air Con</button>
-            <button class="filter" data-filter="electrical">Electrical</button>
-            <button class="filter" data-filter="gas">Gas</button>
-          </div>
-
-          <div class="gallery-grid">
-            <article class="project" data-category="solar">
-              <img src="assets/images/project-solar-roof.svg" alt="Solar panel installation on a UK home" />
-              <div><strong>Solar PV installation</strong><span>Domestic roof installation</span></div>
-            </article>
-            <article class="project" data-category="aircon">
-              <img src="assets/images/project-aircon-outdoor.svg" alt="Air conditioning outdoor unit beside a brick wall" />
-              <div><strong>Air con install</strong><span>Outdoor condenser unit</span></div>
-            </article>
-            <article class="project" data-category="ev">
-              <img src="assets/images/project-ev-charger.svg" alt="EV charger on a brick wall" />
-              <div><strong>EV charger</strong><span>Home charging point</span></div>
-            </article>
-            <article class="project" data-category="electrical">
-              <img src="assets/images/project-consumer-unit.svg" alt="Domestic consumer unit upgrade" />
-              <div><strong>Consumer unit</strong><span>Electrical upgrade</span></div>
-            </article>
-            <article class="project" data-category="gas">
-              <img src="assets/images/project-boiler.svg" alt="Domestic boiler installation" />
-              <div><strong>Boiler installation</strong><span>Gas service project</span></div>
-            </article>
-          </div>
-        </div>
-
-        <aside class="contact-panel">
-          <h3>Get in touch</h3>
-          <ul>
-            <li>☎ 0121 769 0263</li>
-            <li>☘ WhatsApp us</li>
-            <li>✉ info@onesourceairandenergyltd.co.uk</li>
-            <li>⌖ Birmingham & surrounding areas<br><small>Covering the West Midlands</small></li>
-          </ul>
-          <a href="#contact" class="btn btn-primary">Request a Quote →</a>
-        </aside>
-      </div>
-    </section>
-
-    <section id="contact" class="section contact-section">
-      <div class="wrap contact-grid">
-        <div>
-          <p class="label">Start an enquiry</p>
-          <h2>Tell us what you need help with.</h2>
-          <p>Use this sample form layout for the first build. Later, this can send to email, a CRM, or a simple admin dashboard.</p>
-        </div>
-
-        <form class="quote-form">
-          <div class="form-row">
-            <label>Name<input type="text" placeholder="Your name" /></label>
-            <label>Phone<input type="tel" placeholder="Your phone number" /></label>
-          </div>
-          <div class="form-row">
-            <label>Email<input type="email" placeholder="Your email address" /></label>
-            <label>Service
-              <select>
-                <option>Air Conditioning</option>
-                <option>Solar PV</option>
-                <option>Battery Storage</option>
-                <option>EV Charger</option>
-                <option>Electrical Services</option>
-                <option>Gas Services</option>
-              </select>
-            </label>
-          </div>
-          <label>Message<textarea placeholder="Tell us about the property and work required"></textarea></label>
-          <button type="button" class="btn btn-primary">Send Enquiry →</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap footer-grid">
-      <div>
-        <strong>One Source Air & Energy Ltd</strong>
-        <span>Domestic air conditioning, solar PV, EV chargers, electrical and gas services.</span>
-      </div>
-      <div>
-        <a href="#services">Services</a>
-        <a href="#work">Our Work</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="assets/js/site.js"></script>
 </body>
 </html>
