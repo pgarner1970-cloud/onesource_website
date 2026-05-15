@@ -401,3 +401,30 @@ footer {
     justify-content: center;
   }
 }
+
+
+
+
+/* Header WhatsApp keeps larger CTA sizing */
+.header-whatsapp{
+  width:64px;
+  height:64px;
+  border-radius:50%;
+  background:#25D366;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+  transition:all .2s ease;
+}
+
+.header-whatsapp:hover{
+  transform:translateY(-1px);
+  filter:brightness(1.05);
+}
+
+.header-whatsapp img{
+  width:30px;
+  height:30px;
+  display:block;
+}
