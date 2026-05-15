@@ -542,3 +542,102 @@ footer {
 .label {
   display: none !important;
 }
+
+
+/* Final public header/nav repair */
+.site-header {
+  overflow: visible !important;
+}
+
+.site-header .nav {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 28px !important;
+  min-height: 88px !important;
+  overflow: visible !important;
+}
+
+.logo {
+  display: flex !important;
+  align-items: center !important;
+  flex: 0 0 auto !important;
+  margin: 0 !important;
+}
+
+.logo img {
+  width: 230px !important;
+  max-width: 230px !important;
+  height: auto !important;
+  display: block !important;
+  object-fit: contain !important;
+}
+
+.main-nav {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 26px !important;
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  overflow: visible !important;
+}
+
+.main-nav a,
+.nav-dropdown > a {
+  white-space: nowrap !important;
+}
+
+.nav-actions {
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  flex: 0 0 auto !important;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 980px) {
+  .site-header .nav {
+    flex-wrap: wrap !important;
+    gap: 16px !important;
+  }
+
+  .main-nav {
+    order: 3 !important;
+    flex: 1 0 100% !important;
+    justify-content: flex-start !important;
+    overflow-x: auto !important;
+    padding-bottom: 8px !important;
+  }
+
+  .logo img {
+    width: 190px !important;
+    max-width: 190px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .topbar-inner {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 4px !important;
+  }
+
+  .nav-actions .btn {
+    padding: 11px 14px !important;
+    font-size: 13px !important;
+  }
+
+  .header-whatsapp {
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  .header-whatsapp img {
+    width: 44px !important;
+    height: 44px !important;
+  }
+}

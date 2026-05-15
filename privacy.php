@@ -22,19 +22,35 @@
 
 <header class="site-header">
   <div class="wrap nav">
-    <a href="index.php" class="logo">
-      <img src="assets/logos/onesource-logo.png" alt="One Source Air & Energy Ltd">
+    <a href="index.php" class="logo" aria-label="One Source Air and Energy Ltd">
+      <img src="assets/logos/onesource-logo.png" alt="One Source Air & Energy Ltd logo">
     </a>
 
-    <button class="menu-toggle">☰</button>
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
 
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Main navigation">
       <a href="index.php">Home</a>
-</nav>
+      <span class="nav-dropdown">
+        <a href="services.php">Services</a>
+        <span class="dropdown-menu">
+          <a href="air-conditioning.php">Air Conditioning</a>
+          <a href="solar-pv.php">Solar PV</a>
+          <a href="battery-storage.php">Battery Storage</a>
+          <a href="ev-chargers.php">EV Chargers</a>
+          <a href="electrical-services.php">Electrical Services</a>
+          <a href="gas-services.php">Gas Services</a>
+        </span>
+      </span>
+      <a href="our-work.php">Our Work</a>
+      <a href="about.php">About Us</a>
+      <a href="contact.php">Contact</a>
+    </nav>
 
     <div class="nav-actions">
       <a class="btn btn-primary" href="contact.php">Get a Quote →</a>
-      <a href="https://wa.me/447502216131" class="header-whatsapp" aria-label="WhatsApp"><img src="assets/icons/whatsapp.svg" alt="WhatsApp"></a>
+      <a href="https://wa.me/447502216131" class="header-whatsapp" aria-label="WhatsApp">
+        <img src="assets/icons/whatsapp.svg" alt="WhatsApp">
+      </a>
     </div>
   </div>
 </header>

@@ -1,11 +1,48 @@
 <?php include 'opening-hours.php'; ?>
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>One Source Air & Energy Ltd | Domestic Energy Services West Midlands</title><meta name="description" content="Domestic air conditioning, solar PV, battery storage, EV chargers, electrical and gas services across the West Midlands."><link rel="stylesheet" href="assets/css/styles.css"></head><body><div class="topbar"><div class="wrap topbar-inner"><div class="top-contact"><a href="tel:07502216131">☎ 07502 216131</a><a href="mailto:luke@onesourceairandenergyltd.co.uk">✉ luke@onesourceairandenergyltd.co.uk</a></div><div class="top-meta"><?php echo $statusText; ?> • <?php echo htmlspecialchars($hoursData["notice"]); ?></div></div></div>
-<header class="site-header"><div class="wrap nav"><a href="index.php" class="logo" aria-label="One Source Air and Energy Ltd"><img src="assets/logos/onesource-logo.png" alt="One Source Air & Energy Ltd logo"></a><button class="menu-toggle" aria-label="Open menu">☰</button><nav class="main-nav" aria-label="Main navigation">
-        <a href="index.php" data-page="home" class="active">Home</a>
-        <span class="nav-dropdown">
-<span class="dropdown-menu"><a href="air-conditioning.php">Air Conditioning</a><a href="solar-pv.php">Solar PV</a><a href="battery-storage.php">Battery Storage</a><a href="ev-chargers.php">EV Chargers</a><a href="electrical-services.php">Electrical Services</a><a href="gas-services.php">Gas Services</a></span></span>
-        <a href="our-work.php" data-page="work">Our Work</a>
-</nav><div class="nav-actions"><a class="btn btn-primary" href="contact.php">Get a Quote →</a><a href="https://wa.me/447502216131" class="header-whatsapp" aria-label="WhatsApp"><img src="assets/icons/whatsapp.svg" alt="WhatsApp"></a></div></div></header>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>One Source Air & Energy Ltd | Domestic Energy Services West Midlands</title><meta name="description" content="Domestic air conditioning, solar PV, battery storage, EV chargers, electrical and gas services across the West Midlands."><link rel="stylesheet" href="assets/css/styles.css"></head><body><div class="topbar">
+  <div class="wrap topbar-inner">
+    <div class="top-contact">
+      <a href="tel:07502216131">☎ 07502 216131</a>
+      <a href="mailto:luke@onesourceairandenergyltd.co.uk">✉ luke@onesourceairandenergyltd.co.uk</a>
+    </div>
+    <div class="top-meta"><?php echo $statusText; ?> • <?php echo htmlspecialchars($hoursData["notice"]); ?></div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a href="index.php" class="logo" aria-label="One Source Air and Energy Ltd">
+      <img src="assets/logos/onesource-logo.png" alt="One Source Air & Energy Ltd logo">
+    </a>
+
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.php">Home</a>
+      <span class="nav-dropdown">
+        <a href="services.php">Services</a>
+        <span class="dropdown-menu">
+          <a href="air-conditioning.php">Air Conditioning</a>
+          <a href="solar-pv.php">Solar PV</a>
+          <a href="battery-storage.php">Battery Storage</a>
+          <a href="ev-chargers.php">EV Chargers</a>
+          <a href="electrical-services.php">Electrical Services</a>
+          <a href="gas-services.php">Gas Services</a>
+        </span>
+      </span>
+      <a href="our-work.php">Our Work</a>
+      <a href="about.php">About Us</a>
+      <a href="contact.php">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a class="btn btn-primary" href="contact.php">Get a Quote →</a>
+      <a href="https://wa.me/447502216131" class="header-whatsapp" aria-label="WhatsApp">
+        <img src="assets/icons/whatsapp.svg" alt="WhatsApp">
+      </a>
+    </div>
+  </div>
+</header>
 <main><section class="hero"><div class="hero-bg"></div><div class="wrap hero-content"><h1>Trusted home energy solutions across the West Midlands.</h1><p class="hero-copy">Professional domestic installations, certified engineers and quality workmanship you can rely on.</p><div class="hero-buttons"><a href="contact.php" class="btn btn-primary">Request a Quote →</a><a href="our-work.php" class="btn btn-ghost">View Our Work →</a></div></div></section>
 <section class="trust">
   <div class="wrap trust-grid">
