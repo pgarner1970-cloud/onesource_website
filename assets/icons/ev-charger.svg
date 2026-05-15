@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 120" role="img" aria-label="EV charger icon">
+  <rect x="14" y="8" width="68" height="96" rx="10" fill="none" stroke="#12a538" stroke-width="6"/>
+  <path d="M34 34h28v28H34z" fill="#12a538"/>
+  <rect x="36" y="24" width="7" height="16" rx="1" fill="#12a538"/>
+  <rect x="53" y="24" width="7" height="16" rx="1" fill="#12a538"/>
+  <circle cx="48" cy="55" r="17" fill="#ffffff"/>
+  <path d="M51 39L39 58h10l-4 21 13-27H48z" fill="#12a538"/>
+  <text x="48" y="92" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="800" font-size="25" fill="#12a538">EV</text>
+</svg>

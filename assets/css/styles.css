@@ -66,3 +66,80 @@ section[id] {
 .icon-electric{
   color:#ff8a00 !important;
 }
+
+
+.ev-charger-icon {
+  color: #12a538 !important;
+  padding: 5px;
+}
+
+.ev-charger-icon img {
+  width: 34px;
+  height: 42px;
+  object-fit: contain;
+  display: block;
+}
+
+
+.whatsapp img {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
+.footer-grid {
+  justify-content: center;
+  text-align: center;
+}
+
+.footer-grid > div {
+  max-width: 760px;
+}
+
+
+.contact-map {
+  grid-column: 1 / -1;
+  background: #fff;
+  color: var(--ink);
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--line);
+}
+
+.contact-map h3 {
+  margin: 0 0 8px;
+  color: var(--navy);
+  font-size: 24px;
+}
+
+.contact-map p {
+  margin: 0 0 16px;
+  color: var(--muted);
+}
+
+.contact-map iframe {
+  width: 100%;
+  min-height: 360px;
+  border: 0;
+  border-radius: 8px;
+}
+
+
+.compact-policy {
+  max-width: 900px;
+  margin: auto;
+}
+
+.compact-policy h2 {
+  margin-top: 24px;
+}
+
+.compact-policy p {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.footer-grid a {
+  color: var(--green);
+}
