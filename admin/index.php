@@ -30,23 +30,15 @@ $categories = [
 </head>
 <body>
 
-<div class="admin-topbar">
-  <div class="admin-topbar-left">
-    <strong>Gallery Admin</strong>
-  </div>
-
-  <div class="admin-topbar-right">
-    <a href="index.php">Gallery</a>
-    <a href="opening-hours.php">Opening Hours</a>
-    <a href="service-images.php">Service Images</a>
-    <a href="../index.php">Back to Website</a>
-    <a href="logout.php">Logout</a>
-  </div>
-</div>
-
-  <header class="admin-header">
+<header class="admin-header">
     <h1>Gallery Admin</h1>
-    <nav class="admin-top-links"><a href="category-images.php">Service Images</a><a href="../index.html">Back to Website</a><a href="logout.php">Logout</a></nav>
+    <nav class="admin-top-links">
+      <a href="index.php">Gallery</a>
+      <a href="opening-hours.php">Opening Hours</a>
+      <a href="category-images.php">Service Images</a>
+      <a href="../index.php">Back to Website</a>
+      <a href="logout.php">Logout</a>
+    </nav>
   </header>
 
   <main class="admin-wrap">

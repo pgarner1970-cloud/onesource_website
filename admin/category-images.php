@@ -32,10 +32,12 @@ if (file_exists($CATEGORY_IMAGES_JSON)) {
 </head>
 <body>
   <header class="admin-header">
-    <h1>Service Default Images</h1>
+    <h1>Gallery Admin</h1>
     <nav class="admin-top-links">
-      <a href="index.php">Gallery Admin</a>
-      <a href="../index.html">Back to Website</a>
+      <a href="index.php">Gallery</a>
+      <a href="opening-hours.php">Opening Hours</a>
+      <a href="category-images.php">Service Images</a>
+      <a href="../index.php">Back to Website</a>
       <a href="logout.php">Logout</a>
     </nav>
   </header>

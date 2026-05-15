@@ -511,48 +511,7 @@ footer {
 
 
 
-/* Unified admin navigation */
-.admin-topbar{
-  background:#041327;
-  color:#fff;
-  padding:18px 26px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
-  flex-wrap:wrap;
-}
-
-.admin-topbar-left strong{
-  font-size:20px;
-  color:#fff;
-}
-
 .admin-topbar-right{
-  display:flex;
-  align-items:center;
-  gap:18px;
-  flex-wrap:wrap;
-}
-
-.admin-topbar-right a{
-  color:#2F80ED;
-  text-decoration:none;
-  font-weight:700;
-  transition:opacity .2s ease;
-}
-
-.admin-topbar-right a:hover{
-  opacity:.8;
-}
-
-@media (max-width:768px){
-  .admin-topbar{
-    flex-direction:column;
-    align-items:flex-start;
-  }
-
-  .admin-topbar-right{
     gap:12px;
   }
 }
