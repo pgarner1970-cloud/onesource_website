@@ -22,3 +22,27 @@ body{margin:0;font-family:"Manrope",sans-serif;background:#f4f9fc;color:#16324f}
   display: block;
   margin-top: 3px;
 }
+
+
+html, body, button, input, select, textarea, nav, a, p, span, div, h1, h2, h3, h4, h5, h6 {
+  font-family: "Manrope", sans-serif !important;
+}
+
+body{
+  font-weight: 500;
+}
+
+.main-nav a{
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+h1,h2,h3{
+  letter-spacing: -0.03em;
+}
+
+input::placeholder,
+textarea::placeholder{
+  font-family: "Manrope", sans-serif !important;
+  font-weight: 600;
+}
