@@ -479,3 +479,33 @@ footer {
 .footer-social a[aria-label="WhatsApp"] {
   background: rgba(255,255,255,.08) !important;
 }
+
+
+.form-message {
+  padding: 14px 16px;
+  border-radius: 8px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.form-message.success {
+  background: #e8f6ef;
+  color: #146c43;
+  border: 1px solid #badbcc;
+}
+
+.form-message.error {
+  background: #fdecec;
+  color: #842029;
+  border: 1px solid #f5c2c7;
+}
+
+.hp-field {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0 !important;
+}
+
+
