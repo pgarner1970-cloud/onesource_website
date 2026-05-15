@@ -179,3 +179,19 @@ textarea::placeholder{
   transform: translateY(-1px);
   opacity: .92;
 }
+
+
+.login-links {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.login-links a {
+  color: #0b2c52;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.login-links a:hover {
+  color: #5cc24a;
+}
