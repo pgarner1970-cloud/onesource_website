@@ -450,3 +450,32 @@ footer {
     padding: 28px 0 !important;
   }
 }
+
+
+/* Final WhatsApp icon normalisation */
+.header-whatsapp {
+  width: 52px !important;
+  height: 52px !important;
+  border-radius: 50% !important;
+  background: transparent !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+}
+
+.header-whatsapp img {
+  width: 52px !important;
+  height: 52px !important;
+  display: block !important;
+}
+
+.footer-social a[aria-label="WhatsApp"] img {
+  width: 24px !important;
+  height: 24px !important;
+  display: block !important;
+}
+
+.footer-social a[aria-label="WhatsApp"] {
+  background: rgba(255,255,255,.08) !important;
+}
