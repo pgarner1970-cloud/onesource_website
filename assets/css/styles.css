@@ -405,10 +405,10 @@ footer {
 
 
 
-/* Header WhatsApp keeps larger CTA sizing */
+/* Header WhatsApp refined sizing */
 .header-whatsapp{
-  width:64px;
-  height:64px;
+  width:52px;
+  height:52px;
   border-radius:50%;
   background:#25D366;
   display:flex;
@@ -424,7 +424,7 @@ footer {
 }
 
 .header-whatsapp img{
-  width:30px;
-  height:30px;
+  width:24px;
+  height:24px;
   display:block;
 }
