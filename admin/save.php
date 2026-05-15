@@ -104,13 +104,30 @@ if ($file['error'] !== UPLOAD_ERR_OK) {
 
 $allowed = [
     'image/jpeg' => 'jpg',
+    'image/pjpeg' => 'jpg',
+    'image/jpg' => 'jpg',
     'image/png' => 'png',
+    'image/x-png' => 'png',
     'image/webp' => 'webp'
 ];
 
 $finfo = finfo_open(FILEINFO_MIME_TYPE);
 $mime = finfo_file($finfo, $file['tmp_name']);
 finfo_close($finfo);
+
+
+// Fallback extension detection for some hosting/browser combinations
+$extension = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
+
+if (!isset($allowed[$mime])) {
+    if (in_array($extension, ['jpg', 'jpeg'])) {
+        $mime = 'image/jpeg';
+    } elseif ($extension === 'png') {
+        $mime = 'image/png';
+    } elseif ($extension === 'webp') {
+        $mime = 'image/webp';
+    }
+}
 
 if (!isset($allowed[$mime])) {
     die('Only JPG, PNG and WEBP images are allowed.');
