@@ -530,3 +530,15 @@ footer {
 .section-title > p {
   display: none !important;
 }
+
+
+/* Eyebrow headings removed site-wide */
+.eyebrow,
+.hero-eyebrow,
+.page-eyebrow,
+.section-tag,
+.breadcrumb,
+.section-title > p,
+.label {
+  display: none !important;
+}

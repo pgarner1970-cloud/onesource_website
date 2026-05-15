@@ -34,8 +34,6 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     fail('Please enter a valid email address.');
 }
 
-
-
 $subject = $ENQUIRY_SUBJECT_PREFIX . ': ' . $service;
 
 $body = "New website enquiry\n\n";

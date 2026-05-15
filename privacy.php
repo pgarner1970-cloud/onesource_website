@@ -30,11 +30,7 @@
 
     <nav class="main-nav">
       <a href="index.php">Home</a>
-      <a href="services.php">Services</a>
-      <a href="our-work.php">Gallery</a>
-      <a href="about.php">About Us</a>
-      <a href="contact.php">Contact</a>
-    </nav>
+</nav>
 
     <div class="nav-actions">
       <a class="btn btn-primary" href="contact.php">Get a Quote →</a>
