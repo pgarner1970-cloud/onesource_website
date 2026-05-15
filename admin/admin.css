@@ -362,3 +362,48 @@ textarea::placeholder{
     grid-template-columns: 1fr !important;
   }
 }
+
+
+/* Compact 4-column admin cards */
+.admin-project-grid .project-row {
+  padding: 12px !important;
+}
+
+.admin-project-grid .project-row h3,
+.admin-project-grid .project-row .project-title {
+  font-size: 16px !important;
+  line-height: 1.25 !important;
+  margin-bottom: 6px !important;
+}
+
+.admin-project-grid .project-row p,
+.admin-project-grid .project-row .project-description {
+  font-size: 13px !important;
+  line-height: 1.45 !important;
+}
+
+.admin-project-grid .project-row .project-meta {
+  font-size: 13px !important;
+}
+
+.admin-project-grid .project-row img {
+  height: 150px !important;
+}
+
+.admin-project-grid .project-row .action-buttons,
+.admin-project-grid .project-row .project-actions {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  margin-top: 12px !important;
+}
+
+.admin-project-grid .project-row .action-buttons a,
+.admin-project-grid .project-row .action-buttons button,
+.admin-project-grid .project-row .project-actions a,
+.admin-project-grid .project-row .project-actions button {
+  padding: 8px 14px !important;
+  font-size: 13px !important;
+  min-height: auto !important;
+  border-radius: 10px !important;
+}
