@@ -34,9 +34,7 @@
       <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
         <img src="assets/icons/facebook.svg" alt="Facebook">
       </a>
-      <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <img src="assets/icons/linkedin.svg" alt="LinkedIn">
-      </a>
+      <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt="Instagram"></a>
       <a href="https://wa.me/447502216131" class="header-whatsapp" aria-label="WhatsApp"><img src="assets/icons/whatsapp.svg" alt="WhatsApp"></a>
     </div>
   </div>

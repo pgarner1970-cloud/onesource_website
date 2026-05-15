@@ -33,6 +33,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </style>
 </head>
 <body>
+
+<div class="admin-topbar">
+  <div class="admin-topbar-left">
+    <strong>Gallery Admin</strong>
+  </div>
+
+  <div class="admin-topbar-right">
+    <a href="index.php">Gallery</a>
+    <a href="opening-hours.php">Opening Hours</a>
+    <a href="service-images.php">Service Images</a>
+    <a href="../index.php">Back to Website</a>
+    <a href="logout.php">Logout</a>
+  </div>
+</div>
+
 <div class="hours-admin">
 <h1>Opening Hours</h1>
 
