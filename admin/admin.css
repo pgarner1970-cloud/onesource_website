@@ -432,3 +432,23 @@ textarea::placeholder{
 .service-image-card img {
   height: 180px !important;
 }
+
+
+/* Smaller compact admin buttons */
+.admin-project-grid .project-row .action-buttons a,
+.admin-project-grid .project-row .action-buttons button,
+.admin-project-grid .project-row .project-actions a,
+.admin-project-grid .project-row .project-actions button,
+.project-row .btn {
+  padding: 6px 11px !important;
+  font-size: 12px !important;
+  min-height: 34px !important;
+  border-radius: 8px !important;
+  line-height: 1 !important;
+}
+
+.admin-project-grid .project-row .action-buttons,
+.admin-project-grid .project-row .project-actions {
+  gap: 6px !important;
+  margin-top: 10px !important;
+}
