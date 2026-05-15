@@ -126,3 +126,56 @@ textarea::placeholder{
 .admin-project-grid .admin-actions button {
   min-width: 70px;
 }
+
+
+.admin-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.admin-actions a,
+.admin-actions button {
+  appearance: none;
+  border: none;
+  border-radius: 8px;
+  min-width: 88px;
+  height: 42px;
+  padding: 0 16px;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all .2s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,.08);
+}
+
+.edit {
+  background: #0b2c52 !important;
+  color: #fff !important;
+}
+
+.hide {
+  background: #f59e0b !important;
+  color: #fff !important;
+}
+
+.show {
+  background: #5cc24a !important;
+  color: #fff !important;
+}
+
+.delete {
+  background: #dc2626 !important;
+  color: #fff !important;
+}
+
+.admin-actions a:hover,
+.admin-actions button:hover {
+  transform: translateY(-1px);
+  opacity: .92;
+}
