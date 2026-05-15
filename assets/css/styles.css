@@ -191,3 +191,39 @@ textarea::placeholder{
   font-family: "Manrope", sans-serif !important;
   font-weight: 600;
 }
+
+
+.footer-social{
+  display:flex;
+  gap:14px;
+  justify-content:flex-end;
+  align-items:center;
+  margin-top:18px;
+}
+
+.footer-social a{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:#ffffff12;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:all .2s ease;
+}
+
+.footer-social a:hover{
+  transform:translateY(-2px);
+  background:#ffffff22;
+}
+
+.footer-social img{
+  width:24px;
+  height:24px;
+}
+
+@media (max-width:768px){
+  .footer-social{
+    justify-content:center;
+  }
+}

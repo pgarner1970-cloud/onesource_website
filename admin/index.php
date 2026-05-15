@@ -31,7 +31,7 @@ $categories = [
 <body>
   <header class="admin-header">
     <h1>Gallery Admin</h1>
-    <a href="logout.php">Logout</a>
+    <nav class="admin-top-links"><a href="category-images.php">Service Images</a><a href="../index.html">Back to Website</a><a href="logout.php">Logout</a></nav>
   </header>
 
   <main class="admin-wrap">

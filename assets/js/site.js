@@ -16,3 +16,19 @@ filters.forEach((button) => {
     });
   });
 });
+
+
+// Load editable default service/category images set in admin
+fetch('data/category-images.json')
+  .then(response => response.ok ? response.json() : null)
+  .then(images => {
+    if (!images) return;
+
+    document.querySelectorAll('[data-service-image]').forEach((img) => {
+      const key = img.getAttribute('data-service-image');
+      if (images[key]) {
+        img.src = images[key];
+      }
+    });
+  })
+  .catch(() => {});
