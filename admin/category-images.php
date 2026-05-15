@@ -57,6 +57,11 @@ if (file_exists($CATEGORY_IMAGES_JSON)) {
               </label>
               <button type="submit">Update Image</button>
             </form>
+
+            <form action="category-image-default.php" method="post" class="default-image-form">
+              <input type="hidden" name="category" value="<?= htmlspecialchars($key) ?>">
+              <button type="submit" class="default-image-button">Use Default Image</button>
+            </form>
           </article>
         <?php endforeach; ?>
       </div>

@@ -15,5 +15,5 @@
   
 <rect width="1200" height="760" fill="url(#brick)"/>
 <rect width="1200" height="760" fill="rgba(255,255,255,.06)"/>
-<rect x="410" y="140" width="360" height="465" rx="30" fill="#f7f9fc" filter="url(#shadow)"/><rect x="465" y="220" width="250" height="110" rx="14" fill="#e4edf5"/><rect x="465" y="370" width="250" height="150" rx="14" fill="#ffffff" stroke="#d1dde7" stroke-width="6"/><rect x="515" y="417" width="150" height="54" rx="8" fill="#5cc24a"/><text x="590" y="290" font-family="Arial" font-size="42" font-weight="700" text-anchor="middle" fill="#0b2c52">BATTERY</text>
+<rect x="410" y="140" width="360" height="465" rx="30" fill="#f7f9fc" filter="url(#shadow)"/><rect x="465" y="220" width="250" height="110" rx="14" fill="#e4edf5"/><rect x="465" y="370" width="250" height="150" rx="14" fill="#ffffff" stroke="#d1dde7" stroke-width="6"/><rect x="515" y="417" width="150" height="54" rx="8" fill="#2F80ED"/><text x="590" y="290" font-family="Arial" font-size="42" font-weight="700" text-anchor="middle" fill="#0b2c52">BATTERY</text>
 </svg>

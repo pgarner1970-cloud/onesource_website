@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
-body{margin:0;font-family:"Manrope",sans-serif;background:#f4f9fc;color:#16324f}.admin-header{background:#0b2c52;color:#fff;padding:18px 28px;display:flex;justify-content:space-between;align-items:center}.admin-header h1{margin:0}.admin-header a{color:#7de06d;font-weight:800;text-decoration:none}.admin-wrap{max-width:1100px;margin:30px auto;padding:0 18px}.admin-panel{background:#fff;border:1px solid #dfe8f0;border-radius:10px;padding:24px;margin-bottom:24px;box-shadow:0 8px 20px rgba(7,31,61,.06)}.admin-form{display:grid;gap:14px}.admin-form label{display:grid;gap:6px;font-weight:800}.admin-form input,.admin-form select,.admin-form textarea{padding:12px;border:1px solid #dfe8f0;border-radius:6px;font:inherit}.admin-form textarea{min-height:90px}.admin-form button,.login-card button{background:#5cc24a;color:#fff;border:0;border-radius:6px;padding:13px 18px;font-weight:900;cursor:pointer}.check{display:flex!important;align-items:center;gap:8px}.project-list{display:grid;gap:14px}.project-row{display:grid;grid-template-columns:130px 1fr auto;gap:16px;align-items:center;border:1px solid #dfe8f0;border-radius:8px;padding:12px}.project-row img{width:130px;height:85px;object-fit:cover;border-radius:6px}.project-row strong{display:block;font-size:18px}.project-row span{color:#5cc24a;font-weight:800}.project-row p{margin:6px 0 0;color:#637083}.delete{background:#d93025!important}.admin-login{min-height:100vh;display:grid;place-items:center}.login-card{width:min(420px,90vw);background:#fff;padding:28px;border-radius:10px;box-shadow:0 18px 45px rgba(7,31,61,.14);display:grid;gap:14px}.login-card label{display:grid;gap:6px;font-weight:800}.login-card input{padding:12px;border:1px solid #dfe8f0;border-radius:6px}.error{background:#ffe8e8;color:#9b1c1c;padding:10px;border-radius:6px}@media(max-width:700px){.project-row{grid-template-columns:1fr}.project-row img{width:100%;height:180px}}
+body{margin:0;font-family:"Manrope",sans-serif;background:#f4f9fc;color:#16324f}.admin-header{background:#0b2c52;color:#fff;padding:18px 28px;display:flex;justify-content:space-between;align-items:center}.admin-header h1{margin:0}.admin-header a{color:#5AA2FF;font-weight:800;text-decoration:none}.admin-wrap{max-width:1100px;margin:30px auto;padding:0 18px}.admin-panel{background:#fff;border:1px solid #dfe8f0;border-radius:10px;padding:24px;margin-bottom:24px;box-shadow:0 8px 20px rgba(7,31,61,.06)}.admin-form{display:grid;gap:14px}.admin-form label{display:grid;gap:6px;font-weight:800}.admin-form input,.admin-form select,.admin-form textarea{padding:12px;border:1px solid #dfe8f0;border-radius:6px;font:inherit}.admin-form textarea{min-height:90px}.admin-form button,.login-card button{background:#2F80ED;color:#fff;border:0;border-radius:6px;padding:13px 18px;font-weight:900;cursor:pointer}.check{display:flex!important;align-items:center;gap:8px}.project-list{display:grid;gap:14px}.project-row{display:grid;grid-template-columns:130px 1fr auto;gap:16px;align-items:center;border:1px solid #dfe8f0;border-radius:8px;padding:12px}.project-row img{width:130px;height:85px;object-fit:cover;border-radius:6px}.project-row strong{display:block;font-size:18px}.project-row span{color:#2F80ED;font-weight:800}.project-row p{margin:6px 0 0;color:#637083}.delete{background:#d93025!important}.admin-login{min-height:100vh;display:grid;place-items:center}.login-card{width:min(420px,90vw);background:#fff;padding:28px;border-radius:10px;box-shadow:0 18px 45px rgba(7,31,61,.14);display:grid;gap:14px}.login-card label{display:grid;gap:6px;font-weight:800}.login-card input{padding:12px;border:1px solid #dfe8f0;border-radius:6px}.error{background:#ffe8e8;color:#9b1c1c;padding:10px;border-radius:6px}@media(max-width:700px){.project-row{grid-template-columns:1fr}.project-row img{width:100%;height:180px}}
 .admin-actions {
   display: flex;
   gap: 8px;
@@ -11,7 +11,7 @@ body{margin:0;font-family:"Manrope",sans-serif;background:#f4f9fc;color:#16324f}
 }
 
 .show {
-  background: #5cc24a !important;
+  background: #2F80ED !important;
 }
 
 .hide {
@@ -88,9 +88,9 @@ textarea::placeholder{
 
 .admin-filter.active,
 .admin-filter:hover {
-  background: #5cc24a;
+  background: #2F80ED;
   color: #fff;
-  border-color: #5cc24a;
+  border-color: #2F80ED;
 }
 
 .admin-project-grid {
@@ -165,7 +165,7 @@ textarea::placeholder{
 }
 
 .show {
-  background: #5cc24a !important;
+  background: #2F80ED !important;
   color: #fff !important;
 }
 
@@ -193,7 +193,7 @@ textarea::placeholder{
 }
 
 .login-links a:hover {
-  color: #5cc24a;
+  color: #2F80ED;
 }
 
 
@@ -242,4 +242,14 @@ textarea::placeholder{
 
 .service-image-card input {
   width: 100%;
+}
+
+
+.default-image-form {
+  margin-top: 8px;
+}
+
+.default-image-button {
+  background: #0b2c52 !important;
+  color: #fff !important;
 }
