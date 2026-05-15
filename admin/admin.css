@@ -281,16 +281,7 @@ textarea::placeholder{
   flex-wrap: wrap !important;
 }
 
-.admin-top-links a {
-  color: #2F80ED !important;
-  text-decoration: none !important;
-  font-weight: 800 !important;
-  font-size: 16px !important;
-}
 
-.admin-top-links a:hover {
-  color: #5AA2FF !important;
-}
 
 @media (max-width: 768px) {
   .admin-header {
@@ -330,20 +321,36 @@ textarea::placeholder{
   flex-wrap: wrap !important;
 }
 
-.admin-top-links a {
-  color: #2F80ED !important;
-  text-decoration: none !important;
-  font-weight: 800 !important;
-  font-size: 16px !important;
-}
 
-.admin-top-links a:hover {
-  color: #5AA2FF !important;
-}
 
 @media (max-width: 768px) {
   .admin-header {
     flex-direction: column !important;
     align-items: flex-start !important;
   }
+}
+
+
+/* Cigar style admin menu buttons */
+.admin-top-links a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 10px 18px !important;
+  border-radius: 999px !important;
+  background: rgba(47,128,237,0.14) !important;
+  border: 1px solid rgba(90,162,255,0.35) !important;
+  color: #69A8FF !important;
+  text-decoration: none !important;
+  font-weight: 800 !important;
+  font-size: 15px !important;
+  line-height: 1 !important;
+  transition: all .2s ease !important;
+}
+
+.admin-top-links a:hover {
+  background: #2F80ED !important;
+  color: #ffffff !important;
+  border-color: #2F80ED !important;
+  transform: translateY(-1px);
 }

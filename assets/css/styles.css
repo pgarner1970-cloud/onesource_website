@@ -524,3 +524,9 @@ footer {
 .page-eyebrow {
   display: none !important;
 }
+
+
+/* Remove remaining section eyebrow labels */
+.section-title > p {
+  display: none !important;
+}
