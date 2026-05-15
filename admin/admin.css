@@ -407,3 +407,28 @@ textarea::placeholder{
   min-height: auto !important;
   border-radius: 10px !important;
 }
+
+
+/* Show full uploaded images in admin without cropping */
+.admin-project-grid .project-row img,
+.project-row img,
+.edit-preview,
+.service-image-card img {
+  object-fit: contain !important;
+  background: #f4f9fc !important;
+  padding: 6px !important;
+}
+
+.admin-project-grid .project-row img {
+  height: 155px !important;
+}
+
+.edit-preview {
+  height: auto !important;
+  max-height: 360px !important;
+  width: min(520px, 100%) !important;
+}
+
+.service-image-card img {
+  height: 180px !important;
+}
