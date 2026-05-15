@@ -1,0 +1,6 @@
+
+
+# Live admin data and uploads - do not overwrite via Git deploy
+/data/*.json
+/admin/data/*.json
+/uploads/

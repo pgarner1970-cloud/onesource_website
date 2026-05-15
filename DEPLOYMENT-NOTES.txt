@@ -1,0 +1,15 @@
+Deployment notes
+
+The admin uses live data files and upload folders:
+
+- /data/*.json
+- /admin/data/*.json
+- /uploads/
+
+These are excluded in .gitignore so future Git deployments do not overwrite gallery items, opening hours, service image choices or uploaded images.
+
+Recommended workflow:
+1. Keep code changes in Git.
+2. Do not commit live JSON data or uploads.
+3. Back up /data, /admin/data and /uploads from hosting before major changes.
+4. For a larger future version, move admin data to MySQL.
