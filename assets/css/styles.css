@@ -428,3 +428,25 @@ footer {
   height:24px;
   display:block;
 }
+
+
+/* Compact internal page hero spacing */
+.page-hero {
+  padding: 40px 0 !important;
+}
+
+.page-hero h1 {
+  margin-top: 0 !important;
+  margin-bottom: 12px !important;
+}
+
+.page-hero p {
+  margin-bottom: 0 !important;
+  max-width: 760px;
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 28px 0 !important;
+  }
+}
