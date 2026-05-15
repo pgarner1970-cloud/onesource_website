@@ -57,3 +57,12 @@ section[id] {
 .nav-dropdown:hover .dropdown-menu{display:block}
 .footer-grid span{display:block}
 @media(max-width:900px){.content-grid{grid-template-columns:1fr}.side-nav{position:static}.nav-dropdown:hover .dropdown-menu,.dropdown-menu{position:static;display:block;box-shadow:none;border:0;padding:0 0 8px 14px}.dropdown-menu a{padding:8px 0}}
+
+
+.icon-ev{
+  color:#27ae60 !important;
+}
+
+.icon-electric{
+  color:#ff8a00 !important;
+}
