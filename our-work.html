@@ -50,7 +50,7 @@ fetch('data/projects.json')
 
       gallery.innerHTML = filtered.map(project => `
         <article class="project" data-category="${project.category}">
-          <img src="${project.image}" alt="${project.title}">
+          <img loading="lazy" src="${project.image}" alt="${project.title}">
           <div>
             <strong>${project.title}</strong>
             <span>${project.description || 'Recent domestic installation'}</span>

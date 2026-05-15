@@ -55,16 +55,24 @@ $categories = [
 
     <section class="admin-panel">
       <h2>Current Gallery Items</h2>
-      <div class="project-list">
+      <div class="admin-filter-row">
+        <button type="button" class="admin-filter active" data-filter="all">All</button>
+        <?php foreach ($categories as $key => $label): ?>
+          <button type="button" class="admin-filter" data-filter="<?= htmlspecialchars($key) ?>"><?= htmlspecialchars($label) ?></button>
+        <?php endforeach; ?>
+      </div>
+
+      <div class="project-list admin-project-grid">
         <?php foreach ($projects as $project): ?>
-          <article class="project-row">
-            <img src="../<?= htmlspecialchars($project['image'] ?? '') ?>" alt="">
+          <article class="project-row" data-category="<?= htmlspecialchars($project['category'] ?? 'other') ?>">
+            <img loading="lazy" src="../<?= htmlspecialchars($project['image'] ?? '') ?>" alt="">
             <div>
               <strong><?= htmlspecialchars($project['title'] ?? '') ?></strong>
               <span><?= htmlspecialchars($categories[$project['category'] ?? 'other'] ?? 'Other') ?> • <?= (isset($project['featured']) ? (bool)$project['featured'] : true) ? 'Visible' : 'Hidden' ?></span>
               <p><?= htmlspecialchars($project['description'] ?? '') ?></p>
             </div>
             <div class="admin-actions">
+              <a class="edit" href="edit.php?id=<?= urlencode($project['id'] ?? '') ?>">Edit</a>
               <form action="toggle.php" method="post">
                 <input type="hidden" name="id" value="<?= htmlspecialchars($project['id'] ?? '') ?>">
                 <?php $isVisible = isset($project['featured']) ? (bool)$project['featured'] : true; ?>
@@ -82,5 +90,22 @@ $categories = [
       </div>
     </section>
   </main>
+
+<script>
+document.querySelectorAll('.admin-filter').forEach((button) => {
+  button.addEventListener('click', () => {
+    document.querySelectorAll('.admin-filter').forEach((item) => item.classList.remove('active'));
+    button.classList.add('active');
+
+    const filter = button.dataset.filter;
+
+    document.querySelectorAll('.project-row').forEach((row) => {
+      const show = filter === 'all' || row.dataset.category === filter;
+      row.style.display = show ? '' : 'none';
+    });
+  });
+});
+</script>
+
 </body>
 </html>
