@@ -28,7 +28,7 @@
     <nav class="main-nav" aria-label="Main navigation">
       <a href="index.php">Home</a>
       <span class="nav-dropdown">
-        <a href="services.php">Services ▾</a>
+        <a href="services.php">Services</a>
         <span class="dropdown-menu">
           <a href="air-conditioning.php">Air Conditioning</a>
           <a href="solar-pv.php">Solar PV</a>
