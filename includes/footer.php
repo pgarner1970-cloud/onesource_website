@@ -40,12 +40,23 @@ function social_url($socialLinks, $key) {
 }
 ?>
 <footer>
-  <div class="wrap footer-inner">
+  <div class="wrap footer-inner footer-three-col">
     <div class="footer-legal">
       <strong>ONE SOURCE AIR & ENERGY LTD</strong>
       <span>Registered in England & Wales • Company No. 10162474</span>
       <span>Cleobury Mortimer, Kidderminster DY14 8DP</span>
-      <span class="footer-links"><a href="privacy.php">Privacy & Cookie Policy</a><span aria-hidden="true">•</span><a href="admin/">Admin Login</a></span>\n      <span class="footer-credit">Website provided by Yellow Arrow <a class="yellow-arrow-link" href="https://www.yellowarrow.co.uk/" target="_blank" rel="noopener noreferrer" aria-label="Yellow Arrow website"><img src="assets/icons/yellow-arrow.svg" alt=""></a></span>
+      <span class="footer-links">
+        <a href="privacy.php">Privacy & Cookie Policy</a>
+        <span aria-hidden="true">•</span>
+        <a href="admin/">Admin Login</a>
+      </span>
+    </div>
+
+    <div class="footer-credit">
+      <span>Website provided by Yellow Arrow</span>
+      <a class="yellow-arrow-link" href="https://www.yellowarrow.co.uk/" target="_blank" rel="noopener noreferrer" aria-label="Yellow Arrow website">
+        <img src="assets/icons/yellow-arrow.svg" alt="">
+      </a>
     </div>
 
     <div class="footer-social">
