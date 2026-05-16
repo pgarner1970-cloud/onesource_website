@@ -34,6 +34,7 @@
           <a href="ev-chargers.php">EV Chargers</a>
           <a href="electrical-services.php">Electrical Services</a>
           <a href="gas-services.php">Gas Services</a>
+          <a href="oil-installations.php">Oil Installations</a>
         </span>
       </span>
       <a href="our-work.php">Our Work</a>
@@ -50,7 +51,8 @@
   </div>
 </header>
 <main><section class="page-hero"><div class="wrap"><h1>Electrical Services</h1><p>Domestic electrical works, upgrades and installation support from NICEIC approved contractors.</p></div></section><section class="section"><div class="wrap content-grid"><article class="content-card"><img class="service-detail-image" data-service-image="electrical" src="assets/images/services/electrical-services.jpg" alt="Electrical Services"><h2>Electrical Services for domestic properties</h2><p>Domestic electrical works, upgrades and installation support from NICEIC approved contractors.</p><h3>How we can help</h3><ul><li>Clear advice before work begins</li><li>Safe and tidy installation</li><li>Domestic property focused service</li><li>Ongoing support and maintenance where appropriate</li></ul><a class="btn btn-primary" href="contact.php">Request a Quote →</a></article><aside class="side-nav">
-<a href="air-conditioning.php">Air Conditioning</a><a href="solar-pv.php">Solar PV</a><a href="battery-storage.php">Battery Storage</a><a href="ev-chargers.php">EV Chargers</a><a href="electrical-services.php">Electrical Services</a><a href="gas-services.php">Gas Services</a></aside></div></section></main>
+<a href="air-conditioning.php">Air Conditioning</a><a href="solar-pv.php">Solar PV</a><a href="battery-storage.php">Battery Storage</a><a href="ev-chargers.php">EV Chargers</a><a href="electrical-services.php">Electrical Services</a><a href="gas-services.php">Gas Services</a>
+          <a href="oil-installations.php">Oil Installations</a></aside></div></section></main>
 <footer>
   <div class="wrap footer-inner">
     <div class="footer-legal">

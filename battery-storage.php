@@ -34,6 +34,7 @@
           <a href="ev-chargers.php">EV Chargers</a>
           <a href="electrical-services.php">Electrical Services</a>
           <a href="gas-services.php">Gas Services</a>
+          <a href="oil-installations.php">Oil Installations</a>
         </span>
       </span>
       <a href="our-work.php">Our Work</a>
@@ -50,7 +51,8 @@
   </div>
 </header>
 <main><section class="page-hero"><div class="wrap"><h1>Battery Storage</h1><p>Store generated electricity and make better use of your solar system day and night.</p></div></section><section class="section"><div class="wrap content-grid"><article class="content-card"><img class="service-detail-image" data-service-image="battery-storage" src="assets/images/services/battery-storage.jpg" alt="Battery Storage"><h2>Battery Storage for domestic properties</h2><p>Store generated electricity and make better use of your solar system day and night.</p><h3>How we can help</h3><ul><li>Clear advice before work begins</li><li>Safe and tidy installation</li><li>Domestic property focused service</li><li>Ongoing support and maintenance where appropriate</li></ul><a class="btn btn-primary" href="contact.php">Request a Quote →</a></article><aside class="side-nav">
-<a href="air-conditioning.php">Air Conditioning</a><a href="solar-pv.php">Solar PV</a><a href="battery-storage.php">Battery Storage</a><a href="ev-chargers.php">EV Chargers</a><a href="electrical-services.php">Electrical Services</a><a href="gas-services.php">Gas Services</a></aside></div></section></main>
+<a href="air-conditioning.php">Air Conditioning</a><a href="solar-pv.php">Solar PV</a><a href="battery-storage.php">Battery Storage</a><a href="ev-chargers.php">EV Chargers</a><a href="electrical-services.php">Electrical Services</a><a href="gas-services.php">Gas Services</a>
+          <a href="oil-installations.php">Oil Installations</a></aside></div></section></main>
 <footer>
   <div class="wrap footer-inner">
     <div class="footer-legal">

@@ -34,6 +34,7 @@
           <a href="ev-chargers.php">EV Chargers</a>
           <a href="electrical-services.php">Electrical Services</a>
           <a href="gas-services.php">Gas Services</a>
+          <a href="oil-installations.php">Oil Installations</a>
         </span>
       </span>
       <a href="our-work.php">Our Work</a>
