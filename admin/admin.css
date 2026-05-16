@@ -579,3 +579,40 @@ textarea::placeholder{
   font-size: 13px;
   margin-top: 4px;
 }
+
+
+.ai-explainer {
+  margin-top: 22px;
+  padding: 18px;
+  background: #f7fafc;
+  border: 1px solid #dce7f0;
+  border-radius: 14px;
+}
+
+.admin-cost-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 14px 0;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.admin-cost-table th,
+.admin-cost-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #dce7f0;
+  text-align: left;
+  font-size: 14px;
+}
+
+.admin-cost-table th {
+  background: #0b2c52;
+  color: #fff;
+}
+
+.form-message.error {
+  background: #fdecec;
+  color: #842029;
+  border: 1px solid #f5c2c7;
+}
