@@ -750,3 +750,13 @@ footer {
     grid-template-columns: 1fr !important;
   }
 }
+
+/* Service nav repair */
+.dropdown-menu {
+  min-width: 260px !important;
+}
+
+.dropdown-menu a,
+.sidebar-card a {
+  display: block;
+}

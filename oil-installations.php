@@ -33,6 +33,8 @@
           <a href="battery-storage.php">Battery Storage</a>
           <a href="ev-chargers.php">EV Chargers</a>
           <a href="electrical-services.php">Electrical Services</a>
+          <a href="gas-services.php">Gas Services</a>
+          <a href="oil-installations.php">Oil Installations</a>
 
 </span>
       </span>
