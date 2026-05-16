@@ -51,39 +51,8 @@
   </div>
 </header>
 <main><section class="hero"><div class="hero-bg"></div><div class="wrap hero-content"><h1>Trusted home energy solutions across the West Midlands.</h1><p class="hero-copy">Professional domestic installations, certified engineers and quality workmanship you can rely on.</p><div class="hero-buttons"><a href="contact.php" class="btn btn-primary">Request a Quote →</a><a href="our-work.php" class="btn btn-ghost">View Our Work →</a></div></div></section>
-
 <section class="trust-strip">
-  <div class="wrap trust-grid">
-    <div class="trust-heading">TRUSTED. CERTIFIED.<br>ACCREDITED.</div>
-
-    <div class="badge">
-      <img src="assets/logos/gas-safe-register.png" alt="Gas Safe Register">
-    </div>
-
-    <div class="badge">
-      <img src="assets/accreditations/oftec.png" alt="OFTEC Registered">
-    </div>
-
-    <div class="badge">
-      <img src="assets/logos/niceic-approved-contractor.png" alt="NICEIC Approved Contractor">
-    </div>
-
-    <div class="badge">
-      <img src="assets/logos/refcom.png" alt="REFCOM F-Gas Certification">
-    </div>
-
-    <div class="badge">
-      <img src="assets/logos/mcs-certified.png" alt="MCS Certified">
-    </div>
-
-    <div class="badge quality-badge">
-      <span>★★★★★</span>
-      <strong>QUALITY WORKMANSHIP</strong>
-    </div>
-  </div>
-</section>
-
-<section class="trust">
+  <section class="trust">
   <div class="wrap trust-grid">
 <a href="https://www.gassaferegister.co.uk/" class="badge" target="_blank" rel="noopener"><img src="assets/logos/gas-safe-register.png" alt="Gas Safe Register logo"></a>
             <div class="accreditation-card">

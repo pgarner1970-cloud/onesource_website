@@ -1176,3 +1176,8 @@ footer {
 .trust-strip + .trust-strip {
   display: none !important;
 }
+
+/* Force-hide accidental duplicated accreditation strips */
+.trust-strip ~ .trust-strip {
+    display: none !important;
+}
