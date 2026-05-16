@@ -1195,3 +1195,20 @@ footer {
 .service-card {
   overflow: hidden !important;
 }
+
+
+/* Match public service-card image display to admin default image preview */
+.service-card > a > img,
+.service-card img[data-service-image] {
+  width: 100% !important;
+  height: 220px !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  background: #eef5f8 !important;
+  padding: 12px !important;
+  box-sizing: border-box !important;
+}
+
+.service-card .service-icon {
+  top: 202px !important;
+}
