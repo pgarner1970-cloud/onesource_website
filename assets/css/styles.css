@@ -1181,3 +1181,17 @@ footer {
 .trust-strip ~ .trust-strip {
     display: none !important;
 }
+
+
+/* Service card image uncropped display */
+.service-card > a > img,
+.service-card img[data-service-image] {
+  object-fit: contain !important;
+  object-position: center center !important;
+  background: #eef5f8 !important;
+  padding: 0 !important;
+}
+
+.service-card {
+  overflow: hidden !important;
+}
