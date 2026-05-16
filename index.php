@@ -47,15 +47,15 @@
 <section class="trust">
   <div class="wrap trust-grid">
 <a href="https://www.gassaferegister.co.uk/" class="badge" target="_blank" rel="noopener"><img src="assets/logos/gas-safe-register.png" alt="Gas Safe Register logo"></a>
-    <a href="https://niceic.com/" class="badge" target="_blank" rel="noopener"><img src="assets/logos/niceic-approved-contractor.png" alt="NICEIC Approved Contractor logo"></a>
-    <a href="https://www.refcom.org.uk/" class="badge" target="_blank" rel="noopener"><img src="assets/logos/refcom.png" alt="REFCOM F-Gas Certification logo"></a>
-    <a href="https://mcscertified.com/" class="badge" target="_blank" rel="noopener"><img src="assets/logos/mcs-certified.png" alt="MCS Certified logo"></a>
-    <div class="rating">★★★★★<br><small>Quality workmanship</small></div>
             <div class="accreditation-card">
                 <img src="assets/accreditations/oftec.png" alt="OFTEC Certified">
             </div>
 
-  </div>
+    <a href="https://niceic.com/" class="badge" target="_blank" rel="noopener"><img src="assets/logos/niceic-approved-contractor.png" alt="NICEIC Approved Contractor logo"></a>
+    <a href="https://www.refcom.org.uk/" class="badge" target="_blank" rel="noopener"><img src="assets/logos/refcom.png" alt="REFCOM F-Gas Certification logo"></a>
+    <a href="https://mcscertified.com/" class="badge" target="_blank" rel="noopener"><img src="assets/logos/mcs-certified.png" alt="MCS Certified logo"></a>
+    <div class="rating">★★★★★<br><small>Quality workmanship</small></div>
+</div>
 </section>
 
 <section class="section"><div class="wrap"><div class="section-title"><h2>Domestic services from one reliable source.</h2></div><div class="service-grid"><article class="service-card"><img data-service-image="air-conditioning" src="assets/images/services/air-conditioning.jpg" alt="Air Conditioning"><div class="service-body"><span class="service-icon icon-air">❄</span><h3>Air Conditioning</h3><p>Installation, maintenance and servicing for bedrooms, living spaces, garden rooms and home offices.</p><a href="air-conditioning.php">Learn more →</a></div></article><article class="service-card"><img data-service-image="solar-pv" src="assets/images/services/solar-pv.jpg" alt="Solar PV"><div class="service-body"><span class="service-icon icon-solar">☀</span><h3>Solar PV</h3><p>Solar PV installed to MCS standards, designed to help reduce energy bills.</p><a href="solar-pv.php">Learn more →</a></div></article><article class="service-card"><img data-service-image="battery-storage" src="assets/images/services/battery-storage.jpg" alt="Battery Storage"><div class="service-body"><span class="service-icon icon-battery">▣</span><h3>Battery Storage</h3><p>Store generated electricity and make better use of your solar system day and night.</p><a href="battery-storage.php">Learn more →</a></div></article><article class="service-card"><img data-service-image="ev-chargers" src="assets/images/services/ev-chargers.jpg" alt="EV Chargers"><div class="service-body"><span class="service-icon icon-ev ev-charger-icon"><img src="assets/icons/ev-charger.svg" alt="" aria-hidden="true"></span><h3>EV Chargers</h3><p>Neat home EV charging installations carried out by experienced electrical engineers.</p><a href="ev-chargers.php">Learn more →</a></div></article><article class="service-card"><img data-service-image="electrical" src="assets/images/services/electrical-services.jpg" alt="Electrical Services"><div class="service-body"><span class="service-icon icon-electric">⚡</span><h3>Electrical Services</h3><p>Domestic electrical works, upgrades and installation support from NICEIC approved contractors.</p><a href="electrical-services.php">Learn more →</a></div></article><article class="service-card"><img data-service-image="gas-services" src="assets/images/services/gas-services.jpg" alt="Gas Services"><div class="service-body"><span class="service-icon icon-gas">🔥</span><h3>Gas Services</h3><p>Domestic gas work, boiler installation, servicing and repairs by Gas Safe engineers.</p><a href="gas-services.php">Learn more →</a></div></article></div></div></section></main>
