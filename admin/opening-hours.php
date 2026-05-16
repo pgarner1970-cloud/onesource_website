@@ -1,5 +1,5 @@
 <?php
-$file = __DIR__ . '/data/opening-hours.json';
+$file = __DIR__ . '/../data/opening-hours.json';
 $data = json_decode(file_get_contents($file), true);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
