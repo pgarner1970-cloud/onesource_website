@@ -48,7 +48,7 @@
   <div class="wrap trust-grid">
 <a href="https://www.gassaferegister.co.uk/" class="badge" target="_blank" rel="noopener"><img src="assets/logos/gas-safe-register.png" alt="Gas Safe Register logo"></a>
             <div class="accreditation-card">
-                <img src="assets/accreditations/oftec.png" alt="OFTEC Certified">
+                <a href="https://www.oftec.org/" target="_blank" rel="noopener noreferrer"><img src="assets/accreditations/oftec.png" alt="OFTEC Certified"></a>
             </div>
 
     <a href="https://niceic.com/" class="badge" target="_blank" rel="noopener"><img src="assets/logos/niceic-approved-contractor.png" alt="NICEIC Approved Contractor logo"></a>
