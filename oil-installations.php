@@ -1,18 +1,11 @@
 <?php include 'opening-hours.php'; ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Oil Installations | One Source Air & Energy Ltd</title>
-<meta name="description" content="Domestic, commercial and industrial oil heating installation and servicing across the West Midlands.">
-
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Oil Installations | One Source Air & Energy Ltd</title><meta name="description" content="Oil boiler installation, servicing and oil heating support for domestic, commercial and industrial properties."><link rel="stylesheet" href="assets/css/styles.css">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="stylesheet" href="assets/css/styles.css">
-</head>
-<body>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
 
-<div class="topbar">
+</head><body><div class="topbar">
   <div class="wrap topbar-inner">
     <div class="top-contact">
       <a href="tel:07502216131">☎ 07502 216131</a>
@@ -24,13 +17,26 @@
 
 <header class="site-header">
   <div class="wrap nav">
-    <a href="index.php" class="logo">
-      <img src="assets/logos/onesource-logo.png" alt="One Source Air & Energy Ltd">
+    <a href="index.php" class="logo" aria-label="One Source Air and Energy Ltd">
+      <img src="assets/logos/onesource-logo.png" alt="One Source Air & Energy Ltd logo">
     </a>
 
-    <nav class="main-nav">
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+
+    <nav class="main-nav" aria-label="Main navigation">
       <a href="index.php">Home</a>
-      <a href="services.php">Services</a>
+      <span class="nav-dropdown">
+        <a href="services.php">Services</a>
+        <span class="dropdown-menu">
+          <a href="air-conditioning.php">Air Conditioning</a>
+          <a href="solar-pv.php">Solar PV</a>
+          <a href="battery-storage.php">Battery Storage</a>
+          <a href="ev-chargers.php">EV Chargers</a>
+          <a href="electrical-services.php">Electrical Services</a>
+          <a href="oil-installations.php">Oil Installations</a>
+          <a href="oil-installations.php">Oil Installations</a>
+        </span>
+      </span>
       <a href="our-work.php">Our Work</a>
       <a href="about.php">About Us</a>
       <a href="contact.php">Contact</a>
@@ -38,57 +44,31 @@
 
     <div class="nav-actions">
       <a class="btn btn-primary" href="contact.php">Get a Quote →</a>
+      <a href="https://wa.me/447502216131" class="header-whatsapp" aria-label="WhatsApp">
+        <img src="assets/icons/whatsapp.svg" alt="WhatsApp">
+      </a>
     </div>
   </div>
 </header>
+<main><section class="page-hero"><div class="wrap"><h1>Oil Installations</h1><p>Domestic oil heating work, boiler installation, servicing and repairs by qualified engineers.</p></div></section><section class="section"><div class="wrap content-grid"><article class="content-card"><img class="service-detail-image" data-service-image="oil-installations" src="assets/images/services/oil-installations.jpg" alt="Oil Installations"><h2>Oil Installations for domestic properties</h2><p>Domestic oil heating work, boiler installation, servicing and repairs by qualified engineers.</p><h3>How we can help</h3><ul><li>Clear advice before work begins</li><li>Safe and tidy installation</li><li>Domestic property focused service</li><li>Ongoing support and maintenance where appropriate</li></ul><a class="btn btn-primary" href="contact.php">Request a Quote →</a></article><aside class="side-nav">
+<a href="air-conditioning.php">Air Conditioning</a><a href="solar-pv.php">Solar PV</a><a href="battery-storage.php">Battery Storage</a><a href="ev-chargers.php">EV Chargers</a><a href="electrical-services.php">Electrical Services</a><a href="oil-installations.php">Oil Installations</a>
+          <a href="oil-installations.php">Oil Installations</a></aside></div></section></main>
+<footer>
+  <div class="wrap footer-inner">
+    <div class="footer-legal">
+      <strong>ONE SOURCE AIR & ENERGY LTD</strong>
+      <span>Registered in England & Wales • Company No. 10162474</span>
+      <span>Cleobury Mortimer, Kidderminster DY14 8DP</span>
+      <span class="footer-links"><a href="privacy.php">Privacy & Cookie Policy</a><span aria-hidden="true">•</span><a href="admin/">Admin Login</a></span>
+    </div>
 
-<section class="page-hero">
-  <div class="wrap">
-    <h1>Oil Installations</h1>
-    <p>Domestic, commercial and industrial oil heating installation, servicing and support.</p>
-  </div>
-</section>
-
-<section class="service-content">
-  <div class="wrap">
-    <div class="service-layout">
-
-      <div class="service-main">
-        <img src="assets/service-images/oil-installations.png" alt="Oil heating installation" style="width:100%; border-radius:12px; margin-bottom:30px;">
-
-        <h2>How we can help</h2>
-
-        <ul class="service-list">
-          <li>Oil boiler installation</li>
-          <li>Oil heating upgrades</li>
-          <li>Replacement systems</li>
-          <li>Commercial oil systems</li>
-          <li>Industrial oil heating support</li>
-          <li>General servicing and maintenance</li>
-        </ul>
-
-        <p>
-          Professional oil heating services carried out safely and reliably across the West Midlands and surrounding areas.
-        </p>
-      </div>
-
-      <aside class="service-sidebar">
-        <div class="sidebar-card">
-          <h3>Our Services</h3>
-
-          <a href="air-conditioning.php">Air Conditioning</a>
-          <a href="solar-pv.php">Solar PV</a>
-          <a href="battery-storage.php">Battery Storage</a>
-          <a href="ev-chargers.php">EV Chargers</a>
-          <a href="electrical-services.php">Electrical Services</a>
-          <a href="gas-services.php">Gas Services</a>
-          <a href="oil-installations.php">Oil Installations</a>
-        </div>
-      </aside>
-
+    <div class="footer-social">
+      <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+        <img src="assets/icons/facebook.svg" alt="Facebook">
+      </a>
+      <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt="Instagram"></a>
+      <a href="https://wa.me/447502216131" class="header-whatsapp" aria-label="WhatsApp"><img src="assets/icons/whatsapp.svg" alt="WhatsApp"></a>
     </div>
   </div>
-</section>
-
-</body>
-</html>
+</footer>
+<script src="assets/js/site.js"></script></body></html>

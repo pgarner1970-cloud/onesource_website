@@ -4,5 +4,6 @@
   "battery-storage": "assets/images/services/battery-storage.jpg",
   "ev-chargers": "assets/images/services/ev-chargers.jpg",
   "electrical": "assets/images/services/electrical-services.jpg",
-  "gas-services": "assets/images/services/gas-services.jpg"
+  "gas-services": "assets/images/services/gas-services.jpg",
+  "oil-installations": "assets/images/services/oil-installations.jpg"
 }

@@ -11,7 +11,8 @@ $validCategories = [
     'battery-storage',
     'ev-chargers',
     'electrical',
-    'gas-services'
+    'gas-services',
+    'oil-installations'
 ];
 
 $category = $_POST['category'] ?? '';

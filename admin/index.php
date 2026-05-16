@@ -17,6 +17,7 @@ $categories = [
     'ev-chargers' => 'EV Chargers',
     'electrical' => 'Electrical',
     'gas-services' => 'Gas Services',
+    'oil-installations' => 'Oil Installations',
     'other' => 'Other'
 ];
 ?>

@@ -11,7 +11,8 @@ $categories = [
     'battery-storage' => 'Battery Storage',
     'ev-chargers' => 'EV Chargers',
     'electrical' => 'Electrical Services',
-    'gas-services' => 'Gas Services'
+    'gas-services' => 'Gas Services',
+    'oil-installations' => 'Oil Installations'
 ];
 
 $images = [];
