@@ -798,3 +798,68 @@ footer {
 .icon-oil {
   color: #8B5A2B !important;
 }
+
+
+/* Final service card grid and icon fixes */
+.service-grid,
+.services-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 22px !important;
+}
+
+.service-card {
+  overflow: hidden !important;
+}
+
+.service-card > a {
+  height: 100% !important;
+}
+
+.service-card img {
+  width: 100% !important;
+  height: 220px !important;
+  object-fit: cover !important;
+}
+
+.service-card .service-icon {
+  width: 46px !important;
+  height: 46px !important;
+  min-width: 46px !important;
+  min-height: 46px !important;
+  max-width: 46px !important;
+  max-height: 46px !important;
+  border-radius: 10px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  font-size: 21px !important;
+  line-height: 1 !important;
+  box-sizing: border-box !important;
+}
+
+.icon-oil {
+  color: #8B5A2B !important;
+}
+
+@media (max-width: 1150px) {
+  .service-grid,
+  .services-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 850px) {
+  .service-grid,
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .service-grid,
+  .services-grid {
+    grid-template-columns: 1fr !important;
+  }
+}

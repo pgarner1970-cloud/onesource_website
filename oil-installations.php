@@ -1,5 +1,5 @@
 <?php include 'opening-hours.php'; ?>
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Oil Installations | One Source Air & Energy Ltd</title><meta name="description" content="Domestic oil boiler installation, servicing and oil heating support."><link rel="stylesheet" href="assets/css/styles.css">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Oil Installations | One Source Air & Energy Ltd</title><meta name="description" content="Domestic oil heating installation, servicing and support."><link rel="stylesheet" href="assets/css/styles.css">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
@@ -35,7 +35,6 @@
           <a href="electrical-services.php">Electrical Services</a>
           <a href="gas-services.php">Gas Services</a>
           <a href="oil-installations.php">Oil Installations</a>
-
 </span>
       </span>
       <a href="our-work.php">Our Work</a>
@@ -53,8 +52,8 @@
 </header>
 <main><section class="page-hero"><div class="wrap"><h1>Oil Installations</h1>
     <p>Domestic oil heating installation, servicing and support.</p></div></section><section class="section"><div class="wrap content-grid"><article class="content-card"><img class="service-detail-image" data-service-image="oil-installations" src="assets/images/services/oil-installations.jpg" alt="Oil Installations"><h2>Oil Installations for domestic properties</h2><p>Domestic oil heating installation, servicing and support.</p><h3>How we can help</h3><ul><li>Clear advice before work begins</li><li>Safe and tidy installation</li><li>Domestic property focused service</li><li>Ongoing support and maintenance where appropriate</li></ul><a class="btn btn-primary" href="contact.php">Request a Quote →</a></article><aside class="side-nav">
-<a href="air-conditioning.php">Air Conditioning</a><a href="solar-pv.php">Solar PV</a><a href="battery-storage.php">Battery Storage</a><a href="ev-chargers.php">EV Chargers</a><a href="electrical-services.php">Electrical Services</a>
-
+<a href="air-conditioning.php">Air Conditioning</a><a href="solar-pv.php">Solar PV</a><a href="battery-storage.php">Battery Storage</a><a href="ev-chargers.php">EV Chargers</a><a href="electrical-services.php">Electrical Services</a><a href="oil-installations.php">Oil Installations</a>
+          <a href="oil-installations.php">Oil Installations</a>
 </aside></div></section></main>
 <?php include __DIR__ . '/includes/footer.php'; ?>
 <script src="assets/js/site.js"></script></body></html>

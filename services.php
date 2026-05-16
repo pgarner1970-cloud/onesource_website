@@ -52,11 +52,10 @@
 </header>
 <main><section class="page-hero"><div class="wrap">
 <p>Explore services for homes across the West Midlands.</p></div></section><section class="section"><div class="wrap"><div class="service-grid"><article class="service-card"><img data-service-image="air-conditioning" src="assets/images/services/air-conditioning.jpg" alt="Air Conditioning"><div class="service-body"><span class="service-icon icon-air">❄</span><h3>Air Conditioning</h3><p>Domestic, commercial and industrial air conditioning installation, servicing and maintenance.</p><a href="air-conditioning.php">Learn more →</a></div></article>
-
           <article class="service-card">
             <a href="oil-installations.php">
               <img data-service-image="oil-installations" src="assets/images/services/oil-installations.jpg" alt="Domestic oil heating installation">
-              <span class="service-icon icon-oil">◼</span>
+              <span class="service-icon icon-oil">🛢️</span>
               <h3>Oil Installations</h3>
               <p>Domestic oil heating installation, servicing and support.</p>
               <strong>Learn more →</strong>
