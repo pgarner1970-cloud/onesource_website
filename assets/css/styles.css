@@ -1424,3 +1424,93 @@ footer {
     text-align: center !important;
   }
 }
+
+
+/* Homepage section spacing rhythm */
+.home .section,
+body .section {
+  padding-top: 64px !important;
+  padding-bottom: 64px !important;
+}
+
+.trust-strip {
+  margin: 0 !important;
+}
+
+.services-section,
+.section:has(.service-grid),
+.section:has(.services-grid) {
+  padding-top: 64px !important;
+  padding-bottom: 56px !important;
+}
+
+.accreditations-section {
+  margin-top: 0 !important;
+  padding-top: 64px !important;
+  padding-bottom: 64px !important;
+}
+
+.accreditations-section .section-heading {
+  margin-bottom: 34px !important;
+}
+
+.accreditation-grid {
+  gap: 22px !important;
+}
+
+.trustpilot-section {
+  margin-top: 0 !important;
+  padding-top: 58px !important;
+  padding-bottom: 58px !important;
+}
+
+.trustpilot-widget-panel {
+  min-height: 230px !important;
+}
+
+.trustpilot-placeholder {
+  min-height: 150px !important;
+}
+
+footer {
+  margin-top: 0 !important;
+}
+
+/* Avoid large empty gaps caused by adjacent border-only sections */
+.accreditations-section + .trustpilot-section,
+.section + .accreditations-section,
+.trustpilot-section + footer {
+  margin-top: 0 !important;
+}
+
+/* Service section heading spacing */
+.section-head,
+.section-heading {
+  margin-bottom: 34px !important;
+}
+
+/* Keep lower page rhythm tighter after service cards */
+.service-grid,
+.services-grid {
+  margin-bottom: 0 !important;
+}
+
+@media (max-width: 760px) {
+  .home .section,
+  body .section,
+  .accreditations-section,
+  .trustpilot-section {
+    padding-top: 46px !important;
+    padding-bottom: 46px !important;
+  }
+
+  .accreditations-section .section-heading,
+  .section-head,
+  .section-heading {
+    margin-bottom: 24px !important;
+  }
+
+  .trustpilot-widget-panel {
+    min-height: 190px !important;
+  }
+}
