@@ -60,7 +60,13 @@
           <?php elseif (isset($_GET['status']) && $_GET['status'] === 'error'): ?>
             <div class="form-message error"><?= htmlspecialchars($_GET['message'] ?? 'There was a problem sending your enquiry.') ?></div>
           <?php endif; ?>
-<form class="quote-form" method="post" action="send-enquiry.php"><div class="form-row"><label>Name<input type="text" name="name" placeholder="Your name" required></label><label>Phone<input type="tel" name="phone" placeholder="Your phone number" required></label></div><div class="form-row"><label>Email<input type="email" name="email" placeholder="Your email address" required></label><label>Service<select name="service" required><option>Air Conditioning</option><option>Solar PV</option><option>Battery Storage</option><option>EV Charger</option><option>Electrical Services</option><option>Gas Services</option></select></label></div><label>Message<textarea name="message" placeholder="Tell us about the property and work required" required></textarea></label><input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off"><button type="submit" class="btn btn-primary">Send Enquiry →</button></form>
+<form class="quote-form" method="post" action="send-enquiry.php"><div class="form-row"><label>Name<input type="text" name="name" placeholder="Your name" required></label><label>Phone<input type="tel" name="phone" placeholder="Your phone number" required></label></div><div class="form-row"><label>Email<input type="email" name="email" placeholder="Your email address" required></label><label>Service<select name="service" required><option>Air Conditioning</option>
+              <option>Solar PV</option>
+              <option>Battery Storage</option>
+              <option>EV Chargers</option>
+              <option>Electrical Services</option>
+              <option>Gas Services</option>
+              <option>Oil Installations</option></select></label></div><label>Message<textarea name="message" placeholder="Tell us about the property and work required" required></textarea></label><input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off"><button type="submit" class="btn btn-primary">Send Enquiry →</button></form>
         <div class="contact-map">
           <h3>Find us</h3>
           <p>Cleobury Mortimer, Kidderminster DY14 8DP</p>

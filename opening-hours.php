@@ -1,5 +1,5 @@
 <?php
-$hoursData = json_decode(file_get_contents(__DIR__ . '/admin/data/opening-hours.json'), true);
+$hoursData = json_decode(file_get_contents(__DIR__ . '/data/opening-hours.json'), true);
 $today = strtolower(date('l'));
 $todayData = $hoursData[$today];
 

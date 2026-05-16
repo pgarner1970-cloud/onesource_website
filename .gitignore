@@ -4,3 +4,5 @@
 /data/*.json
 /admin/data/*.json
 /uploads/
+# Runtime admin data - edited live by the website/admin suite
+# Legacy data location no longer used

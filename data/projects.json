@@ -47,4 +47,13 @@
     "image": "assets/images/services/gas-services.jpg",
     "featured": true
   }
+,
+  {
+    "id": "oil-services-example",
+    "title": "Oil Services",
+    "category": "oil-installations",
+    "description": "Domestic oil and boiler work example",
+    "image": "assets/images/services/oil-installations.jpg",
+    "featured": true
+  } 
 ]

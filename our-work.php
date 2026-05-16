@@ -60,6 +60,7 @@
           <button class="filter" data-filter="ev-chargers">EV Chargers</button>
           <button class="filter" data-filter="electrical">Electrical</button>
           <button class="filter" data-filter="gas-services">Gas Services</button>
+          <button class="filter" data-filter="oil-installations">Oil Installations</button>
         </div>
         <div class="gallery-grid" id="dynamic-gallery">
           <p>Loading gallery...</p>

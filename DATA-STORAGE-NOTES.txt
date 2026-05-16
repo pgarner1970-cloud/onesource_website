@@ -1,0 +1,33 @@
+One Source website data storage
+
+The website now uses one runtime JSON data directory:
+
+/data/
+
+Expected live runtime files:
+- data/projects.json
+- data/category-images.json
+- data/category-images-defaults.json
+- data/social-links.json
+- data/opening-hours.json
+
+The old directory below is no longer used:
+
+/admin/data/
+
+Manual server cleanup/move if needed:
+
+cd /home/sites/28a/b/bcbcb03f33/git/onesource_website
+mkdir -p data
+
+# Only run this if admin/data/opening-hours.json still exists:
+mv admin/data/opening-hours.json data/opening-hours.json
+rmdir admin/data
+
+Runtime JSON files and uploads should not be tracked in Git:
+- /data/*.json
+- /uploads/
+
+If Git deployment is blocked by live JSON changes, use:
+git checkout -- data/*.json
+git pull
