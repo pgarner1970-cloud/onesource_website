@@ -51,6 +51,10 @@
     <a href="https://www.refcom.org.uk/" class="badge" target="_blank" rel="noopener"><img src="assets/logos/refcom.png" alt="REFCOM F-Gas Certification logo"></a>
     <a href="https://mcscertified.com/" class="badge" target="_blank" rel="noopener"><img src="assets/logos/mcs-certified.png" alt="MCS Certified logo"></a>
     <div class="rating">★★★★★<br><small>Quality workmanship</small></div>
+            <div class="accreditation-card">
+                <img src="assets/accreditations/oftec.png" alt="OFTEC Certified">
+            </div>
+
   </div>
 </section>
 
