@@ -162,11 +162,6 @@
             </a>
           </article>
 
-
-
-
-
-
 </div></section></main>
 <section class="accreditations-section">
   <div class="wrap">
@@ -234,20 +229,7 @@
           <p>MCS certification supports recognised standards for renewable energy installations such as Solar PV and related energy systems.</p>
         </div>
       </article>
-
-    
-      <article class="accreditation-info-card">
-        <div class="accreditation-logo quality-logo">
-          <span>★★★★★</span>
-        </div>
-        <div class="accreditation-content">
-          <h3>Quality Workmanship</h3>
-          <h4>Reliable, Professional Service</h4>
-          <p>We focus on neat installations, clear advice and dependable workmanship across every service we provide.</p>
-        </div>
-      </article>
-
-    </div>
+</div>
   </div>
 </section>
 

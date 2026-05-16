@@ -1170,3 +1170,9 @@ footer {
     grid-template-columns: 1fr !important;
   }
 }
+
+
+/* Accreditation duplicate safeguard */
+.trust-strip + .trust-strip {
+  display: none !important;
+}
