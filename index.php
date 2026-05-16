@@ -1,5 +1,11 @@
 <?php include 'opening-hours.php'; ?>
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>One Source Air & Energy Ltd | Domestic Energy Services West Midlands</title><meta name="description" content="Domestic air conditioning, solar PV, battery storage, EV chargers, electrical and gas services across the West Midlands."><link rel="stylesheet" href="assets/css/styles.css"></head><body><div class="topbar">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>One Source Air & Energy Ltd | Domestic Energy Services West Midlands</title><meta name="description" content="Domestic air conditioning, solar PV, battery storage, EV chargers, electrical and gas services across the West Midlands."><link rel="stylesheet" href="assets/css/styles.css">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+
+</head><body><div class="topbar">
   <div class="wrap topbar-inner">
     <div class="top-contact">
       <a href="tel:07502216131">☎ 07502 216131</a>
