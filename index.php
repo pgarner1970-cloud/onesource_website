@@ -201,36 +201,60 @@
 </div>
   </div>
 </section>
+<?php
+$trustpilotSettingsFile = __DIR__ . '/data/trustpilot-settings.json';
+$trustpilotSettings = [
+  'enabled' => true,
+  'business_unit_id' => '',
+  'profile_url' => 'https://uk.trustpilot.com/review/onesourceairandenergyltd.co.uk',
+  'heading' => 'Rated by our customers',
+  'intro' => 'See what customers say about One Source Air & Energy Ltd.'
+];
 
-
+if (file_exists($trustpilotSettingsFile)) {
+  $loadedTrustpilotSettings = json_decode(file_get_contents($trustpilotSettingsFile), true);
+  if (is_array($loadedTrustpilotSettings)) {
+    $trustpilotSettings = array_merge($trustpilotSettings, $loadedTrustpilotSettings);
+  }
+}
+?>
+<?php if (!empty($trustpilotSettings['enabled'])): ?>
 <section class="trustpilot-section">
   <div class="wrap trustpilot-wrap">
     <div class="trustpilot-summary">
       <div class="trustpilot-brand">★ Trustpilot</div>
-      <h2>Rated by our customers</h2>
-      <p>See what customers say about One Source Air &amp; Energy Ltd.</p>
-      <a class="btn btn-outline trustpilot-link" href="https://uk.trustpilot.com/review/onesourceairandenergyltd.co.uk" target="_blank" rel="noopener noreferrer">
-        Read our Trustpilot reviews →
-      </a>
+      <h2><?= htmlspecialchars($trustpilotSettings['heading']) ?></h2>
+      <p><?= htmlspecialchars($trustpilotSettings['intro']) ?></p>
+      <?php if (!empty($trustpilotSettings['profile_url'])): ?>
+        <a class="btn btn-outline trustpilot-link" href="<?= htmlspecialchars($trustpilotSettings['profile_url']) ?>" target="_blank" rel="noopener noreferrer">
+          Read our Trustpilot reviews →
+        </a>
+      <?php endif; ?>
     </div>
 
     <div class="trustpilot-widget-panel">
-      <!-- Trustpilot TrustBox widget.
-           Replace YOUR_TRUSTPILOT_BUSINESS_UNIT_ID with the client's Trustpilot Business Unit ID. -->
-      <div class="trustpilot-widget"
-           data-locale="en-GB"
-           data-template-id="54ad5defc6454f065c28af8b"
-           data-businessunit-id="YOUR_TRUSTPILOT_BUSINESS_UNIT_ID"
-           data-style-height="240px"
-           data-style-width="100%"
-           data-theme="light"
-           data-stars="4,5"
-           data-review-languages="en">
-        <a href="https://uk.trustpilot.com/review/onesourceairandenergyltd.co.uk" target="_blank" rel="noopener noreferrer">Trustpilot</a>
-      </div>
+      <?php if (!empty($trustpilotSettings['business_unit_id'])): ?>
+        <div class="trustpilot-widget"
+             data-locale="en-GB"
+             data-template-id="54ad5defc6454f065c28af8b"
+             data-businessunit-id="<?= htmlspecialchars($trustpilotSettings['business_unit_id']) ?>"
+             data-style-height="240px"
+             data-style-width="100%"
+             data-theme="light"
+             data-stars="4,5"
+             data-review-languages="en">
+          <a href="<?= htmlspecialchars($trustpilotSettings['profile_url']) ?>" target="_blank" rel="noopener noreferrer">Trustpilot</a>
+        </div>
+      <?php else: ?>
+        <div class="trustpilot-placeholder">
+          <strong>Trustpilot widget pending</strong>
+          <span>Add the Business Unit ID in admin to display live reviews.</span>
+        </div>
+      <?php endif; ?>
     </div>
   </div>
 </section>
+<?php endif; ?>
 
 
 <?php include __DIR__ . '/includes/footer.php'; ?>

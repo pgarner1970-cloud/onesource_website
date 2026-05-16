@@ -1291,3 +1291,56 @@ footer {
     min-height: 260px;
   }
 }
+
+
+/* Trustpilot admin placeholder */
+.trustpilot-placeholder {
+  width: 100%;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-align: center;
+  color: var(--muted);
+  border: 1px dashed var(--line);
+  border-radius: 14px;
+  background: #f8fafc;
+}
+
+.trustpilot-placeholder strong {
+  color: var(--navy);
+}
+
+/* Yellow Arrow footer credit */
+.footer-credit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 6px;
+  color: rgba(255,255,255,.78);
+  font-size: 13px;
+}
+
+.yellow-arrow-link {
+  display: inline-flex;
+  width: 19px;
+  height: 19px;
+  border-radius: 5px;
+  overflow: hidden;
+  vertical-align: middle;
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+.yellow-arrow-link:hover {
+  transform: translateY(-1px);
+  opacity: .9;
+}
+
+.yellow-arrow-link img {
+  width: 19px;
+  height: 19px;
+  display: block;
+}
