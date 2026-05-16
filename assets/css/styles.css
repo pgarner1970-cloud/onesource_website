@@ -1662,3 +1662,95 @@ footer {
     height: 58px !important;
   }
 }
+
+
+/* FINAL mobile navigation fix */
+@media (max-width: 860px) {
+  .menu-toggle {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 46px !important;
+    height: 46px !important;
+    border: 1px solid var(--line) !important;
+    border-radius: 12px !important;
+    background: #fff !important;
+    color: var(--navy) !important;
+    font-size: 25px !important;
+    font-weight: 900 !important;
+    cursor: pointer !important;
+    z-index: 1002 !important;
+  }
+
+  .site-header .nav {
+    display: grid !important;
+    grid-template-columns: 1fr auto !important;
+    align-items: center !important;
+    gap: 14px !important;
+  }
+
+  .nav-actions {
+    grid-column: 1 / -1 !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 18px !important;
+  }
+
+  .main-nav {
+    grid-column: 1 / -1 !important;
+    display: none !important;
+    width: 100% !important;
+    background: #fff !important;
+    padding: 8px 0 12px !important;
+    border-top: 1px solid var(--line) !important;
+    margin: 0 !important;
+  }
+
+  body.mobile-nav-open .main-nav,
+  .main-nav.mobile-open,
+  .menu-toggle[aria-expanded="true"] + .main-nav {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .main-nav > a,
+  .main-nav .nav-dropdown > a {
+    display: block !important;
+    width: 100% !important;
+    padding: 14px 18px !important;
+    text-align: left !important;
+    border-bottom: 1px solid rgba(220,231,240,.85) !important;
+  }
+
+  .main-nav .nav-dropdown {
+    display: block !important;
+    width: 100% !important;
+    position: static !important;
+  }
+
+  .main-nav .dropdown-menu {
+    display: none !important;
+    position: static !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    background: #f7fafc !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .main-nav .nav-dropdown.services-open .dropdown-menu {
+    display: block !important;
+  }
+
+  .main-nav .dropdown-menu a {
+    display: block !important;
+    padding: 12px 30px !important;
+    border-bottom: 1px solid rgba(220,231,240,.75) !important;
+    text-align: left !important;
+  }
+}

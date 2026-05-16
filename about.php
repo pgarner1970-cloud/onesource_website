@@ -53,4 +53,47 @@
 <main><section class="page-hero"><div class="wrap">
 <p>Practical, efficient and professionally installed domestic systems.</p></div></section><section class="section pale"><div class="wrap about-grid"><div class="content-card"><h2>About One Source Air & Energy Ltd</h2><p>We provide domestic air conditioning, solar PV, battery storage, EV charging, electrical and gas services with a focus on quality, safety and tidy workmanship.</p><ul><li>Clear advice before work begins</li><li>Safe and compliant installations</li><li>Reliable communication</li><li>A neat finish in domestic homes</li></ul></div><img class="about-img" src="assets/images/hero-uk-street.svg" alt="UK housing and home energy systems"></div></section></main>
 <?php include __DIR__ . '/includes/footer.php'; ?>
-<script src="assets/js/site.js"></script></body></html>
+<script src="assets/js/site.js"></script>
+<script id="FINAL_MOBILE_NAV_INLINE_FIX">
+(function () {
+  function ready(fn) {
+    if (document.readyState !== 'loading') fn();
+    else document.addEventListener('DOMContentLoaded', fn);
+  }
+
+  ready(function () {
+    var toggle = document.querySelector('.menu-toggle');
+    var nav = document.querySelector('.main-nav');
+    var dropdown = document.querySelector('.main-nav .nav-dropdown');
+
+    if (toggle && nav) {
+      toggle.setAttribute('aria-expanded', 'false');
+
+      toggle.addEventListener('click', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        var open = !nav.classList.contains('mobile-open');
+        nav.classList.toggle('mobile-open', open);
+        document.body.classList.toggle('mobile-nav-open', open);
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+
+    if (dropdown) {
+      var serviceLink = dropdown.querySelector(':scope > a') || dropdown.querySelector('a');
+      if (serviceLink) {
+        serviceLink.addEventListener('click', function (event) {
+          if (window.matchMedia('(max-width: 860px)').matches) {
+            event.preventDefault();
+            event.stopPropagation();
+            dropdown.classList.toggle('services-open');
+          }
+        });
+      }
+    }
+  });
+})();
+</script>
+
+</body></html>

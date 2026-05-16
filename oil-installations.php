@@ -56,4 +56,47 @@
           <a href="oil-installations.php">Oil Installations</a>
 </aside></div></section></main>
 <?php include __DIR__ . '/includes/footer.php'; ?>
-<script src="assets/js/site.js"></script></body></html>
+<script src="assets/js/site.js"></script>
+<script id="FINAL_MOBILE_NAV_INLINE_FIX">
+(function () {
+  function ready(fn) {
+    if (document.readyState !== 'loading') fn();
+    else document.addEventListener('DOMContentLoaded', fn);
+  }
+
+  ready(function () {
+    var toggle = document.querySelector('.menu-toggle');
+    var nav = document.querySelector('.main-nav');
+    var dropdown = document.querySelector('.main-nav .nav-dropdown');
+
+    if (toggle && nav) {
+      toggle.setAttribute('aria-expanded', 'false');
+
+      toggle.addEventListener('click', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        var open = !nav.classList.contains('mobile-open');
+        nav.classList.toggle('mobile-open', open);
+        document.body.classList.toggle('mobile-nav-open', open);
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+
+    if (dropdown) {
+      var serviceLink = dropdown.querySelector(':scope > a') || dropdown.querySelector('a');
+      if (serviceLink) {
+        serviceLink.addEventListener('click', function (event) {
+          if (window.matchMedia('(max-width: 860px)').matches) {
+            event.preventDefault();
+            event.stopPropagation();
+            dropdown.classList.toggle('services-open');
+          }
+        });
+      }
+    }
+  });
+})();
+</script>
+
+</body></html>
