@@ -38,6 +38,7 @@
 </span>
       </span>
       <a href="our-work.php">Our Work</a>
+      <a href="advice-insights.php">Advice & Insights</a>
       <a href="about.php">About Us</a>
       <a href="contact.php">Contact</a>
     </nav>

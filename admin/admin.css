@@ -556,3 +556,26 @@ textarea::placeholder{
   color: #146c43;
   border: 1px solid #badbcc;
 }
+
+.admin-list {
+  display: grid;
+  gap: 12px;
+}
+
+.admin-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 14px;
+  background: #fff;
+  border: 1px solid #dce7f0;
+  border-radius: 12px;
+}
+
+.admin-list-item span {
+  display: block;
+  color: #637083;
+  font-size: 13px;
+  margin-top: 4px;
+}

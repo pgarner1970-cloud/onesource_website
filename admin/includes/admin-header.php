@@ -7,6 +7,7 @@
     <a href="index.php">Gallery Admin</a>
     <a href="category-images.php">Service Images</a>
     <a href="opening-hours.php">Opening Hours</a>
+    <a href="advice-admin.php">Advice & Insights</a>
     <a href="social-links.php">Social Media</a>
     <a href="trustpilot-settings.php">Trustpilot</a>
     <a href="../index.php">Back to Website</a>
