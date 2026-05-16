@@ -12,8 +12,32 @@ if (file_exists($socialFile)) {
 $socialIcons = [
     'facebook' => ['label' => 'Facebook', 'icon' => 'assets/icons/facebook.svg'],
     'instagram' => ['label' => 'Instagram', 'icon' => 'assets/icons/instagram.svg'],
-    'whatsapp' => ['label' => 'WhatsApp', 'icon' => 'assets/icons/whatsapp.svg']
+    'whatsapp' => ['label' => 'WhatsApp', 'icon' => 'assets/icons/whatsapp.svg'],
+    'linkedin' => ['label' => 'LinkedIn', 'icon' => 'assets/icons/linkedin.svg'],
+    'youtube' => ['label' => 'YouTube', 'icon' => 'assets/icons/youtube.svg'],
+    'tiktok' => ['label' => 'TikTok', 'icon' => 'assets/icons/tiktok.svg'],
+    'x' => ['label' => 'X / Twitter', 'icon' => 'assets/icons/x.svg'],
+    'google_business' => ['label' => 'Google Business', 'icon' => 'assets/icons/google-business.svg'],
+    'trustpilot' => ['label' => 'Trustpilot', 'icon' => 'assets/icons/trustpilot.svg'],
+    'checkatrade' => ['label' => 'Checkatrade', 'icon' => 'assets/icons/checkatrade.svg'],
+    'mybuilder' => ['label' => 'MyBuilder', 'icon' => 'assets/icons/mybuilder.svg'],
+    'rated_people' => ['label' => 'Rated People', 'icon' => 'assets/icons/rated-people.svg']
 ];
+
+function social_url($socialLinks, $key) {
+    if (!isset($socialLinks[$key])) {
+        return '';
+    }
+
+    if (is_array($socialLinks[$key])) {
+        if (empty($socialLinks[$key]['enabled'])) {
+            return '';
+        }
+        return trim($socialLinks[$key]['url'] ?? '');
+    }
+
+    return trim((string)$socialLinks[$key]);
+}
 ?>
 <footer>
   <div class="wrap footer-inner">
@@ -26,8 +50,9 @@ $socialIcons = [
 
     <div class="footer-social">
       <?php foreach ($socialIcons as $key => $item): ?>
-        <?php if (!empty($socialLinks[$key])): ?>
-          <a href="<?= htmlspecialchars($socialLinks[$key]) ?>" target="_blank" rel="noopener noreferrer" aria-label="<?= htmlspecialchars($item['label']) ?>">
+        <?php $url = social_url($socialLinks, $key); ?>
+        <?php if ($url !== ''): ?>
+          <a href="<?= htmlspecialchars($url) ?>" target="_blank" rel="noopener noreferrer" aria-label="<?= htmlspecialchars($item['label']) ?>" title="<?= htmlspecialchars($item['label']) ?>">
             <img src="<?= htmlspecialchars($item['icon']) ?>" alt="<?= htmlspecialchars($item['label']) ?>">
           </a>
         <?php endif; ?>

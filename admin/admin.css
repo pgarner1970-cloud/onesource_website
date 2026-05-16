@@ -501,3 +501,58 @@ textarea::placeholder{
   color: #146c43;
   border: 1px solid #badbcc;
 }
+
+.admin-note {
+  color: #637083;
+  margin-bottom: 18px;
+}
+
+.social-form {
+  display: grid;
+  gap: 14px;
+}
+
+.social-admin-row {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 14px;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #dce7f0;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.social-enable {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  margin: 0 !important;
+}
+
+.social-enable input {
+  width: auto !important;
+}
+
+.social-admin-row input[type="url"] {
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+  .social-admin-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-message {
+  padding: 14px 16px;
+  border-radius: 8px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.form-message.success {
+  background: #e8f6ef;
+  color: #146c43;
+  border: 1px solid #badbcc;
+}

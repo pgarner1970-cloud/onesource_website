@@ -4,28 +4,53 @@ require_login();
 
 $file = __DIR__ . '/../data/social-links.json';
 
-$links = [
-    'facebook' => '',
-    'instagram' => '',
-    'whatsapp' => ''
+$platforms = [
+    'facebook' => ['label' => 'Facebook', 'placeholder' => 'https://www.facebook.com/Onesourceairandenergyltd/'],
+    'instagram' => ['label' => 'Instagram', 'placeholder' => 'https://www.instagram.com/...'],
+    'whatsapp' => ['label' => 'WhatsApp', 'placeholder' => 'https://wa.me/447502216131'],
+    'linkedin' => ['label' => 'LinkedIn', 'placeholder' => 'https://www.linkedin.com/company/...'],
+    'youtube' => ['label' => 'YouTube', 'placeholder' => 'https://www.youtube.com/@...'],
+    'tiktok' => ['label' => 'TikTok', 'placeholder' => 'https://www.tiktok.com/@...'],
+    'x' => ['label' => 'X / Twitter', 'placeholder' => 'https://x.com/...'],
+    'google_business' => ['label' => 'Google Business', 'placeholder' => 'https://g.page/r/...'],
+    'trustpilot' => ['label' => 'Trustpilot', 'placeholder' => 'https://uk.trustpilot.com/review/...'],
+    'checkatrade' => ['label' => 'Checkatrade', 'placeholder' => 'https://www.checkatrade.com/trades/...'],
+    'mybuilder' => ['label' => 'MyBuilder', 'placeholder' => 'https://www.mybuilder.com/profile/...'],
+    'rated_people' => ['label' => 'Rated People', 'placeholder' => 'https://www.ratedpeople.com/profile/...'],
 ];
+
+$links = [];
 
 if (file_exists($file)) {
     $loaded = json_decode(file_get_contents($file), true);
     if (is_array($loaded)) {
-        $links = array_merge($links, $loaded);
+        $links = $loaded;
+    }
+}
+
+foreach ($platforms as $key => $meta) {
+    if (!isset($links[$key])) {
+        $links[$key] = ['url' => '', 'enabled' => false];
+    } elseif (!is_array($links[$key])) {
+        $links[$key] = ['url' => (string)$links[$key], 'enabled' => trim((string)$links[$key]) !== ''];
+    } else {
+        $links[$key]['url'] = $links[$key]['url'] ?? '';
+        $links[$key]['enabled'] = !empty($links[$key]['enabled']);
     }
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $links = [
-        'facebook' => trim($_POST['facebook'] ?? ''),
-        'instagram' => trim($_POST['instagram'] ?? ''),
-        'whatsapp' => trim($_POST['whatsapp'] ?? '')
-    ];
+    foreach ($platforms as $key => $meta) {
+        $url = trim($_POST[$key . '_url'] ?? '');
+        $enabled = isset($_POST[$key . '_enabled']) && $url !== '';
+
+        $links[$key] = [
+            'url' => $url,
+            'enabled' => $enabled
+        ];
+    }
 
     file_put_contents($file, json_encode($links, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
-
     header('Location: social-links.php?saved=1');
     exit;
 }
@@ -44,24 +69,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <main class="admin-wrap">
   <section class="admin-panel">
     <h2>Social Media Links</h2>
-    <p class="admin-note">Only icons with a saved link will appear in the website footer. Leave a field blank to hide that icon.</p>
+    <p class="admin-note">Only enabled platforms with a URL will show in the website footer.</p>
 
     <?php if (isset($_GET['saved'])): ?>
       <div class="form-message success">Social media links updated.</div>
     <?php endif; ?>
 
-    <form method="post" class="admin-form">
-      <label>Facebook URL
-        <input type="url" name="facebook" placeholder="https://www.facebook.com/..." value="<?= htmlspecialchars($links['facebook']) ?>">
-      </label>
+    <form method="post" class="admin-form social-form">
+      <?php foreach ($platforms as $key => $meta): ?>
+        <div class="social-admin-row">
+          <label class="social-enable">
+            <input type="checkbox" name="<?= htmlspecialchars($key) ?>_enabled" <?php if (!empty($links[$key]['enabled'])) echo 'checked'; ?>>
+            <strong><?= htmlspecialchars($meta['label']) ?></strong>
+          </label>
 
-      <label>Instagram URL
-        <input type="url" name="instagram" placeholder="https://www.instagram.com/..." value="<?= htmlspecialchars($links['instagram']) ?>">
-      </label>
-
-      <label>WhatsApp Link
-        <input type="url" name="whatsapp" placeholder="https://wa.me/447502216131" value="<?= htmlspecialchars($links['whatsapp']) ?>">
-      </label>
+          <input type="url"
+                 name="<?= htmlspecialchars($key) ?>_url"
+                 placeholder="<?= htmlspecialchars($meta['placeholder']) ?>"
+                 value="<?= htmlspecialchars($links[$key]['url'] ?? '') ?>">
+        </div>
+      <?php endforeach; ?>
 
       <button type="submit">Save Social Links</button>
     </form>
