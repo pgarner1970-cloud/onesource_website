@@ -706,3 +706,47 @@ footer {
 }
 
 .icon-oil{color:#8B5A2B !important;}
+
+
+/* Services grid: 4 columns on desktop for 7 services */
+.service-grid,
+.services-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 22px !important;
+}
+
+.service-card {
+  min-width: 0 !important;
+}
+
+.service-card img {
+  width: 100% !important;
+  height: 220px !important;
+  object-fit: cover !important;
+}
+
+.icon-oil {
+  color: #8B5A2B !important;
+}
+
+@media (max-width: 1150px) {
+  .service-grid,
+  .services-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 850px) {
+  .service-grid,
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .service-grid,
+  .services-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
