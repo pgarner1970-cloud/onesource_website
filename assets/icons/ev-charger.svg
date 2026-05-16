@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect x="14" y="6" width="36" height="52" rx="5" fill="none" stroke="#2F80ED" stroke-width="5"/>
-  <path d="M27 16h10v16h-10z" fill="#2F80ED"/>
-  <path d="M35 30l-7 12h7l-3 10 9-15h-7z" fill="#2F80ED"/>
-  <text x="22" y="57" font-size="12" font-family="Arial" font-weight="700" fill="#2F80ED">EV</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect x="15" y="7" width="34" height="50" rx="5" fill="none" stroke="#2F80ED" stroke-width="5"/><rect x="25" y="16" width="14" height="14" fill="#2F80ED"/><path d="M36 31l-8 12h7l-4 10 12-17h-7z" fill="#2F80ED"/><path d="M49 24c7 1 9 6 9 12v9c0 5-3 8-8 8" fill="none" stroke="#2F80ED" stroke-width="4" stroke-linecap="round"/></svg>

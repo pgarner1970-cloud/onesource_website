@@ -916,3 +916,32 @@ footer {
   color: #0b8754 !important;
   font-size: 19px !important;
 }
+
+
+/* Final clean service badge SVG icons */
+.service-card .service-icon {
+  width: 46px !important;
+  height: 46px !important;
+  min-width: 46px !important;
+  min-height: 46px !important;
+  max-width: 46px !important;
+  max-height: 46px !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+  box-shadow: 0 8px 18px rgba(0,0,0,.12) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  padding: 8px !important;
+  box-sizing: border-box !important;
+}
+
+.service-card .service-icon img {
+  width: 30px !important;
+  height: 30px !important;
+  max-width: 30px !important;
+  max-height: 30px !important;
+  object-fit: contain !important;
+  display: block !important;
+}
