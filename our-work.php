@@ -69,7 +69,7 @@
     </section></main>
 <?php include __DIR__ . '/includes/footer.php'; ?>
 <script src="assets/js/site.js"></script><script>
-fetch('data/projects.json')
+fetch('gallery-data.php')
   .then(response => response.json())
   .then(projects => {
     const gallery = document.getElementById('dynamic-gallery');

@@ -19,7 +19,7 @@ filters.forEach((button) => {
 
 
 // Load editable default service/category images set in admin
-fetch('data/category-images.json')
+fetch('category-images-data.php')
   .then(response => response.ok ? response.json() : null)
   .then(images => {
     if (!images) return;
