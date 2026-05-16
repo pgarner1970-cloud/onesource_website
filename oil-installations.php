@@ -33,9 +33,8 @@
           <a href="battery-storage.php">Battery Storage</a>
           <a href="ev-chargers.php">EV Chargers</a>
           <a href="electrical-services.php">Electrical Services</a>
-          <a href="oil-installations.php">Oil Installations</a>
-          <a href="oil-installations.php">Oil Installations</a>
-        </span>
+
+</span>
       </span>
       <a href="our-work.php">Our Work</a>
       <a href="about.php">About Us</a>
@@ -50,9 +49,11 @@
     </div>
   </div>
 </header>
-<main><section class="page-hero"><div class="wrap"><h1>Oil Installations</h1><p>Domestic oil boiler installation, servicing and heating system support.</p></div></section><section class="section"><div class="wrap content-grid"><article class="content-card"><img class="service-detail-image" data-service-image="oil-installations" src="assets/images/services/oil-installations.jpg" alt="Oil Installations"><h2>Oil Installations for domestic properties</h2><p>Domestic oil boiler installation, servicing and heating system support.</p><h3>How we can help</h3><ul><li>Clear advice before work begins</li><li>Safe and tidy installation</li><li>Domestic property focused service</li><li>Ongoing support and maintenance where appropriate</li></ul><a class="btn btn-primary" href="contact.php">Request a Quote →</a></article><aside class="side-nav">
-<a href="air-conditioning.php">Air Conditioning</a><a href="solar-pv.php">Solar PV</a><a href="battery-storage.php">Battery Storage</a><a href="ev-chargers.php">EV Chargers</a><a href="electrical-services.php">Electrical Services</a><a href="oil-installations.php">Oil Installations</a>
-          <a href="oil-installations.php">Oil Installations</a></aside></div></section></main>
+<main><section class="page-hero"><div class="wrap"><h1>Oil Installations</h1>
+    <p>Domestic oil heating installation, servicing and support.</p></div></section><section class="section"><div class="wrap content-grid"><article class="content-card"><img class="service-detail-image" data-service-image="oil-installations" src="assets/images/services/oil-installations.jpg" alt="Oil Installations"><h2>Oil Installations for domestic properties</h2><p>Domestic oil heating installation, servicing and support.</p><h3>How we can help</h3><ul><li>Clear advice before work begins</li><li>Safe and tidy installation</li><li>Domestic property focused service</li><li>Ongoing support and maintenance where appropriate</li></ul><a class="btn btn-primary" href="contact.php">Request a Quote →</a></article><aside class="side-nav">
+<a href="air-conditioning.php">Air Conditioning</a><a href="solar-pv.php">Solar PV</a><a href="battery-storage.php">Battery Storage</a><a href="ev-chargers.php">EV Chargers</a><a href="electrical-services.php">Electrical Services</a>
+
+</aside></div></section></main>
 <footer>
   <div class="wrap footer-inner">
     <div class="footer-legal">
