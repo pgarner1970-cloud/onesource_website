@@ -1,9 +1,9 @@
 {
-    "air-conditioning": "assets/images/services/air-conditioning.jpg",
-    "solar-pv": "assets/images/services/solar-pv.jpg",
-    "battery-storage": "assets/images/services/battery-storage.jpg",
-    "ev-chargers": "assets/images/services/ev-chargers.jpg",
-    "electrical": "assets/images/services/electrical-services.jpg",
-    "gas-services": "assets/images/services/gas-services.jpg",
-    "oil-installations": "assets/images/services/oil-installations.jpg"
+  "air-conditioning": "assets/images/services/air-conditioning.jpg",
+  "solar-pv": "assets/images/services/solar-pv.jpg",
+  "battery-storage": "assets/images/services/battery-storage.jpg",
+  "ev-chargers": "assets/images/services/ev-chargers.jpg",
+  "electrical": "assets/images/services/electrical-services.jpg",
+  "gas-services": "assets/images/services/gas-services.jpg",
+  "oil-installations": "assets/images/services/oil-installations.jpg"
 }

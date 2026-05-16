@@ -1,0 +1,26 @@
+One Source production structure
+
+Required folders:
+- admin/
+- assets/
+- data/
+- includes/
+- uploads/
+
+Required root PHP files:
+- index.php
+- services.php
+- service pages
+- our-work.php
+- about.php
+- contact.php
+- privacy.php
+- opening-hours.php
+- send-enquiry.php
+- site-config.php
+
+Runtime data:
+- data/*.json
+- uploads/
+
+These should be backed up and should not normally be overwritten by Git deployment.
