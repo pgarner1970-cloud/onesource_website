@@ -32,3 +32,34 @@ fetch('data/category-images.json')
     });
   })
   .catch(() => {});
+
+
+// Mobile navigation repair
+document.addEventListener('DOMContentLoaded', function () {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mainNav = document.querySelector('.main-nav');
+  const serviceDropdown = document.querySelector('.main-nav .nav-dropdown');
+
+  if (menuToggle && mainNav) {
+    menuToggle.setAttribute('aria-expanded', 'false');
+
+    menuToggle.addEventListener('click', function () {
+      const isOpen = mainNav.classList.toggle('is-open');
+      document.body.classList.toggle('nav-open', isOpen);
+      menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  }
+
+  if (serviceDropdown) {
+    const serviceLink = serviceDropdown.querySelector(':scope > a');
+
+    if (serviceLink) {
+      serviceLink.addEventListener('click', function (event) {
+        if (window.matchMedia('(max-width: 860px)').matches) {
+          event.preventDefault();
+          serviceDropdown.classList.toggle('is-open');
+        }
+      });
+    }
+  }
+});

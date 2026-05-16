@@ -23,12 +23,12 @@
       <img src="assets/logos/onesource-logo.png" alt="One Source Air & Energy Ltd logo">
     </a>
 
-    <button class="menu-toggle" aria-label="Open menu">☰</button>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
 
     <nav class="main-nav" aria-label="Main navigation">
       <a href="index.php">Home</a>
       <span class="nav-dropdown">
-        <a href="services.php">Services</a>
+        <a href="services.php">Services ▾</a>
         <span class="dropdown-menu">
           <a href="air-conditioning.php">Air Conditioning</a>
           <a href="solar-pv.php">Solar PV</a>
