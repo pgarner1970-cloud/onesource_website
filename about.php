@@ -52,22 +52,5 @@
 </header>
 <main><section class="page-hero"><div class="wrap">
 <p>Practical, efficient and professionally installed domestic systems.</p></div></section><section class="section pale"><div class="wrap about-grid"><div class="content-card"><h2>About One Source Air & Energy Ltd</h2><p>We provide domestic air conditioning, solar PV, battery storage, EV charging, electrical and gas services with a focus on quality, safety and tidy workmanship.</p><ul><li>Clear advice before work begins</li><li>Safe and compliant installations</li><li>Reliable communication</li><li>A neat finish in domestic homes</li></ul></div><img class="about-img" src="assets/images/hero-uk-street.svg" alt="UK housing and home energy systems"></div></section></main>
-<footer>
-  <div class="wrap footer-inner">
-    <div class="footer-legal">
-      <strong>ONE SOURCE AIR & ENERGY LTD</strong>
-      <span>Registered in England & Wales • Company No. 10162474</span>
-      <span>Cleobury Mortimer, Kidderminster DY14 8DP</span>
-      <span class="footer-links"><a href="privacy.php">Privacy & Cookie Policy</a><span aria-hidden="true">•</span><a href="admin/">Admin Login</a></span>
-    </div>
-
-    <div class="footer-social">
-      <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
-        <img src="assets/icons/facebook.svg" alt="Facebook">
-      </a>
-      <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt="Instagram"></a>
-      <a href="https://wa.me/447502216131" class="header-whatsapp" aria-label="WhatsApp"><img src="assets/icons/whatsapp.svg" alt="WhatsApp"></a>
-    </div>
-  </div>
-</footer>
+<?php include __DIR__ . '/includes/footer.php'; ?>
 <script src="assets/js/site.js"></script></body></html>

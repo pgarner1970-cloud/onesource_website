@@ -488,3 +488,16 @@ textarea::placeholder{
   margin: 0 !important;
   display: inline-flex !important;
 }
+
+.form-message {
+  padding: 14px 16px;
+  border-radius: 8px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.form-message.success {
+  background: #e8f6ef;
+  color: #146c43;
+  border: 1px solid #badbcc;
+}

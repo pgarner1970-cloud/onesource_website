@@ -66,24 +66,7 @@
         </div>
       </div>
     </section></main>
-<footer>
-  <div class="wrap footer-inner">
-    <div class="footer-legal">
-      <strong>ONE SOURCE AIR & ENERGY LTD</strong>
-      <span>Registered in England & Wales • Company No. 10162474</span>
-      <span>Cleobury Mortimer, Kidderminster DY14 8DP</span>
-      <span class="footer-links"><a href="privacy.php">Privacy & Cookie Policy</a><span aria-hidden="true">•</span><a href="admin/">Admin Login</a></span>
-    </div>
-
-    <div class="footer-social">
-      <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
-        <img src="assets/icons/facebook.svg" alt="Facebook">
-      </a>
-      <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt="Instagram"></a>
-      <a href="https://wa.me/447502216131" class="header-whatsapp" aria-label="WhatsApp"><img src="assets/icons/whatsapp.svg" alt="WhatsApp"></a>
-    </div>
-  </div>
-</footer>
+<?php include __DIR__ . '/includes/footer.php'; ?>
 <script src="assets/js/site.js"></script><script>
 fetch('data/projects.json')
   .then(response => response.json())
