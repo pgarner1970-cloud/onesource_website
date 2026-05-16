@@ -945,3 +945,125 @@ footer {
   object-fit: contain !important;
   display: block !important;
 }
+
+
+/* Accreditation card section */
+.accreditations-section {
+  padding: 72px 0;
+  background: #f7fafc;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.accreditations-section .section-heading {
+  max-width: 760px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.accreditations-section .section-heading h2 {
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.1;
+  color: var(--navy);
+  margin: 0 0 14px;
+  font-weight: 900;
+}
+
+.accreditations-section .section-heading p {
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--muted);
+  margin: 0;
+}
+
+.accreditation-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.accreditation-info-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: 0 10px 28px rgba(0,0,0,.045);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.accreditation-logo {
+  height: 170px;
+  padding: 24px;
+  background: #fff;
+  border-bottom: 1px solid #edf2f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accreditation-logo a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.accreditation-logo img {
+  max-width: 100%;
+  max-height: 118px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.accreditation-content {
+  padding: 24px;
+  flex: 1;
+}
+
+.accreditation-content h3 {
+  font-size: 22px;
+  line-height: 1.2;
+  margin: 0 0 8px;
+  color: var(--navy);
+  font-weight: 900;
+}
+
+.accreditation-content h4 {
+  font-size: 13px;
+  color: var(--blue);
+  margin: 0 0 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .45px;
+}
+
+.accreditation-content p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+@media (max-width: 1100px) {
+  .accreditation-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .accreditations-section {
+    padding: 54px 0;
+  }
+
+  .accreditation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .accreditation-logo {
+    height: 150px;
+  }
+}

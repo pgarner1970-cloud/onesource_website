@@ -51,6 +51,66 @@
   </div>
 </header>
 <main><section class="hero"><div class="hero-bg"></div><div class="wrap hero-content"><h1>Trusted home energy solutions across the West Midlands.</h1><p class="hero-copy">Professional domestic installations, certified engineers and quality workmanship you can rely on.</p><div class="hero-buttons"><a href="contact.php" class="btn btn-primary">Request a Quote →</a><a href="our-work.php" class="btn btn-ghost">View Our Work →</a></div></div></section>
+
+<section class="accreditations-section">
+  <div class="wrap">
+    <div class="section-heading">
+      <h2>Accreditations & Certifications</h2>
+      <p>Trusted, certified and professionally accredited across domestic, commercial and industrial energy services.</p>
+    </div>
+
+    <div class="accreditation-grid">
+
+      <article class="accreditation-info-card">
+        <div class="accreditation-logo">
+          <img src="assets/logos/gas-safe-register.png" alt="Gas Safe Register">
+        </div>
+        <div class="accreditation-content">
+          <h3>Gas Safe Registered</h3>
+          <h4>Domestic Gas Engineer</h4>
+          <p>We are Gas Safe registered for domestic gas installations, servicing, repairs and boiler work carried out safely and professionally.</p>
+        </div>
+      </article>
+
+      <article class="accreditation-info-card">
+        <div class="accreditation-logo">
+          <img src="assets/logos/niceic-approved-contractor.png" alt="NICEIC Approved Contractor">
+        </div>
+        <div class="accreditation-content">
+          <h3>NICEIC Approved Contractor</h3>
+          <h4>Electrical Contractor</h4>
+          <p>We undertake domestic, commercial and industrial electrical installations, upgrades, inspections and EV charging solutions to NICEIC standards.</p>
+        </div>
+      </article>
+
+      <article class="accreditation-info-card">
+        <div class="accreditation-logo">
+          <img src="assets/logos/refcom.png" alt="REFCOM F-Gas Certification">
+        </div>
+        <div class="accreditation-content">
+          <h3>REFCOM Registered</h3>
+          <h4>F-Gas Certified Engineers</h4>
+          <p>REFCOM registration confirms we are qualified to safely handle F-Gas refrigerants used in air conditioning and cooling systems.</p>
+        </div>
+      </article>
+
+      <article class="accreditation-info-card">
+        <div class="accreditation-logo">
+          <a href="https://www.oftec.org/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/accreditations/oftec.png" alt="OFTEC Registered">
+          </a>
+        </div>
+        <div class="accreditation-content">
+          <h3>OFTEC Registered</h3>
+          <h4>Oil Heating Engineer</h4>
+          <p>OFTEC registration demonstrates competence in domestic oil heating installation, servicing and maintenance work.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
 <section class="trust">
   <div class="wrap trust-grid">
 <a href="https://www.gassaferegister.co.uk/" class="badge" target="_blank" rel="noopener"><img src="assets/logos/gas-safe-register.png" alt="Gas Safe Register logo"></a>
