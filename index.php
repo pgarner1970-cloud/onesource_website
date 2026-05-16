@@ -202,5 +202,37 @@
   </div>
 </section>
 
+
+<section class="trustpilot-section">
+  <div class="wrap trustpilot-wrap">
+    <div class="trustpilot-summary">
+      <div class="trustpilot-brand">★ Trustpilot</div>
+      <h2>Rated by our customers</h2>
+      <p>See what customers say about One Source Air &amp; Energy Ltd.</p>
+      <a class="btn btn-outline trustpilot-link" href="https://uk.trustpilot.com/review/onesourceairandenergyltd.co.uk" target="_blank" rel="noopener noreferrer">
+        Read our Trustpilot reviews →
+      </a>
+    </div>
+
+    <div class="trustpilot-widget-panel">
+      <!-- Trustpilot TrustBox widget.
+           Replace YOUR_TRUSTPILOT_BUSINESS_UNIT_ID with the client's Trustpilot Business Unit ID. -->
+      <div class="trustpilot-widget"
+           data-locale="en-GB"
+           data-template-id="54ad5defc6454f065c28af8b"
+           data-businessunit-id="YOUR_TRUSTPILOT_BUSINESS_UNIT_ID"
+           data-style-height="240px"
+           data-style-width="100%"
+           data-theme="light"
+           data-stars="4,5"
+           data-review-languages="en">
+        <a href="https://uk.trustpilot.com/review/onesourceairandenergyltd.co.uk" target="_blank" rel="noopener noreferrer">Trustpilot</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <?php include __DIR__ . '/includes/footer.php'; ?>
-<script src="assets/js/site.js"></script></body></html>
+<script src="assets/js/site.js"></script><script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+</body></html>

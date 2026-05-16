@@ -1,0 +1,15 @@
+Trustpilot widget setup
+
+The homepage now includes a Trustpilot reviews section above the footer.
+
+Before going live, replace this placeholder in index.php:
+
+YOUR_TRUSTPILOT_BUSINESS_UNIT_ID
+
+with the client's Trustpilot Business Unit ID from Trustpilot Business.
+
+Also confirm the profile URL is correct:
+
+https://uk.trustpilot.com/review/onesourceairandenergyltd.co.uk
+
+If the client has a different Trustpilot profile URL, update both links in the Trustpilot section.
