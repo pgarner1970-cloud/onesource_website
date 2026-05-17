@@ -1920,3 +1920,128 @@ footer {
     padding: 18px 18px 0 18px !important;
   }
 }
+
+
+/* FINAL service card structure fix */
+.service-grid,
+.services-grid {
+  align-items: stretch !important;
+}
+
+.service-card {
+  position: relative !important;
+  overflow: hidden !important;
+  background: #fff !important;
+  border: 1px solid #dce7f0 !important;
+  border-radius: 18px !important;
+  box-shadow: 0 10px 28px rgba(0,0,0,.045) !important;
+}
+
+.service-card > a {
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  text-decoration: none !important;
+  color: inherit !important;
+  overflow: hidden !important;
+}
+
+/* Image area */
+.service-card > a > img,
+.service-card img[data-service-image] {
+  display: block !important;
+  width: calc(100% - 36px) !important;
+  height: 190px !important;
+  margin: 18px 18px 0 !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  background: #eef5f8 !important;
+  border-radius: 14px !important;
+  padding: 10px !important;
+  box-sizing: border-box !important;
+  flex: 0 0 auto !important;
+  aspect-ratio: auto !important;
+}
+
+/* Icon badge - sits between image and content without covering the title */
+.service-card .service-icon {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  transform: none !important;
+  margin: -23px 0 14px 28px !important;
+  z-index: 3 !important;
+  width: 46px !important;
+  height: 46px !important;
+  min-width: 46px !important;
+  min-height: 46px !important;
+  max-width: 46px !important;
+  max-height: 46px !important;
+  padding: 8px !important;
+  border-radius: 10px !important;
+  background: #fff !important;
+  box-shadow: 0 8px 18px rgba(0,0,0,.12) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+  flex: 0 0 auto !important;
+}
+
+/* Actual text spacing for current markup */
+.service-card > a > h3 {
+  padding: 0 28px !important;
+  margin: 0 0 12px !important;
+  line-height: 1.2 !important;
+  color: var(--navy) !important;
+}
+
+.service-card > a > p {
+  padding: 0 28px !important;
+  margin: 0 0 20px !important;
+  line-height: 1.65 !important;
+  color: #4f5f75 !important;
+  flex: 1 1 auto !important;
+}
+
+.service-card > a > strong {
+  display: block !important;
+  padding: 0 28px 28px !important;
+  margin-top: auto !important;
+  color: var(--navy) !important;
+  font-weight: 900 !important;
+}
+
+/* Remove older absolute positioning side effects */
+.service-card h3 {
+  margin-top: 0 !important;
+}
+
+@media (max-width: 860px) {
+  .service-card > a > img,
+  .service-card img[data-service-image] {
+    width: calc(100% - 28px) !important;
+    height: 175px !important;
+    margin: 14px 14px 0 !important;
+  }
+
+  .service-card .service-icon {
+    margin-left: 22px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .service-card > a > h3,
+  .service-card > a > p {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+  }
+
+  .service-card > a > strong {
+    padding-left: 22px !important;
+    padding-right: 22px !important;
+    padding-bottom: 24px !important;
+  }
+}
