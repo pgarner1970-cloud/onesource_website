@@ -1,0 +1,11 @@
+Gallery admin split form
+
+Changes:
+- Moves add/edit project form to /admin/gallery-edit.php.
+- Keeps /admin/gallery.php as cleaner gallery list.
+- Adds Add Project Image button.
+- Makes Edit/Hide/Delete buttons uniform size.
+- No SQL required.
+
+Commit message:
+Move gallery project form to separate admin page and standardise action buttons
