@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://onesourceairandenergyltd.co.uk/</loc></url>
-  <url><loc>https://onesourceairandenergyltd.co.uk/services.html</loc></url>
-  <url><loc>https://onesourceairandenergyltd.co.uk/air-conditioning.html</loc></url>
-  <url><loc>https://onesourceairandenergyltd.co.uk/solar-pv.html</loc></url>
-  <url><loc>https://onesourceairandenergyltd.co.uk/battery-storage.html</loc></url>
-  <url><loc>https://onesourceairandenergyltd.co.uk/ev-chargers.html</loc></url>
-  <url><loc>https://onesourceairandenergyltd.co.uk/electrical-services.html</loc></url>
-  <url><loc>https://onesourceairandenergyltd.co.uk/gas-services.html</loc></url>
-  <url><loc>https://onesourceairandenergyltd.co.uk/our-work.html</loc></url>
-  <url><loc>https://onesourceairandenergyltd.co.uk/about.html</loc></url>
-  <url><loc>https://onesourceairandenergyltd.co.uk/contact.html</loc></url>
-  <url><loc>https://onesourceairandenergyltd.co.uk/advice-insights.php</loc></url>
+<url><loc>https://onesourceairandenergyltd.co.uk/about.php</loc></url>
+<url><loc>https://onesourceairandenergyltd.co.uk/advice-insights.php</loc></url>
+<url><loc>https://onesourceairandenergyltd.co.uk/air-conditioning.php</loc></url>
+<url><loc>https://onesourceairandenergyltd.co.uk/article.php</loc></url>
+<url><loc>https://onesourceairandenergyltd.co.uk/battery-storage.php</loc></url>
+<url><loc>https://onesourceairandenergyltd.co.uk/category-images-data.php</loc></url>
+<url><loc>https://onesourceairandenergyltd.co.uk/config.local.example.php</loc></url>
+<url><loc>https://onesourceairandenergyltd.co.uk/config.local.php</loc></url>
+<url><loc>https://onesourceairandenergyltd.co.uk/contact.php</loc></url>
+<url><loc>https://onesourceairandenergyltd.co.uk/electrical-services.php</loc></url>
+<url><loc>https://onesourceairandenergyltd.co.uk/ev-chargers.php</loc></url>
+<url><loc>https://onesourceairandenergyltd.co.uk/gallery-data.php</loc></url>
+<url><loc>https://onesourceairandenergyltd.co.uk/gas-services.php</loc></url>
+<url><loc>https://onesourceairandenergyltd.co.uk/index.php</loc></url>
+<url><loc>https://onesourceairandenergyltd.co.uk/oil-installations.php</loc></url>
+<url><loc>https://onesourceairandenergyltd.co.uk/opening-hours.php</loc></url>
+<url><loc>https://onesourceairandenergyltd.co.uk/our-work.php</loc></url>
+<url><loc>https://onesourceairandenergyltd.co.uk/privacy.php</loc></url>
+<url><loc>https://onesourceairandenergyltd.co.uk/send-enquiry.php</loc></url>
+<url><loc>https://onesourceairandenergyltd.co.uk/services.php</loc></url>
+<url><loc>https://onesourceairandenergyltd.co.uk/site-config.php</loc></url>
+<url><loc>https://onesourceairandenergyltd.co.uk/solar-pv.php</loc></url>
 </urlset>

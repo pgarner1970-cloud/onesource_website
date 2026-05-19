@@ -1,0 +1,15 @@
+SEO Phase 6
+
+Included:
+- Metadata optimisation
+- FAQ sections
+- FAQ schema
+- LocalBusiness schema
+- Canonical URLs
+- Internal linking
+- robots.txt
+- sitemap.xml
+- Lazy loading improvements
+
+Commit message:
+Add SEO foundation improvements, FAQ schema and metadata optimisation

@@ -1,0 +1,26 @@
+
+
+.faq-section {
+  margin-top: 48px;
+  padding: 28px;
+  border-radius: 18px;
+  background: #f7fafc;
+}
+
+.faq-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.faq-item {
+  background: #fff;
+  border: 1px solid #dce7f0;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.faq-item summary {
+  cursor: pointer;
+  font-weight: 800;
+}
