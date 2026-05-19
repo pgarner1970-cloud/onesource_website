@@ -1,7 +1,7 @@
 <?php include 'opening-hours.php'; ?>
 <?php require_once __DIR__ . '/includes/articles.php'; ?>
 <?php
-$articles = get_articles_data(false);
+$articles = read_json_array(__DIR__ . '/data/articles.json', []);
 $articles = array_values(array_filter($articles, function($a) {
     return !empty($a['published']) && !empty($a['slug']);
 }));

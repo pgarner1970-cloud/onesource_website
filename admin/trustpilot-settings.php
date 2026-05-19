@@ -1,9 +1,23 @@
 <?php
 require_once __DIR__ . '/auth.php';
-require_once __DIR__ . '/../includes/content-store.php';
 require_login();
 
-$settings = get_trustpilot_settings_data();
+$file = __DIR__ . '/../data/trustpilot-settings.json';
+
+$settings = [
+    'enabled' => true,
+    'business_unit_id' => '',
+    'profile_url' => 'https://uk.trustpilot.com/review/onesourceairandenergyltd.co.uk',
+    'heading' => 'Rated by our customers',
+    'intro' => 'See what customers say about One Source Air & Energy Ltd.'
+];
+
+if (file_exists($file)) {
+    $loaded = json_decode(file_get_contents($file), true);
+    if (is_array($loaded)) {
+        $settings = array_merge($settings, $loaded);
+    }
+}
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $settings = [
@@ -14,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'intro' => trim($_POST['intro'] ?? '')
     ];
 
-    save_trustpilot_settings_data($settings);
+    file_put_contents($file, json_encode($settings, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
     header('Location: trustpilot-settings.php?saved=1');
     exit;
 }

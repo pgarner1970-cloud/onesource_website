@@ -3,7 +3,7 @@
 require_once __DIR__ . '/includes/security.php'; ?>
 <?php
 $slug = $_GET['slug'] ?? '';
-$articles = get_articles_data(false);
+$articles = read_json_array(__DIR__ . '/data/articles.json', []);
 $article = null;
 
 foreach ($articles as $item) {

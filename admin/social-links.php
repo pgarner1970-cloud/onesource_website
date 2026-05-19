@@ -1,9 +1,32 @@
 <?php
 require_once __DIR__ . '/auth.php';
-require_once __DIR__ . '/../includes/content-store.php';
 require_login();
 
-$links = get_social_links_data();
+$file = __DIR__ . '/../data/social-links.json';
+
+$platforms = [
+    'facebook' => ['label' => 'Facebook', 'placeholder' => 'https://www.facebook.com/Onesourceairandenergyltd/'],
+    'instagram' => ['label' => 'Instagram', 'placeholder' => 'https://www.instagram.com/...'],
+    'whatsapp' => ['label' => 'WhatsApp', 'placeholder' => 'https://wa.me/447502216131'],
+    'linkedin' => ['label' => 'LinkedIn', 'placeholder' => 'https://www.linkedin.com/company/...'],
+    'youtube' => ['label' => 'YouTube', 'placeholder' => 'https://www.youtube.com/@...'],
+    'tiktok' => ['label' => 'TikTok', 'placeholder' => 'https://www.tiktok.com/@...'],
+    'x' => ['label' => 'X / Twitter', 'placeholder' => 'https://x.com/...'],
+    'google_business' => ['label' => 'Google Business', 'placeholder' => 'https://g.page/r/...'],
+    'trustpilot' => ['label' => 'Trustpilot', 'placeholder' => 'https://uk.trustpilot.com/review/...'],
+    'checkatrade' => ['label' => 'Checkatrade', 'placeholder' => 'https://www.checkatrade.com/trades/...'],
+    'mybuilder' => ['label' => 'MyBuilder', 'placeholder' => 'https://www.mybuilder.com/profile/...'],
+    'rated_people' => ['label' => 'Rated People', 'placeholder' => 'https://www.ratedpeople.com/profile/...'],
+];
+
+$links = [];
+
+if (file_exists($file)) {
+    $loaded = json_decode(file_get_contents($file), true);
+    if (is_array($loaded)) {
+        $links = $loaded;
+    }
+}
 
 foreach ($platforms as $key => $meta) {
     if (!isset($links[$key])) {
@@ -27,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ];
     }
 
-    save_social_links_data($links, $platforms);
+    file_put_contents($file, json_encode($links, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
     header('Location: social-links.php?saved=1');
     exit;
 }

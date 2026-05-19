@@ -2,13 +2,12 @@
 // AI draft generator. Creates drafts only. Never publishes automatically.
 
 require_once __DIR__ . '/../includes/articles.php';
-require_once __DIR__ . '/../includes/content-store.php';
 
 function generate_ai_article_draft($topic = '') {
     $settingsFile = __DIR__ . '/../data/article-settings.json';
     $draftFile = __DIR__ . '/../data/article-drafts.json';
 
-    $settings = get_article_settings_data();
+    $settings = read_json_array($settingsFile, []);
     $drafts = read_json_array($draftFile, []);
 
     if (empty($settings['enabled'])) {

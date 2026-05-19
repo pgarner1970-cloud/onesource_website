@@ -1,5 +1,19 @@
 <?php
-require_once __DIR__ . '/includes/content-store.php';
 header('Content-Type: application/json; charset=utf-8');
-echo json_encode(get_projects_data(), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
-?>
+
+$file = __DIR__ . '/data/projects.json';
+
+if (!file_exists($file)) {
+    echo json_encode([]);
+    exit;
+}
+
+$json = file_get_contents($file);
+$data = json_decode($json, true);
+
+if (!is_array($data)) {
+    echo json_encode([]);
+    exit;
+}
+
+echo json_encode($data, JSON_UNESCAPED_SLASHES);

@@ -68,22 +68,22 @@ function safe_html($html) {
     $html = (string)$html;
 
     // Remove dangerous complete tag blocks.
-    $html = preg_replace('#<script\\b[^>]*>.*?</script>#is', '', $html);
-    $html = preg_replace('#<iframe\\b[^>]*>.*?</iframe>#is', '', $html);
-    $html = preg_replace('#<object\\b[^>]*>.*?</object>#is', '', $html);
-    $html = preg_replace('#<embed\\b[^>]*>.*?</embed>#is', '', $html);
-    $html = preg_replace('#<style\\b[^>]*>.*?</style>#is', '', $html);
+    $html = preg_replace('#<script\b[^>]*>.*?</script>#is', '', $html);
+    $html = preg_replace('#<iframe\b[^>]*>.*?</iframe>#is', '', $html);
+    $html = preg_replace('#<object\b[^>]*>.*?</object>#is', '', $html);
+    $html = preg_replace('#<embed\b[^>]*>.*?</embed>#is', '', $html);
+    $html = preg_replace('#<style\b[^>]*>.*?</style>#is', '', $html);
 
     // Remove dangerous standalone tags.
     $html = preg_replace('#</?(script|iframe|object|embed|style|link|meta|form|input|button)[^>]*>#is', '', $html);
 
     // Remove inline JavaScript event handlers.
-    $html = preg_replace('/\\son[a-z]+\\s*=\\s*"[^"]*"/i', '', $html);
-    $html = preg_replace("/\\son[a-z]+\\s*=\\s*'[^']*'/i", '', $html);
+    $html = preg_replace('/\son[a-z]+\s*=\s*"[^"]*"/i', '', $html);
+    $html = preg_replace("/\son[a-z]+\s*=\s*'[^']*'/i", '', $html);
 
     // Remove javascript: links.
-    $html = preg_replace('/href\\s*=\\s*"javascript:[^"]*"/i', 'href="#"', $html);
-    $html = preg_replace("/href\\s*=\\s*'javascript:[^']*'/i", "href='#'", $html);
+    $html = preg_replace('/href\s*=\s*"javascript:[^"]*"/i', 'href="#"', $html);
+    $html = preg_replace("/href\s*=\s*'javascript:[^']*'/i", "href='#'", $html);
 
     // Allow only simple article formatting tags.
     return strip_tags($html, '<p><br><h2><h3><h4><ul><ol><li><strong><b><em><i><a><blockquote>');

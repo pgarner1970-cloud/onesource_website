@@ -1,5 +1,4 @@
 <?php
-require_once __DIR__ . '/content-store.php';
 function read_json_array($file, $fallback = []) {
     if (!file_exists($file)) {
         return $fallback;

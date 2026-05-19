@@ -1,6 +1,13 @@
 <?php
-require_once __DIR__ . '/content-store.php';
-$socialLinks = get_social_links_data();
+$socialFile = __DIR__ . '/../data/social-links.json';
+$socialLinks = [];
+
+if (file_exists($socialFile)) {
+    $socialLinks = json_decode(file_get_contents($socialFile), true);
+    if (!is_array($socialLinks)) {
+        $socialLinks = [];
+    }
+}
 
 $socialIcons = [
     'facebook' => ['label' => 'Facebook', 'icon' => 'assets/icons/facebook.svg'],
