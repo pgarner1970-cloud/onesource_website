@@ -928,3 +928,97 @@ button.delete {
 .compact-form label {
   margin-bottom: 10px;
 }
+
+
+/* Restore original Service Images admin layout */
+.service-default-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+  gap: 18px !important;
+  margin-top: 22px !important;
+}
+
+.service-default-card {
+  background: #fff !important;
+  border: 1px solid #dce7f0 !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  box-shadow: none !important;
+}
+
+.service-default-preview {
+  height: 210px !important;
+  margin: 14px 14px 0 !important;
+  border: 1px solid #dce7f0 !important;
+  border-radius: 7px !important;
+  background: #f7fafc !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+}
+
+.service-default-preview img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  padding: 8px !important;
+  box-sizing: border-box !important;
+}
+
+.service-default-body {
+  padding: 18px 14px 16px !important;
+}
+
+.service-default-body h3 {
+  margin: 0 0 14px !important;
+  font-size: 20px !important;
+  color: #0b2c52 !important;
+}
+
+.service-image-form {
+  display: block !important;
+  margin: 0 0 10px !important;
+}
+
+.service-image-form label {
+  display: block !important;
+  margin: 0 0 4px !important;
+  color: #0b2c52 !important;
+  font-weight: 500 !important;
+}
+
+.service-image-form input[type="file"] {
+  display: block !important;
+  width: 100% !important;
+  margin: 0 0 8px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+.service-admin-button {
+  display: block !important;
+  width: 100% !important;
+  min-height: 25px !important;
+  padding: 3px 10px !important;
+  border-radius: 0 !important;
+  border: 1px solid #999 !important;
+  background: #efefef !important;
+  color: #111 !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  line-height: 1.2 !important;
+  box-shadow: none !important;
+}
+
+.service-admin-button-dark {
+  background: #062a50 !important;
+  color: #fff !important;
+  border-color: #062a50 !important;
+}
+
+.empty-preview {
+  color: #6b7280 !important;
+  font-weight: 700 !important;
+}

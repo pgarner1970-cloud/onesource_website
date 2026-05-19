@@ -98,17 +98,17 @@ $defaultImages = get_service_image_defaults_data();
 <main class="admin-wrap">
   <section class="admin-panel">
     <h2>Default Images for Service Pages</h2>
-    <p class="admin-note">These images are used on the Services page and individual service pages. This is separate from the Gallery / Our Work projects.</p>
+    <p class="admin-note">These images are used on the Services page and each individual service page.</p>
 
     <?php if ($message): ?><div class="form-message success"><?= htmlspecialchars($message) ?></div><?php endif; ?>
     <?php if ($error): ?><div class="form-message error"><?= htmlspecialchars($error) ?></div><?php endif; ?>
 
-    <div class="service-image-admin-grid">
+    <div class="service-default-grid">
       <?php foreach ($services as $key => $label): 
         $image = $currentImages[$key] ?? ($defaultImages[$key] ?? '');
       ?>
-        <article class="service-image-admin-card">
-          <div class="service-image-preview">
+        <article class="service-default-card">
+          <div class="service-default-preview">
             <?php if ($image): ?>
               <img src="../<?= htmlspecialchars($image) ?>" alt="<?= htmlspecialchars($label) ?>">
             <?php else: ?>
@@ -116,26 +116,26 @@ $defaultImages = get_service_image_defaults_data();
             <?php endif; ?>
           </div>
 
-          <h3><?= htmlspecialchars($label) ?></h3>
+          <div class="service-default-body">
+            <h3><?= htmlspecialchars($label) ?></h3>
 
-          <form method="post" enctype="multipart/form-data" class="admin-form compact-form">
-            <?= csrf_field() ?>
-            <input type="hidden" name="action" value="upload_image">
-            <input type="hidden" name="service_key" value="<?= htmlspecialchars($key) ?>">
+            <form method="post" enctype="multipart/form-data" class="service-image-form">
+              <?= csrf_field() ?>
+              <input type="hidden" name="action" value="upload_image">
+              <input type="hidden" name="service_key" value="<?= htmlspecialchars($key) ?>">
 
-            <label>Upload new default image
+              <label>Upload new default image</label>
               <input type="file" name="image" accept="image/jpeg,image/png,image/webp" required>
-            </label>
+              <button type="submit" class="service-admin-button">Update Image</button>
+            </form>
 
-            <button type="submit">Update Image</button>
-          </form>
-
-          <form method="post" class="admin-form compact-form">
-            <?= csrf_field() ?>
-            <input type="hidden" name="action" value="use_default">
-            <input type="hidden" name="service_key" value="<?= htmlspecialchars($key) ?>">
-            <button class="hide" type="submit">Use Original Default</button>
-          </form>
+            <form method="post" class="service-image-form">
+              <?= csrf_field() ?>
+              <input type="hidden" name="action" value="use_default">
+              <input type="hidden" name="service_key" value="<?= htmlspecialchars($key) ?>">
+              <button type="submit" class="service-admin-button service-admin-button-dark">Use Default Image</button>
+            </form>
+          </div>
         </article>
       <?php endforeach; ?>
     </div>

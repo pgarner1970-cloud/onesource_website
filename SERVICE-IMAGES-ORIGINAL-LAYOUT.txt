@@ -1,0 +1,7 @@
+Service Images admin layout restore
+
+SQL:
+None required.
+
+Commit message:
+Restore original service images admin layout
