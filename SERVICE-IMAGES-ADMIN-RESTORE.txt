@@ -1,0 +1,10 @@
+Service Images admin restore
+
+Fixes:
+- Restores /admin/service-images.php as a dedicated page.
+- Gallery remains /admin/gallery.php.
+- Service Images admin no longer points to Gallery/Projects.
+- No SQL required.
+
+Commit message:
+Restore dedicated service images admin page

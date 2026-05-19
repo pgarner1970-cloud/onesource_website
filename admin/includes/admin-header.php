@@ -5,7 +5,7 @@
     <nav class="admin-nav admin-nav-main" aria-label="Admin navigation">
       <a href="gallery.php">Gallery</a>
       <a href="enquiries.php">Enquiries</a>
-      <a href="projects.php">Service Images</a>
+      <a href="service-images.php">Service Images</a>
       <a href="opening-hours.php">Opening Hours</a>
       <a href="advice-admin.php">Advice &amp; Insights</a>
       <a href="social-links.php">Social Media</a>
