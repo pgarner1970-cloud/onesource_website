@@ -411,4 +411,26 @@ function unpublish_article_data($id) {
     }
     return false;
 }
+
+function get_admin_projects_data() {
+    return get_projects_data();
+}
+
+function toggle_project_gallery_status($id) {
+    try {
+        $stmt = db()->prepare('UPDATE projects SET featured = IF(featured=1,0,1) WHERE id = ?');
+        $stmt->execute([(int)$id]);
+    } catch (Throwable $e) {}
+}
+
+function seo_filename($title, $location = '', $ext = 'jpg') {
+    $base = strtolower(trim($title . ' ' . $location));
+    $base = preg_replace('/[^a-z0-9]+/', '-', $base);
+    $base = trim($base, '-');
+    if ($base === '') {
+        $base = 'project-image';
+    }
+    return $base . '-' . date('Ymd-His') . '.' . strtolower($ext);
+}
+
 ?>

@@ -15,5 +15,6 @@
       <a href="migrate-json-to-mysql.php">Migrate Data</a>
     <a href="admin-users.php">Admin Users</a>
     <a href="audit-log.php">Audit Log</a>
+    <a href="gallery.php">Gallery</a>
 </nav>
 </header>
