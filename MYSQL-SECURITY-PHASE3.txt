@@ -1,0 +1,4 @@
+Run mysql-security-phase3.sql in Navicat.
+
+Commit message:
+Phase 3 MySQL admin security hardening with login throttling and audit logging

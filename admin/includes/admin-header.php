@@ -13,5 +13,7 @@
     <a href="../index.php">Back to Website</a>
     <a href="logout.php">Logout</a>
       <a href="migrate-json-to-mysql.php">Migrate Data</a>
+    <a href="admin-users.php">Admin Users</a>
+    <a href="audit-log.php">Audit Log</a>
 </nav>
 </header>
