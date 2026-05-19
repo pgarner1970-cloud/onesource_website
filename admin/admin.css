@@ -1022,3 +1022,44 @@ button.delete {
   color: #6b7280 !important;
   font-weight: 700 !important;
 }
+
+
+/* Compact Opening Hours admin form */
+.admin-panel .hours-row {
+  padding: 8px 0 !important;
+  gap: 10px !important;
+  align-items: center !important;
+}
+
+.admin-panel .hours-row strong {
+  font-size: 16px !important;
+  line-height: 1.2 !important;
+}
+
+.admin-panel .hours-row label {
+  margin: 0 !important;
+  gap: 4px !important;
+  font-size: 15px !important;
+}
+
+.admin-panel .hours-row input,
+.admin-panel .hours-row select {
+  min-height: 42px !important;
+  padding: 8px 12px !important;
+  font-size: 15px !important;
+}
+
+.admin-panel .hours-row + .hours-row {
+  margin-top: 0 !important;
+}
+
+.admin-panel .hours-row {
+  border-bottom: 1px solid #dce7f0 !important;
+}
+
+@media (max-width: 800px) {
+  .admin-panel .hours-row {
+    padding: 12px 0 !important;
+    gap: 8px !important;
+  }
+}

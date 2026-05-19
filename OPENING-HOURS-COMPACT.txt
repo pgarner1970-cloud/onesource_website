@@ -1,0 +1,12 @@
+Opening Hours compact admin layout
+
+Changes:
+- Reduces row padding and vertical spacing.
+- Keeps current visual style.
+- Keeps database/functionality unchanged.
+
+SQL:
+None required.
+
+Commit message:
+Compact opening hours admin form layout
