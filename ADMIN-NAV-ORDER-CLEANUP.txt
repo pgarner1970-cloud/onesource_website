@@ -1,0 +1,13 @@
+Admin navigation order cleanup
+
+Changes:
+- Removed separate Dashboard button from the admin nav.
+- Site Admin brand remains the dashboard/home link.
+- Nav order now matches dashboard card order.
+- Back to Website and Logout remain action links.
+
+SQL:
+None required.
+
+Commit message:
+Clean up admin navigation order and remove dashboard button

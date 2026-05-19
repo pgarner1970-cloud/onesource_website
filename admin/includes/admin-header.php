@@ -10,7 +10,6 @@
 
     <div class="admin-nav-wrap" id="adminNav">
       <nav class="admin-nav admin-nav-main" aria-label="Admin navigation">
-        <a href="index.php">Dashboard</a>
         <a href="gallery.php">Gallery</a>
         <a href="service-images.php">Service Images</a>
         <a href="enquiries.php">Enquiries</a>
