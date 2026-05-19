@@ -1,0 +1,14 @@
+Admin nav final tidy
+
+Changes:
+- Nav order now matches dashboard card order exactly.
+- Removed Dashboard nav button.
+- Site Admin remains dashboard/home link.
+- Desktop menu pills are smaller to reduce wrapping.
+- Mobile burger menu remains unchanged.
+
+SQL:
+None required.
+
+Commit message:
+Tidy admin navigation order and reduce menu pill size
