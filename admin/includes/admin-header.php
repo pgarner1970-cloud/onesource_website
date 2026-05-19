@@ -12,5 +12,6 @@
     <a href="trustpilot-settings.php">Trustpilot</a>
     <a href="../index.php">Back to Website</a>
     <a href="logout.php">Logout</a>
-  </nav>
+      <a href="migrate-json-to-mysql.php">Migrate Data</a>
+</nav>
 </header>

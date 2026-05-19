@@ -1,13 +1,14 @@
 <?php
-$hoursData = json_decode(file_get_contents(__DIR__ . '/data/opening-hours.json'), true);
-$today = strtolower(date('l'));
-$todayData = $hoursData[$today];
+require_once __DIR__ . '/includes/content-store.php';
 
-if ($todayData['type'] === 'open') {
-    $statusText = "Today: Open " . $todayData['open'] . " - " . $todayData['close'];
-} elseif ($todayData['type'] === 'appointment') {
-    $statusText = "Today: By appointment";
-} else {
-    $statusText = "Today: Closed";
+$hoursData = get_opening_hours_data();
+
+$dayKey = strtolower(date('l'));
+$today = $hoursData[$dayKey] ?? ['status' => 'Closed', 'open' => '', 'close' => ''];
+
+$statusText = $today['status'] ?? 'Closed';
+
+if (strtolower($statusText) === 'open' && !empty($today['open']) && !empty($today['close'])) {
+    $statusText = 'Open today ' . $today['open'] . '–' . $today['close'];
 }
 ?>

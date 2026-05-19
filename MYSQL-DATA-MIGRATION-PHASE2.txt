@@ -1,0 +1,18 @@
+MySQL data migration phase 2
+
+Files included:
+- mysql-data-migration-phase2.sql
+- includes/content-store.php
+- admin/migrate-json-to-mysql.php
+
+Deployment:
+1. Upload/deploy the ZIP.
+2. Run mysql-data-migration-phase2.sql against the 20i database.
+3. Log into admin.
+4. Open /admin/migrate-json-to-mysql.php.
+5. Click Run Migration once.
+6. Check gallery, opening hours, social links, Trustpilot settings and articles.
+7. Keep JSON files as backup until everything is confirmed.
+
+Commit message:
+Phase 2 MySQL data migration for site settings, gallery, social links, Trustpilot and articles

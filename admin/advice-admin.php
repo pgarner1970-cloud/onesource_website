@@ -2,15 +2,17 @@
 require_once __DIR__ . '/auth.php';
 require_login();
 require_once __DIR__ . '/../includes/articles.php';
+require_once __DIR__ . '/../includes/content-store.php';
 require_once __DIR__ . '/generate-article-drafts.php';
 
 $draftFile = __DIR__ . '/../data/article-drafts.json';
 $articleFile = __DIR__ . '/../data/articles.json';
 $settingsFile = __DIR__ . '/../data/article-settings.json';
 
-$drafts = read_json_array($draftFile, []);
-$articles = read_json_array($articleFile, []);
-$settings = read_json_array($settingsFile, [
+$drafts = get_article_drafts_data();
+$articles = get_articles_data(false);
+$settings = get_article_settings_data();
+$legacySettings = [
     'enabled' => true,
     'notify_email' => '',
     'drafts_per_week' => 1,
@@ -49,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $result = generate_ai_article_draft($topic);
         $message = $result['message'];
-        $drafts = read_json_array($draftFile, []);
+        $drafts = get_article_drafts_data();
     }
 
     if ($action === 'save_draft') {
