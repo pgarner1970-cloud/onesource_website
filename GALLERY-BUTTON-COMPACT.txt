@@ -1,0 +1,13 @@
+Gallery compact buttons
+
+Changes:
+- Makes Edit/Hide/Delete buttons equal size.
+- Keeps all buttons on one line.
+- Reduces button width and height slightly.
+- Reduces wasted horizontal space in gallery cards.
+
+SQL:
+None required.
+
+Commit message:
+Compact and standardise gallery action buttons
