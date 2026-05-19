@@ -1,0 +1,7 @@
+Admin login centred layout
+
+SQL:
+None required.
+
+Commit message:
+Centre and polish admin login page layout
