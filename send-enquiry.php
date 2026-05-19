@@ -1,87 +1,57 @@
 <?php
-require_once __DIR__ . '/site-config.php';
-
-function clean_input($value) {
-    return trim(str_replace(["\r", "\n"], ' ', $value ?? ''));
-}
-
-function fail($message) {
-    header('Location: contact.php?status=error&message=' . urlencode($message));
-    exit;
-}
+require_once __DIR__ . '/includes/content-store.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header('Location: contact.php');
     exit;
 }
 
-// Honeypot anti-spam field. Real users will never fill this.
-if (!empty($_POST['website'])) {
-    fail('Spam check failed.');
-}
-
-$name = clean_input($_POST['name'] ?? '');
-$phone = clean_input($_POST['phone'] ?? '');
-$email = clean_input($_POST['email'] ?? '');
-$service = clean_input($_POST['service'] ?? '');
+$name = trim($_POST['name'] ?? '');
+$email = trim($_POST['email'] ?? '');
+$phone = trim($_POST['phone'] ?? '');
+$service = trim($_POST['service'] ?? '');
 $message = trim($_POST['message'] ?? '');
+$honeypot = trim($_POST['website'] ?? '');
 
-if ($name === '' || $phone === '' || $email === '' || $message === '') {
-    fail('Please complete all required fields.');
+if ($honeypot !== '') {
+    header('Location: contact.php?sent=1');
+    exit;
 }
 
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    fail('Please enter a valid email address.');
+if ($name === '' || $message === '' || ($email === '' && $phone === '')) {
+    header('Location: contact.php?error=1');
+    exit;
 }
 
-$subject = $ENQUIRY_SUBJECT_PREFIX . ': ' . $service;
-
-$body = "New website enquiry\n\n";
-$body .= "Name: {$name}\n";
-$body .= "Phone: {$phone}\n";
-$body .= "Email: {$email}\n";
-$body .= "Service: {$service}\n\n";
-$body .= "Message:\n{$message}\n\n";
-$body .= "Sent from: " . ($_SERVER['HTTP_HOST'] ?? 'website') . "\n";
-
-$headers = [];
-$headers[] = 'From: One Source Website <' . $ENQUIRY_FROM_EMAIL . '>';
-$headers[] = 'Reply-To: ' . $name . ' <' . $email . '>';
-$headers[] = 'Content-Type: text/plain; charset=UTF-8';
-
-$sent = mail($ENQUIRY_TO_EMAIL, $subject, $body, implode("\r\n", $headers));
-
-if (!$sent) {
-    fail('The enquiry could not be sent. Please phone or email us directly.');
+if ($email !== '' && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    header('Location: contact.php?error=1');
+    exit;
 }
 
-// Optional local enquiry log
-$logDir = __DIR__ . '/data';
-$logFile = $logDir . '/enquiries.json';
+$enquiryId = null;
+try {
+    $enquiryId = create_enquiry([
+        'name' => $name,
+        'email' => $email,
+        'phone' => $phone,
+        'service' => $service,
+        'message' => $message,
+        'status' => 'new'
+    ]);
+} catch (Throwable $e) {}
 
-if (!is_dir($logDir)) {
-    mkdir($logDir, 0755, true);
+$notifyEmail = setting_get('enquiry_notify_email', 'luke@onesourceairandenergyltd.co.uk');
+$emailEnabled = setting_get('enquiry_email_notifications', '1') === '1';
+
+if ($emailEnabled && $notifyEmail !== '') {
+    $subject = 'New website enquiry' . ($service ? ' - ' . $service : '');
+    $body = "New website enquiry\n\nName: {$name}\nEmail: {$email}\nPhone: {$phone}\nService: {$service}\nMessage:\n{$message}\n";
+    if ($enquiryId) { $body .= "\nAdmin enquiry ID: {$enquiryId}\n"; }
+    $headers = "From: One Source Website <no-reply@onesourceairandenergyltd.co.uk>\r\n";
+    if ($email !== '') { $headers .= "Reply-To: {$email}\r\n"; }
+    @mail($notifyEmail, $subject, $body, $headers);
 }
 
-$enquiries = [];
-if (file_exists($logFile)) {
-    $enquiries = json_decode(file_get_contents($logFile), true);
-    if (!is_array($enquiries)) {
-        $enquiries = [];
-    }
-}
-
-$enquiries[] = [
-    'date' => date('c'),
-    'name' => $name,
-    'phone' => $phone,
-    'email' => $email,
-    'service' => $service,
-    'message' => $message
-];
-
-file_put_contents($logFile, json_encode($enquiries, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
-
-header('Location: contact.php?status=success');
+header('Location: contact.php?sent=1');
 exit;
 ?>

@@ -202,23 +202,8 @@
 </div>
   </div>
 </section>
-<?php
-$trustpilotSettingsFile = __DIR__ . '/data/trustpilot-settings.json';
-$trustpilotSettings = [
-  'enabled' => true,
-  'business_unit_id' => '',
-  'profile_url' => 'https://uk.trustpilot.com/review/onesourceairandenergyltd.co.uk',
-  'heading' => 'Rated by our customers',
-  'intro' => 'See what customers say about One Source Air & Energy Ltd.'
-];
-
-if (file_exists($trustpilotSettingsFile)) {
-  $loadedTrustpilotSettings = json_decode(file_get_contents($trustpilotSettingsFile), true);
-  if (is_array($loadedTrustpilotSettings)) {
-    $trustpilotSettings = array_merge($trustpilotSettings, $loadedTrustpilotSettings);
-  }
-}
-?>
+<?php require_once __DIR__ . '/includes/content-store.php';
+$trustpilotSettings = get_trustpilot_settings_data(); ?>
 <?php if (!empty($trustpilotSettings['enabled'])): ?>
 <section class="trustpilot-section">
   <div class="wrap trustpilot-wrap">

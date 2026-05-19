@@ -1,66 +1,59 @@
 [
-    {
-        "id": "air-conditioning-example",
-        "title": "Air Conditioning",
-        "category": "air-conditioning",
-        "description": "Domestic air conditioning installation example",
-        "image": "assets/images/services/air-conditioning.jpg",
-        "featured": true
-    },
-    {
-        "id": "solar-pv-example",
-        "title": "Solar PV",
-        "category": "solar-pv",
-        "description": "Domestic solar PV installation example",
-        "image": "assets/images/services/solar-pv.jpg",
-        "featured": true
-    },
-    {
-        "id": "battery-storage-example",
-        "title": "Battery Storage",
-        "category": "battery-storage",
-        "description": "Domestic battery storage installation example",
-        "image": "assets/images/services/battery-storage.jpg",
-        "featured": true
-    },
-    {
-        "id": "ev-charger-example",
-        "title": "EV Charger",
-        "category": "ev-chargers",
-        "description": "Home EV charger installation example",
-        "image": "assets/images/services/ev-chargers.jpg",
-        "featured": true
-    },
-    {
-        "id": "electrical-example",
-        "title": "Electrical Services",
-        "category": "electrical",
-        "description": "Domestic electrical work example",
-        "image": "assets/images/services/electrical-services.jpg",
-        "featured": true
-    },
-    {
-        "id": "gas-services-example",
-        "title": "Gas Services",
-        "category": "gas-services",
-        "description": "Domestic gas and boiler work example",
-        "image": "assets/images/services/gas-services.jpg",
-        "featured": true
-    },
-    {
-        "id": "oil-services-example",
-        "title": "Oil Services",
-        "category": "oil-installations",
-        "description": "Domestic oil and boiler work example",
-        "image": "assets/images/services/oil-installations.jpg",
-        "featured": true
-    },
-    {
-        "id": "mr-blobby-s-house-1778920550",
-        "title": "Mr Blobby's House",
-        "category": "air-conditioning",
-        "description": "Mr Blobby's House",
-        "image": "uploads/projects/mr-blobby-s-house-1778920550.jpg",
-        "featured": true
-    }
+  {
+    "id": "air-conditioning-example",
+    "title": "Air Conditioning",
+    "category": "air-conditioning",
+    "description": "Domestic air conditioning installation example",
+    "image": "assets/images/services/air-conditioning.jpg",
+    "featured": true
+  },
+  {
+    "id": "solar-pv-example",
+    "title": "Solar PV",
+    "category": "solar-pv",
+    "description": "Domestic solar PV installation example",
+    "image": "assets/images/services/solar-pv.jpg",
+    "featured": true
+  },
+  {
+    "id": "battery-storage-example",
+    "title": "Battery Storage",
+    "category": "battery-storage",
+    "description": "Domestic battery storage installation example",
+    "image": "assets/images/services/battery-storage.jpg",
+    "featured": true
+  },
+  {
+    "id": "ev-charger-example",
+    "title": "EV Charger",
+    "category": "ev-chargers",
+    "description": "Home EV charger installation example",
+    "image": "assets/images/services/ev-chargers.jpg",
+    "featured": true
+  },
+  {
+    "id": "electrical-example",
+    "title": "Electrical Services",
+    "category": "electrical",
+    "description": "Domestic electrical work example",
+    "image": "assets/images/services/electrical-services.jpg",
+    "featured": true
+  },
+  {
+    "id": "gas-services-example",
+    "title": "Gas Services",
+    "category": "gas-services",
+    "description": "Domestic gas and boiler work example",
+    "image": "assets/images/services/gas-services.jpg",
+    "featured": true
+  }
+,
+  {
+    "id": "oil-services-example",
+    "title": "Oil Services",
+    "category": "oil-installations",
+    "description": "Domestic oil and boiler work example",
+    "image": "assets/images/services/oil-installations.jpg",
+    "featured": true
+  } 
 ]

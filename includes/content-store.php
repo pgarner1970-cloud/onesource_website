@@ -433,4 +433,47 @@ function seo_filename($title, $location = '', $ext = 'jpg') {
     return $base . '-' . date('Ymd-His') . '.' . strtolower($ext);
 }
 
+
+function create_enquiry($data) {
+    $stmt = db()->prepare('INSERT INTO enquiries (name, email, phone, service, message, status, ip_address, user_agent, source_page, is_spam) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
+    $stmt->execute([
+        trim($data['name'] ?? ''),
+        trim($data['email'] ?? ''),
+        trim($data['phone'] ?? ''),
+        trim($data['service'] ?? ''),
+        trim($data['message'] ?? ''),
+        $data['status'] ?? 'new',
+        $_SERVER['REMOTE_ADDR'] ?? '',
+        substr($_SERVER['HTTP_USER_AGENT'] ?? '', 0, 1000),
+        substr($_SERVER['HTTP_REFERER'] ?? '', 0, 255),
+        !empty($data['is_spam']) ? 1 : 0
+    ]);
+    return (int)db()->lastInsertId();
+}
+
+function get_enquiries($status = '') {
+    if ($status !== '') {
+        $stmt = db()->prepare('SELECT * FROM enquiries WHERE status = ? ORDER BY created_at DESC');
+        $stmt->execute([$status]);
+        return $stmt->fetchAll();
+    }
+    return db()->query('SELECT * FROM enquiries ORDER BY created_at DESC')->fetchAll();
+}
+
+function get_enquiry($id) {
+    $stmt = db()->prepare('SELECT * FROM enquiries WHERE id = ? LIMIT 1');
+    $stmt->execute([(int)$id]);
+    return $stmt->fetch();
+}
+
+function update_enquiry($id, $status, $notes) {
+    $stmt = db()->prepare('UPDATE enquiries SET status = ?, admin_notes = ? WHERE id = ?');
+    $stmt->execute([$status, $notes, (int)$id]);
+}
+
+function delete_enquiry($id) {
+    $stmt = db()->prepare('DELETE FROM enquiries WHERE id = ?');
+    $stmt->execute([(int)$id]);
+}
+
 ?>

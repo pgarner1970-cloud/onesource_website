@@ -1,0 +1,15 @@
+Admin structure cleanup
+
+Changes:
+- /admin/index.php is now a Site Admin dashboard.
+- /admin/gallery.php is the Gallery manager.
+- Header title changed to Site Admin.
+- Back to Website and Logout moved to right-side action nav.
+- Migrate Data removed from the main nav and kept only on dashboard as a support tool.
+- Gallery/admin action buttons now share a consistent style.
+
+SQL:
+None required.
+
+Commit message:
+Clean up admin dashboard navigation and gallery button styling

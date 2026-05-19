@@ -144,7 +144,7 @@ if (!empty($_GET['edit'])) {
 <head>
 <meta charset="UTF-8">
 <meta name="robots" content="noindex,nofollow">
-<title>Gallery Admin</title>
+<title>Gallery | Site Admin</title>
 <link rel="stylesheet" href="admin.css">
 </head>
 <body>
