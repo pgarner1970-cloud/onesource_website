@@ -1,5 +1,6 @@
 <?php include 'opening-hours.php'; ?>
-<?php require_once __DIR__ . '/includes/articles.php'; ?>
+<?php require_once __DIR__ . '/includes/articles.php';
+require_once __DIR__ . '/includes/security.php'; ?>
 <?php
 $slug = $_GET['slug'] ?? '';
 $articles = read_json_array(__DIR__ . '/data/articles.json', []);
@@ -51,7 +52,7 @@ $description = $article['meta_description'] ?? $article['excerpt'] ?? '';
 <section class="section">
   <div class="wrap article-layout">
     <article class="article-body">
-      <?= $article['body'] ?? '' ?>
+      <?= safe_html($article['body'] ?? '') ?>
     </article>
 
     <aside class="article-sidebar">

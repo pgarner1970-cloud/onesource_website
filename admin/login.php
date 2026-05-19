@@ -3,12 +3,18 @@ require_once __DIR__ . '/auth.php';
 
 $error = '';
 
+if (is_logged_in()) {
+    header('Location: index.php');
+    exit;
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = $_POST['username'] ?? '';
+    verify_csrf();
+
+    $username = trim($_POST['username'] ?? '');
     $password = $_POST['password'] ?? '';
 
-    if ($username === $ADMIN_USERNAME && $password === $ADMIN_PASSWORD) {
-        $_SESSION['admin_logged_in'] = true;
+    if (admin_login($username, $password)) {
         header('Location: index.php');
         exit;
     }
@@ -19,23 +25,37 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="robots" content="noindex,nofollow">
   <meta charset="UTF-8">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Login | One Source</title>
   <link rel="stylesheet" href="admin.css">
 </head>
-<body class="admin-login">
-  <form method="post" class="login-card">
-    <h1>Gallery Admin</h1>
-    <p>Manage Our Work gallery images.</p>
-    <?php if ($error): ?><div class="error"><?= htmlspecialchars($error) ?></div><?php endif; ?>
-    <label>Username<input type="text" name="username" required></label>
-    <label>Password<input type="password" name="password" required></label>
-    <button type="submit">Login</button>
-  </form>
+<body class="login-page">
+  <main class="login-wrap">
+    <form method="post" class="login-card">
+      <?= csrf_field() ?>
+      <h1>One Source Admin</h1>
 
-        <div class="login-links">
-          <a href="../index.html">← Back to Website</a>
-        </div>
+      <?php if ($error): ?>
+        <div class="form-message error"><?= htmlspecialchars($error) ?></div>
+      <?php endif; ?>
+
+      <?php if (!db_available()): ?>
+        <div class="form-message error">Database is not configured. Complete config.local.php and run admin/install.php first.</div>
+      <?php endif; ?>
+
+      <label>Username
+        <input type="text" name="username" required autocomplete="username">
+      </label>
+
+      <label>Password
+        <input type="password" name="password" required autocomplete="current-password">
+      </label>
+
+      <button type="submit">Login</button>
+      <a class="back-link" href="../index.php">← Back to website</a>
+    </form>
+  </main>
 </body>
 </html>

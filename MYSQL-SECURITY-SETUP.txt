@@ -1,0 +1,14 @@
+MySQL security phase 1 setup
+
+1. Copy config.local.example.php to config.local.php on the server.
+2. Enter the 20i MySQL credentials in config.local.php.
+3. Visit /admin/install.php.
+4. Create the first admin user with a strong password.
+5. Immediately delete or rename /admin/install.php after setup.
+6. Log in at /admin/login.php.
+
+Important:
+- config.local.php must never be committed to Git.
+- /data/*.json and /uploads/ should not be tracked by Git.
+- This phase migrates admin authentication to MySQL.
+- Existing gallery/opening hours/social/article data remain JSON for now.

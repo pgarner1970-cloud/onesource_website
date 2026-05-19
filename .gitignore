@@ -6,3 +6,6 @@
 /uploads/
 # Runtime admin data - edited live by the website/admin suite
 # Legacy data location no longer used
+/config.local.php
+!/data/.htaccess
+!/uploads/.htaccess
