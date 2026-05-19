@@ -2,6 +2,7 @@
 require_once __DIR__ . '/auth.php';
 require_login();
 require_once __DIR__ . '/../includes/content-store.php';
+require_once __DIR__ . '/../includes/articles.php';
 
 $categories = [
     'air-conditioning' => 'Air Conditioning',
