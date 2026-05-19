@@ -860,3 +860,25 @@ button.delete {
 .enquiry-item.status-spam, .enquiry-item.status-archived { border-left-color: #6c757d; opacity: .82; }
 .enquiry-item.status-booked { border-left-color: #f59e0b; }
 .filter-row a.filter { text-decoration: none; }
+
+.hours-row,
+.social-row {
+  display: grid;
+  grid-template-columns: 160px 1fr 1fr 1fr;
+  gap: 14px;
+  align-items: end;
+  padding: 14px 0;
+  border-bottom: 1px solid #dce7f0;
+}
+
+.social-row {
+  grid-template-columns: 220px 1fr;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  .hours-row,
+  .social-row {
+    grid-template-columns: 1fr;
+  }
+}

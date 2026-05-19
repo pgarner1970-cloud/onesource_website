@@ -1,0 +1,14 @@
+Admin stabilisation phase 7
+
+Fixes:
+- opening-hours.php corrupted JSON/file_get_contents logic
+- advice-admin.php parse error
+- social-links.php missing platforms array
+- admin Service Images navigation link points to projects.php
+- removes Migrate Data from main admin navigation
+
+SQL:
+None required.
+
+Commit message:
+Stabilise admin pages after MySQL migration cleanup

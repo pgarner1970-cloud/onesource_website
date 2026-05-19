@@ -1,81 +1,98 @@
 <?php
-$data = json_decode(file_get_contents($file), true);
+require_once __DIR__ . '/auth.php';
+require_login();
+require_once __DIR__ . '/../includes/content-store.php';
+
+$days = [
+    'monday' => 'Monday',
+    'tuesday' => 'Tuesday',
+    'wednesday' => 'Wednesday',
+    'thursday' => 'Thursday',
+    'friday' => 'Friday',
+    'saturday' => 'Saturday',
+    'sunday' => 'Sunday'
+];
+
+$message = '';
+$error = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $days = ['monday','tuesday','wednesday','thursday','friday','saturday','sunday'];
+    verify_csrf();
 
-    foreach ($days as $day) {
-        $data[$day]['type'] = $_POST[$day . '_type'] ?? 'closed';
-        $data[$day]['open'] = $_POST[$day . '_open'] ?? '';
-        $data[$day]['close'] = $_POST[$day . '_close'] ?? '';
+    try {
+        $data = ['notice' => trim($_POST['notice'] ?? '')];
+
+        foreach ($days as $key => $label) {
+            $data[$key] = [
+                'status' => trim($_POST[$key . '_status'] ?? 'Closed'),
+                'open' => trim($_POST[$key . '_open'] ?? ''),
+                'close' => trim($_POST[$key . '_close'] ?? '')
+            ];
+        }
+
+        save_opening_hours_data($data);
+        admin_audit('opening_hours_updated', 'Opening hours updated');
+        $message = 'Opening hours updated.';
+    } catch (Throwable $e) {
+        $error = $e->getMessage();
     }
-
-    $data['notice'] = $_POST['notice'] ?? '';
-
-    file_put_contents($file, json_encode($data, JSON_PRETTY_PRINT));
-    header('Location: opening-hours.php?saved=1');
-    exit;
 }
+
+$hours = get_opening_hours_data();
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Opening Hours</title>
-<link rel="stylesheet" href="../assets/css/styles.css">
-<style>
-.hours-admin{max-width:900px;margin:40px auto;padding:30px;background:#fff;border-radius:16px}
-.hours-grid{display:grid;grid-template-columns:160px 180px 1fr 1fr;gap:12px;align-items:center}
-.hours-grid input,.hours-grid select{padding:10px}
-.save-btn{margin-top:25px;background:#2F80ED;color:#fff;border:none;padding:14px 24px;border-radius:10px;font-weight:700}
-.notice{margin-top:20px}
-</style>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex,nofollow">
+<title>Opening Hours | Site Admin</title>
 <link rel="stylesheet" href="admin.css">
 </head>
 <body>
 <?php include __DIR__ . '/includes/admin-header.php'; ?>
-</h1>
-    
-  </header>
 
-<div class="hours-admin">
-<h1>Opening Hours</h1>
+<main class="admin-wrap">
+  <section class="admin-panel">
+    <h2>Opening Hours</h2>
+    <p class="admin-note">Update the opening-hours banner and bank holiday notice shown across the website.</p>
 
-<?php if(isset($_GET['saved'])): ?>
-<p style="color:green;font-weight:bold;">Opening hours updated.</p>
-<?php endif; ?>
+    <?php if ($message): ?><div class="form-message success"><?= htmlspecialchars($message) ?></div><?php endif; ?>
+    <?php if ($error): ?><div class="form-message error"><?= htmlspecialchars($error) ?></div><?php endif; ?>
 
-<form method="post">
-<div class="hours-grid">
-<?php
-$labels = [
-'monday'=>'Monday','tuesday'=>'Tuesday','wednesday'=>'Wednesday',
-'thursday'=>'Thursday','friday'=>'Friday','saturday'=>'Saturday','sunday'=>'Sunday'
-];
+    <form method="post" class="admin-form">
+      <?= csrf_field() ?>
 
-foreach($labels as $key=>$label):
-?>
-<div><strong><?php echo $label; ?></strong></div>
+      <?php foreach ($days as $key => $label): 
+        $row = $hours[$key] ?? ['status' => 'Closed', 'open' => '', 'close' => ''];
+      ?>
+        <div class="hours-row">
+          <strong><?= htmlspecialchars($label) ?></strong>
 
-<select name="<?php echo $key; ?>_type">
-<option value="open" <?php if($data[$key]['type']=='open') echo 'selected'; ?>>Open</option>
-<option value="appointment" <?php if($data[$key]['type']=='appointment') echo 'selected'; ?>>By appointment</option>
-<option value="closed" <?php if($data[$key]['type']=='closed') echo 'selected'; ?>>Closed</option>
-</select>
+          <label>Status
+            <select name="<?= htmlspecialchars($key) ?>_status">
+              <?php foreach (['Open','Closed','By appointment'] as $status): ?>
+                <option value="<?= htmlspecialchars($status) ?>" <?php if (($row['status'] ?? '') === $status) echo 'selected'; ?>><?= htmlspecialchars($status) ?></option>
+              <?php endforeach; ?>
+            </select>
+          </label>
 
-<input type="time" name="<?php echo $key; ?>_open" value="<?php echo $data[$key]['open']; ?>">
-<input type="time" name="<?php echo $key; ?>_close" value="<?php echo $data[$key]['close']; ?>">
+          <label>Open
+            <input type="time" name="<?= htmlspecialchars($key) ?>_open" value="<?= htmlspecialchars($row['open'] ?? '') ?>">
+          </label>
 
-<?php endforeach; ?>
-</div>
+          <label>Close
+            <input type="time" name="<?= htmlspecialchars($key) ?>_close" value="<?= htmlspecialchars($row['close'] ?? '') ?>">
+          </label>
+        </div>
+      <?php endforeach; ?>
 
-<div class="notice">
-<label><strong>Top notice</strong></label><br>
-<input type="text" name="notice" value="<?php echo htmlspecialchars($data['notice']); ?>" style="width:100%;padding:12px;">
-</div>
+      <label>Notice
+        <input type="text" name="notice" value="<?= htmlspecialchars($hours['notice'] ?? 'Closed bank holidays') ?>">
+      </label>
 
-<button class="save-btn">Save Opening Hours</button>
-</form>
-</div>
+      <button type="submit">Save Opening Hours</button>
+    </form>
+  </section>
+</main>
 </body>
 </html>
