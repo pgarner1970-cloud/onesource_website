@@ -1,0 +1,13 @@
+Opening Hours compact table layout
+
+Changes:
+- Rebuilds opening-hours.php with compact table-style layout.
+- Removes excessive row spacing.
+- Keeps MySQL functionality unchanged.
+- Keeps mobile responsive stacking.
+
+SQL:
+None required.
+
+Commit message:
+Rebuild opening hours admin with compact table layout

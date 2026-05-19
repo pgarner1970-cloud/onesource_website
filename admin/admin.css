@@ -1121,3 +1121,103 @@ button.delete {
     width: 100%;
   }
 }
+
+
+/* Compact table layout for Opening Hours admin */
+.opening-hours-panel {
+  max-width: 980px !important;
+}
+
+.opening-hours-form {
+  margin-top: 18px !important;
+}
+
+.opening-hours-table {
+  border: 1px solid #dce7f0 !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  background: #fff !important;
+  margin-bottom: 18px !important;
+}
+
+.opening-hours-head,
+.opening-hours-row {
+  display: grid !important;
+  grid-template-columns: 150px 1fr 150px 150px !important;
+  gap: 10px !important;
+  align-items: center !important;
+}
+
+.opening-hours-head {
+  background: #f7fafc !important;
+  padding: 10px 14px !important;
+  border-bottom: 1px solid #dce7f0 !important;
+  font-size: 14px !important;
+  font-weight: 900 !important;
+  color: #0b2c52 !important;
+}
+
+.opening-hours-row {
+  padding: 8px 14px !important;
+  border-bottom: 1px solid #e7eef5 !important;
+}
+
+.opening-hours-row:last-child {
+  border-bottom: 0 !important;
+}
+
+.opening-hours-row .day-name {
+  font-weight: 900 !important;
+  color: #0b2c52 !important;
+  font-size: 15px !important;
+}
+
+.opening-hours-row select,
+.opening-hours-row input[type="time"] {
+  width: 100% !important;
+  min-height: 36px !important;
+  height: 36px !important;
+  padding: 6px 10px !important;
+  border: 1px solid #d7e3ee !important;
+  border-radius: 8px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.opening-notice-field {
+  display: block !important;
+  margin: 0 0 14px !important;
+  font-weight: 900 !important;
+  color: #0b2c52 !important;
+}
+
+.opening-notice-field input {
+  margin-top: 6px !important;
+}
+
+.opening-hours-form button[type="submit"] {
+  max-width: 260px !important;
+}
+
+/* override old hours-row styles if still present */
+.hours-row {
+  display: none !important;
+}
+
+@media (max-width: 760px) {
+  .opening-hours-head {
+    display: none !important;
+  }
+
+  .opening-hours-row {
+    grid-template-columns: 1fr !important;
+    gap: 7px !important;
+    padding: 12px !important;
+  }
+
+  .opening-hours-row .day-name {
+    font-size: 17px !important;
+  }
+}

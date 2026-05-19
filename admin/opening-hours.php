@@ -52,41 +52,50 @@ $hours = get_opening_hours_data();
 <?php include __DIR__ . '/includes/admin-header.php'; ?>
 
 <main class="admin-wrap">
-  <section class="admin-panel">
+  <section class="admin-panel opening-hours-panel">
     <h2>Opening Hours</h2>
     <p class="admin-note">Update the opening-hours banner and bank holiday notice shown across the website.</p>
 
     <?php if ($message): ?><div class="form-message success"><?= htmlspecialchars($message) ?></div><?php endif; ?>
     <?php if ($error): ?><div class="form-message error"><?= htmlspecialchars($error) ?></div><?php endif; ?>
 
-    <form method="post" class="admin-form">
+    <form method="post" class="admin-form opening-hours-form">
       <?= csrf_field() ?>
 
-      <?php foreach ($days as $key => $label): 
-        $row = $hours[$key] ?? ['status' => 'Closed', 'open' => '', 'close' => ''];
-      ?>
-        <div class="hours-row">
-          <strong><?= htmlspecialchars($label) ?></strong>
-
-          <label>Status
-            <select name="<?= htmlspecialchars($key) ?>_status">
-              <?php foreach (['Open','Closed','By appointment'] as $status): ?>
-                <option value="<?= htmlspecialchars($status) ?>" <?php if (($row['status'] ?? '') === $status) echo 'selected'; ?>><?= htmlspecialchars($status) ?></option>
-              <?php endforeach; ?>
-            </select>
-          </label>
-
-          <label>Open
-            <input type="time" name="<?= htmlspecialchars($key) ?>_open" value="<?= htmlspecialchars($row['open'] ?? '') ?>">
-          </label>
-
-          <label>Close
-            <input type="time" name="<?= htmlspecialchars($key) ?>_close" value="<?= htmlspecialchars($row['close'] ?? '') ?>">
-          </label>
+      <div class="opening-hours-table">
+        <div class="opening-hours-head">
+          <span>Day</span>
+          <span>Status</span>
+          <span>Open</span>
+          <span>Close</span>
         </div>
-      <?php endforeach; ?>
 
-      <label>Notice
+        <?php foreach ($days as $key => $label): 
+          $row = $hours[$key] ?? ['status' => 'Closed', 'open' => '', 'close' => ''];
+        ?>
+          <div class="opening-hours-row">
+            <div class="day-name"><?= htmlspecialchars($label) ?></div>
+
+            <div>
+              <select name="<?= htmlspecialchars($key) ?>_status" aria-label="<?= htmlspecialchars($label) ?> status">
+                <?php foreach (['Open','Closed','By appointment'] as $status): ?>
+                  <option value="<?= htmlspecialchars($status) ?>" <?php if (($row['status'] ?? '') === $status) echo 'selected'; ?>><?= htmlspecialchars($status) ?></option>
+                <?php endforeach; ?>
+              </select>
+            </div>
+
+            <div>
+              <input type="time" name="<?= htmlspecialchars($key) ?>_open" value="<?= htmlspecialchars($row['open'] ?? '') ?>" aria-label="<?= htmlspecialchars($label) ?> open time">
+            </div>
+
+            <div>
+              <input type="time" name="<?= htmlspecialchars($key) ?>_close" value="<?= htmlspecialchars($row['close'] ?? '') ?>" aria-label="<?= htmlspecialchars($label) ?> close time">
+            </div>
+          </div>
+        <?php endforeach; ?>
+      </div>
+
+      <label class="opening-notice-field">Notice
         <input type="text" name="notice" value="<?= htmlspecialchars($hours['notice'] ?? 'Closed bank holidays') ?>">
       </label>
 
