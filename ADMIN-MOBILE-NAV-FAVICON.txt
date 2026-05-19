@@ -1,0 +1,24 @@
+Admin mobile nav and favicon pack
+
+Changes:
+- Adds mobile burger menu for admin navigation.
+- Keeps desktop admin navigation horizontal.
+- Adds sticky responsive admin header.
+- Creates enlarged favicon/icon pack:
+  - favicon.ico
+  - 16x16 PNG
+  - 32x32 PNG
+  - 48x48 PNG
+  - Apple touch icon
+  - Android icons
+  - site.webmanifest
+- Adds favicon references to public page heads.
+
+Source image used for favicon:
+assets/favicon/favicon.png
+
+SQL:
+None required.
+
+Commit message:
+Add mobile admin burger navigation and improved favicon pack
