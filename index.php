@@ -244,7 +244,7 @@ $trustpilotSettings = get_trustpilot_settings_data(); ?>
 
 
 <?php include __DIR__ . '/includes/footer.php'; ?>
-<script src="assets/js/site.js"></script><script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+<script src="assets/js/site.js"></script><script src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 
 <script id="FINAL_MOBILE_NAV_INLINE_FIX">
 (function () {
@@ -284,6 +284,29 @@ $trustpilotSettings = get_trustpilot_settings_data(); ?>
         });
       }
     }
+  });
+})();
+</script>
+
+
+<script>
+(function () {
+  function initTrustpilotWidget() {
+    var widget = document.querySelector('.trustpilot-widget');
+    if (!widget) return;
+
+    if (window.Trustpilot && typeof window.Trustpilot.loadFromElement === 'function') {
+      try {
+        window.Trustpilot.loadFromElement(widget, true);
+      } catch (e) {
+        console.warn('Trustpilot widget failed to initialise', e);
+      }
+    }
+  }
+
+  window.addEventListener('load', function () {
+    setTimeout(initTrustpilotWidget, 300);
+    setTimeout(initTrustpilotWidget, 1500);
   });
 })();
 </script>

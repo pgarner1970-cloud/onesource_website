@@ -1,0 +1,13 @@
+Trustpilot reliability update
+
+Changes:
+- Forces official Trustpilot widget script to use explicit HTTPS URL.
+- Reinitialises Trustpilot widget after page load.
+- Adds a fallback message/link so the panel is not blank if Trustpilot does not render on staging.
+- Keeps existing Trustpilot admin settings unchanged.
+
+SQL:
+None required.
+
+Commit message:
+Improve Trustpilot widget loading and fallback display

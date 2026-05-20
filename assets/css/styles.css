@@ -2045,3 +2045,45 @@ footer {
     padding-bottom: 24px !important;
   }
 }
+
+
+/* Trustpilot reliability/fallback */
+.trustpilot-widget-panel,
+.trustpilot-widget {
+  min-height: 210px;
+  position: relative;
+}
+
+.trustpilot-widget iframe {
+  position: relative;
+  z-index: 2;
+}
+
+.trustpilot-fallback {
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  padding: 28px;
+  border-radius: 14px;
+  background: #fff;
+  color: #0b2c52;
+  text-align: center;
+}
+
+.trustpilot-fallback p {
+  margin: 0;
+  color: #53657a;
+}
+
+.trustpilot-fallback a {
+  color: #0b2c52;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.trustpilot-widget iframe + .trustpilot-fallback,
+.trustpilot-widget:has(iframe) .trustpilot-fallback {
+  display: none;
+}
