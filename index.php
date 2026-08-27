@@ -60,7 +60,7 @@
                 <a href="https://www.oftec.org/" target="_blank" rel="noopener noreferrer"><img src="assets/accreditations/oftec.png" alt="OFTEC Certified"></a>
             </div>
 
-    <a href="https://niceic.com/" class="badge" target="_blank" rel="noopener"><img src="assets/logos/niceic-approved-contractor.png" alt="NICEIC Approved Contractor logo"></a>
+    <a href="https://niceic.com/" class="badge" target="_blank" rel="noopener"><img src="assets/logos/niceic-logo.png" alt="NICEIC logo"></a>
     <a href="https://www.refcom.org.uk/" class="badge" target="_blank" rel="noopener"><img src="assets/logos/refcom.png" alt="REFCOM F-Gas Certification logo"></a>
     <a href="https://mcscertified.com/" class="badge" target="_blank" rel="noopener"><img src="assets/logos/mcs-certified.png" alt="MCS Certified logo"></a>
     <div class="rating">★★★★★<br><small>Quality workmanship</small></div>
@@ -155,7 +155,7 @@
 
       <article class="accreditation-info-card">
         <div class="accreditation-logo">
-          <img src="assets/logos/niceic-approved-contractor.png" alt="NICEIC Approved Contractor">
+          <img src="assets/logos/niceic-logo.png" alt="NICEIC logo">
         </div>
         <div class="accreditation-content">
           <h3>NICEIC Approved Contractor</h3>
