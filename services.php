@@ -94,7 +94,7 @@
               <img data-service-image="electrical-services" src="assets/images/services/electrical-services.jpg" alt="Electrical services">
               <span class="service-icon icon-electrical-services"><img src="assets/icons/electrical-services.svg" alt=""></span>
               <h3>Electrical Services</h3>
-              <p>Domestic, commercial and industrial electrical installation, upgrades and maintenance.</p>
+              <p>Domestic, commercial and industrial electrical installation, upgrades and maintenance from a NICEIC Registered Installer.</p>
               <strong>Learn more →</strong>
             </a>
           </article>
